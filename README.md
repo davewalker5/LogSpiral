@@ -101,3 +101,7 @@ Future directions may include:
 - Siphuncle generation
 - Animated shell growth
 - Parameter presets for different shell forms
+
+## Acknowledgements
+
+Inspired by the mathematics of logarithmic shell growth and the broader traditions of theoretical morphology and computational natural history, including the work of D’Arcy Wentworth Thompson and David Raup. All code and implementations in this repository are original to this project.
