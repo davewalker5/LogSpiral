@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "log-spiral"
+version = "1.0.0"
+description = "Logarithmic Spiral"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "ipykernel",
+  "matplotlib",
+  "nbformat",
+  "numpy",
+  "plotly"
+]
+
+[tool.setuptools]
+py-modules = []
