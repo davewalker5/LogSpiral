@@ -1,0 +1,37 @@
+{
+    "spiral": {
+        "a": 1.0,
+        "b": 0.13,
+        "turns": 4,
+        "points": 500,
+        "aperture_mode": "abutting",
+        "abutment_scale": 1.55,
+        "abutment_height_ratio": 0.7
+    },
+    "shell": {
+        "z_scale": 0.0,
+        "aperture_points": 48,
+        "ribbing_amplitude": 0.06,
+        "ribbing_frequency": 18,
+        "lip_start": 0.88,
+        "lip_strength": 0.35,
+        "lip_power": 3,
+        "wall_enabled": true,
+        "wall_thickness": 0.9,
+        "inner_surface_colour_shift": -0.15
+    },
+    "chambers": {
+        "enabled": true,
+        "aperture_points": 48,
+        "chamber_spacing": 0.65,
+        "septum_rings": 10,
+        "septum_depth": 0.35
+    },
+    "siphuncle": {
+        "enabled": true,
+        "aperture_points": 48,
+        "siphuncle_radius": 0.6,
+        "siphuncle_offset": 0.35,
+        "tube_points": 16
+    }
+}
