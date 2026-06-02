@@ -83,6 +83,25 @@ At intervals along the growth path:
 
 Older chambers can optionally be rendered darker than newer chambers to emphasise shell growth history.
 
+## Siphuncle Builder
+
+```python
+build_siphuncle_mesh()
+```
+
+Builds a simplified siphuncle running through the shell chambers.
+
+The siphuncle is modelled as a small tube that follows the shell’s growth path through the chambered interior.
+
+At each growth stage:
+
+1. The centre of an aperture ring is estimated
+2. The siphuncle position is offset slightly from the chamber centre
+3. A small circular tube section is generated
+4. Neighbouring tube sections are stitched into a continuous mesh
+
+This provides a simplified representation of the tube-like structure that connects chambered cephalopod shell compartments.
+
 ## Rendering
 
 The meshes are rendered using Plotly Mesh3d, allowing:
@@ -104,10 +123,10 @@ The project currently supports:
 - Curved chamber septa
 - Transparent shell rendering
 - Shell wall thickness
+- Siphuncle generation
 
 Future directions may include:
 
-- Siphuncle generation
 - Animated shell growth
 - Parameter presets for different shell forms
 
