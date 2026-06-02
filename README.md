@@ -103,10 +103,10 @@ The project currently supports:
 - Aperture lip flare
 - Curved chamber septa
 - Transparent shell rendering
+- Shell wall thickness
 
 Future directions may include:
 
-- Shell wall thickness
 - Siphuncle generation
 - Animated shell growth
 - Parameter presets for different shell forms
