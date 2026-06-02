@@ -7,7 +7,16 @@
 
 # LogSpiral - Procedural Shell Morphology
 
-![Example Output](https://github.com/davewalker5/LogSpiral/blob/main/images/shell-002.png?raw=true)
+<table>
+  <tr>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/shell-001.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/shell-002.png" width="100%"></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/shell-003.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/shell-004.png" width="100%"></td>
+  </tr>
+</table>
 
 A small exploratory project investigating procedural shell generation using logarithmic spirals, swept apertures and simple growth rules.
 
