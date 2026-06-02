@@ -13,11 +13,14 @@
     "shell": {
         "z_scale": 0.0,
         "aperture_points": 48,
+
         "ribbing_amplitude": 0.06,
         "ribbing_frequency": 18,
+
         "lip_start": 0.88,
         "lip_strength": 0.35,
         "lip_power": 3,
+
         "wall_enabled": true,
         "wall_thickness": 0.9,
         "inner_surface_colour_shift": -0.15
@@ -34,6 +37,7 @@
         "aperture_points": 48,
         "siphuncle_radius": 0.6,
         "siphuncle_offset": 0.35,
-        "tube_points": 16
+        "tube_points": 16,
+        "siphuncle_end_fraction": 0.99
     }
 }

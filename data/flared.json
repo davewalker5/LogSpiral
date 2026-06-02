@@ -1,0 +1,46 @@
+{
+  "name": "Flared Shell",
+  "description": "A gastropod-inspired shell form with an open spiral, raised coiling and a strongly flared final aperture.",
+  "spiral": {
+    "a": 1.0,
+    "b": 0.145,
+    "turns": 3.6,
+    "points": 650,
+    "aperture_mode": "proportional",
+    "aperture_width_multiplier": 0.26,
+    "aperture_height_multiplier": 0.16
+  },
+  "shell": {
+    "z_scale": 0.18,
+    "aperture_points": 56,
+
+    "ribbing_enabled": true,
+    "ribbing_amplitude": 0.025,
+    "ribbing_frequency": 16,
+
+    "lip_enabled": true,
+    "lip_start": 0.76,
+    "lip_strength": 0.85,
+    "lip_power": 2,
+
+    "wall_enabled": true,
+    "wall_thickness": 0.65,
+    "inner_surface_colour_shift": -0.12
+  },
+  "chambers": {
+    "enabled": false,
+    "aperture_points": 56,
+    "chamber_spacing": 0.65,
+    "septum_rings": 10,
+    "septum_depth": 0.25
+  },
+  "siphuncle": {
+    "enabled": false,
+    "aperture_points": 56,
+    "siphuncle_radius": 0.25,
+    "siphuncle_offset": 0.25,
+    "tube_points": 16,
+    "siphuncle_end_fraction": 0.98,
+    "include_terminal_ring": true
+  }
+}

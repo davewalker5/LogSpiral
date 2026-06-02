@@ -9,12 +9,12 @@
 
 <table>
   <tr>
-    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/shell-001.png" width="100%"></td>
-    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/shell-002.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/nautilus-001.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/nautilus-002.png" width="100%"></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/shell-003.png" width="100%"></td>
-    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/shell-004.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/nautilus-003.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/nautilus-004.png" width="100%"></td>
   </tr>
 </table>
 
@@ -47,6 +47,204 @@ Additional features can then be layered onto the basic geometry:
 
 The result is not intended as a strict biological simulation, but as an exploration of how relatively simple mathematical and geometric rules can generate complex natural forms.
 
+---
+
+## Example Shell Presets
+
+The shell generator includes a growing collection of parameter presets that explore different regions of shell morphospace using variations in:
+
+- Logarithmic growth rate
+- Aperture scaling
+- Coiling geometry
+- Shell inflation
+- Ornamentation (ribbing)
+- Aperture flare
+- Shell wall thickness
+
+Although highly simplified, these presets demonstrate how a relatively small set of growth parameters can produce shell forms reminiscent of real molluscan and cephalopod shells.
+
+### Nautilus-Like Shell
+
+<table>
+  <tr>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/nautilus-001.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/nautilus-002.png" width="100%"></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/nautilus-003.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/nautilus-004.png" width="100%"></td>
+  </tr>
+</table>
+
+The nautilus-like preset produces a tightly coiled, inflated shell with adjacent whorls in contact.
+
+Characteristics:
+
+- Smooth rounded whorl profile
+- Relatively low expansion rate
+- Planispiral coiling
+- Broad inflated chambers
+- Visible siphuncle and chamber septa
+
+This form resembles extant chambered nautiluses, whose shells grow as expanding logarithmic spirals with internally partitioned buoyancy chambers.
+
+The model demonstrates how relatively modest geometric rules can produce biologically recognisable cephalopod shell forms.
+
+### Smooth Nautilus
+
+<table>
+  <tr>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/smooth-nautilus-001.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/nautilus-002.png" width="100%"></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/smooth-nautilus-003.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/smooth-nautilus-004.png" width="100%"></td>
+  </tr>
+</table>
+
+The smooth nautilus variant removes geometric ribbing while retaining pigmentation banding and shell inflation.
+
+Compared with the ornamented nautilus-like form:
+
+- Shell growth appears calmer and more continuous
+- The underlying logarithmic geometry becomes more visually apparent
+- Pigmentation and curvature dominate the visual texture
+
+This preset highlights the distinction between:
+
+- Shell geometry
+- Shell ornamentation
+- Shell pigmentation
+
+which are treated separately within the model.
+
+### Ammonite-Like Shell
+
+<table>
+  <tr>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/ammonite-001.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/ammonite-002.png" width="100%"></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/ammonite-003.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/ammonite-004.png" width="100%"></td>
+  </tr>
+</table>
+
+The ammonite-like preset exaggerates shell expansion and ornamentation relative to the nautilus form.
+
+Characteristics:
+
+- Broader outer whorl
+- Stronger radial ribbing
+- More compressed appearance
+- Faster shell expansion
+- Larger visible aperture
+
+The resulting morphology resembles many fossil ammonites, particularly strongly ribbed planispiral forms.
+
+The model demonstrates how relatively small parameter changes can shift shell morphology from nautilus-like inflation toward more ornamented ammonite-like geometries.
+
+Transparent rendering additionally reveals:
+
+- Internal chamber spacing
+- Septal placement
+- Siphuncle trajectory
+
+providing a simplified visualisation of cephalopod internal shell structure.
+
+### Ramshorn-Like Shell
+
+<table>
+  <tr>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/ramshorn-001.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/ramshorn-002.png" width="100%"></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/ramshorn-003.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/ramshorn-004.png" width="100%"></td>
+  </tr>
+</table>
+
+The ramshorn preset explores planispiral gastropod morphology rather than chambered cephalopods.
+
+Characteristics:
+
+- Smooth rounded tube-like whorls
+- Strongly flattened coiling
+- Broad body whorl
+- Relatively simple aperture geometry
+- Minimal ornamentation
+
+The resulting form resembles freshwater ramshorn snails (Planorbidae), whose shells coil within a near-planar spiral.
+
+Unlike the cephalopod-inspired presets, this form is primarily driven by smooth continuous growth rather than chambered internal structure.
+
+Reducing ribbing proved important here, as excessive ornamentation quickly pushed the morphology back toward ammonite-like forms.
+
+### Flared Shell
+
+<table>
+  <tr>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/flared-001.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/flared-002.png" width="100%"></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/flared-003.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/flared-004.png" width="100%"></td>
+  </tr>
+</table>
+
+The flared shell preset intentionally explores more open and exaggerated shell geometries.
+
+Characteristics:
+
+- Rapidly expanding aperture
+- Separated whorls
+- Open spiral growth
+- Dramatic terminal flare
+- Loosely coiled geometry
+
+Unlike the more biologically conservative presets, this form acts as an exploration of the shell generator’s morphospace.
+
+The resulting geometry resembles aspects of:
+
+- Vermetid shells
+- Juvenile uncoiled gastropods
+- Speculative or transitional shell forms
+
+and demonstrates how altering aperture expansion can fundamentally change shell architecture.
+
+Interestingly, once whorl abutment is relaxed, the shell begins to behave more like a continuously expanding tube traced through space rather than a tightly packed coil.
+
+### Observations
+
+A recurring theme across these presets is that shell morphology emerges from the interaction between only a few core mechanisms:
+
+1. Logarithmic radial growth
+2. Sperture scaling
+3. Coiling rate
+4. Ornamentation modulation
+5. Terminal aperture flare
+
+Small parameter changes can produce disproportionately large morphological differences.
+
+The project therefore acts not only as a graphics exercise, but also as a simplified exploration of computational natural history and developmental morphology.
+
+In particular, separating:
+
+- Growth trajectory
+- Aperture geometry
+- Ornamentation
+- Pigmentation
+- Internal shell structures
+
+proved important both visually and conceptually.
+
+This mirrors, in a highly simplified way, the layered processes involved in real biological shell formation.
+
+---
 
 ## Shell Mesh Builder
 
@@ -124,11 +322,12 @@ The project currently supports:
 - Transparent shell rendering
 - Shell wall thickness
 - Siphuncle generation
+- Parameter presets for different shell forms
 
 Future directions may include:
 
 - Animated shell growth
-- Parameter presets for different shell forms
+- Involute versus evolute coiling
 
 ## Acknowledgements
 
