@@ -45,17 +45,17 @@ The result is not intended as a strict biological simulation, but as an explorat
 build_shell_mesh()
 ```
 
-Builds the outer shell surface by:
+The shell is treated as a record of growth:
 
-1. Generating a sequence of elliptical apertures along the logarithmic spiral
-2. Scaling the apertures as the shell grows
-3. Optionally modulating aperture size to produce growth ribs
-4. Optionally flaring the final aperture to simulate a mature shell lip
-5. Stitching neighbouring aperture rings into a continuous triangular mesh
+1. A sequence of elliptical apertures is generated along the logarithmic spiral
+2. The apertures scale progressively as the shell grows
+3. Aperture size can be periodically modulated to produce growth ribs
+4. The final aperture can be enlarged to simulate a mature shell lip flare
+5. An inner shell surface can be generated to create visible shell wall thickness
+6. Outer and inner shell surfaces are stitched together into continuous triangular meshes
+7. Per-vertex colour values are generated to simulate shell pigmentation banding
 
-Each aperture ring represents a moment in the shell's growth history.
-
-Per-vertex colour values are also generated to simulate shell pigmentation patterns.
+Each aperture ring represents a moment in the shell’s developmental history.
 
 ## Chamber Septa Builder
 
