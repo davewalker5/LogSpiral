@@ -1,4 +1,6 @@
 {
+    "name": "Generic 3D Logarithmic Spiral Shell",
+    "description": "Generic 3D Logarithmic Spiral Shell",
     "spiral": {
         "a": 1.0,
         "b": 0.13,
