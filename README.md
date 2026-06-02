@@ -9,12 +9,12 @@
 
 <table>
   <tr>
-    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/nautilus-001.png" width="100%"></td>
-    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/nautilus-002.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/shell-001.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/shell-002.png" width="100%"></td>
   </tr>
   <tr>
-    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/nautilus-003.png" width="100%"></td>
-    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/nautilus-004.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/shell-003.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/shell-004.png" width="100%"></td>
   </tr>
 </table>
 
@@ -95,7 +95,7 @@ The model demonstrates how relatively modest geometric rules can produce biologi
 <table>
   <tr>
     <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/smooth-nautilus-001.png" width="100%"></td>
-    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/nautilus-002.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/smooth-nautilus-002.png" width="100%"></td>
   </tr>
   <tr>
     <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/smooth-nautilus-003.png" width="100%"></td>
@@ -163,7 +163,6 @@ providing a simplified visualisation of cephalopod internal shell structure.
   </tr>
   <tr>
     <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/ramshorn-003.png" width="100%"></td>
-    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/ramshorn-004.png" width="100%"></td>
   </tr>
 </table>
 
@@ -192,7 +191,6 @@ Reducing ribbing proved important here, as excessive ornamentation quickly pushe
   </tr>
   <tr>
     <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/flared-003.png" width="100%"></td>
-    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/flared-004.png" width="100%"></td>
   </tr>
 </table>
 
