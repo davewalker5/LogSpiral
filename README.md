@@ -45,7 +45,24 @@ Additional features can then be layered onto the basic geometry:
 - Translucent shell rendering
 - Internal chamber septa
 
-The result is not intended as a strict biological simulation, but as an exploration of how relatively simple mathematical and geometric rules can generate complex natural forms.
+The result is not intended as a strict biological simulation, but as an exploration of how relatively simple mathematical and geometric rules can generate complex natural forms. That said, the use of logarithmic spirals here is not simply aesthetic or descriptive.
+
+Many real molluscan shells grow by accretion at the aperture edge: new shell material is continuously added around the opening while the overall aperture shape remains broadly similar as the organism enlarges.
+
+Under these conditions, growth becomes approximately self-similar:
+
+- the shell expands continuously
+- proportions remain relatively stable
+- each new growth stage resembles a scaled version of earlier stages
+
+This tends to produce shell geometries closely approximated by logarithmic spirals, where radial expansion is proportional to current size rather than occurring in fixed linear increments.
+
+The logarithmic spiral therefore acts both as:
+
+- a useful mathematical model of shell form
+- and as a simplified representation of an underlying biological growth process
+
+Real shells additionally reflect genetics, environment, biomechanics and ecological pressures, all of which can perturb or modify the underlying geometric pattern.
 
 ---
 
@@ -217,6 +234,12 @@ and demonstrates how altering aperture expansion can fundamentally change shell 
 Interestingly, once whorl abutment is relaxed, the shell begins to behave more like a continuously expanding tube traced through space rather than a tightly packed coil.
 
 ### Observations
+
+An important aspect of logarithmic shell growth is self-similarity.
+
+As the shell enlarges, the organism can continue growing without fundamentally changing its body geometry. Earlier shell stages therefore become preserved records of previous growth states, producing the characteristic coiled shell forms seen in many molluscs and cephalopods.
+
+The project therefore treats shell form not simply as static geometry, but as accumulated developmental history emerging from iterative growth rules.
 
 A recurring theme across these presets is that shell morphology emerges from the interaction between only a few core mechanisms:
 
