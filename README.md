@@ -221,7 +221,7 @@ Interestingly, once whorl abutment is relaxed, the shell begins to behave more l
 A recurring theme across these presets is that shell morphology emerges from the interaction between only a few core mechanisms:
 
 1. Logarithmic radial growth
-2. Sperture scaling
+2. Aperture scaling
 3. Coiling rate
 4. Ornamentation modulation
 5. Terminal aperture flare
