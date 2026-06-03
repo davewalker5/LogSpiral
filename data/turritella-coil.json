@@ -1,0 +1,47 @@
+{
+  "name": "Turritella-Like Tower Shell",
+  "description": "A high-spired gastropod shell built from a logarithmic coil with Z-scaling rather than a conical helix",
+  "spiral": {
+    "a": 0.85,
+    "b": 0.015,
+    "turns": 10,
+    "points": 950,
+    "aperture_mode": "proportional",
+    "aperture_width_multiplier": 0.38,
+    "aperture_height_multiplier": 0.30,
+    "growth_mode": "log_spiral"
+  },
+  "shell": {
+    "z_scale": 0.0,
+    "automatic_z_path": true,
+    "whorl_abutment": 0.65,
+    "aperture_points": 48,
+    "ribbing_enabled": true,
+    "ribbing_amplitude": 0.035,
+    "ribbing_frequency": 55,
+    "lip_enabled": true,
+    "lip_start": 0.94,
+    "lip_strength": 0.10,
+    "lip_power": 3,
+    "wall_enabled": true,
+    "wall_thickness": 0.05,
+    "inner_surface_colour_shift": -0.12
+  },
+  "chambers": { "enabled": false },
+  "siphuncle": { "enabled": false },
+  "plotting": {
+    "opaque": {
+      "enabled": true,
+      "title": "Turritella-Like Tower Shell",
+      "shell_opacity": 1.0,
+      "septa_opacity": 0.0,
+      "siphuncle_opacity": 0.0,
+      "width": 1000,
+      "height": 1000,
+      "hide_axes": false
+    },
+    "transparent": {
+      "enabled": false
+    }
+  }
+}

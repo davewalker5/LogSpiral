@@ -8,10 +8,13 @@
     "points": 850,
     "aperture_mode": "abutting",
     "abutment_scale": 1.58,
-    "abutment_height_ratio": 0.58
+    "abutment_height_ratio": 0.58,
+    "growth_mode": "log_spiral"
   },
   "shell": {
     "z_scale": 0.0,
+    "automatic_z_path": false,
+    "whorl_abutment": 0.0,
     "aperture_points": 64,
 
     "ribbing_enabled": true,
@@ -50,6 +53,8 @@
       "shell_opacity": 1.0,
       "septa_opacity": 0.75,
       "siphuncle_opacity": 0.75,
+      "width": 900,
+      "height": 900,
       "hide_axes": false
     },
     "transparent": {
@@ -58,6 +63,8 @@
       "shell_opacity": 0.25,
       "septa_opacity": 0.75,
       "siphuncle_opacity": 0.75,
+      "width": 900,
+      "height": 900,
       "hide_axes": false
     }
   }

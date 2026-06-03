@@ -233,6 +233,51 @@ and demonstrates how altering aperture expansion can fundamentally change shell 
 
 Interestingly, once whorl abutment is relaxed, the shell begins to behave more like a continuously expanding tube traced through space rather than a tightly packed coil.
 
+### Tower Shell (Turritella-Like)
+
+<table>
+  <tr>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/turritella-001.png" width="100%"></td>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/turritella-002.png" width="100%"></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/turritella-003.png" width="100%"></td>
+  </tr>
+</table>
+
+The tower shell preset explores high-spired gastropod morphology using a logarithmic spiral combined with axial growth. Unlike the planispiral nautilus and ammonite-inspired forms, shell growth is translated progressively along the coiling axis, producing an elongated tower-like shell.
+
+Characteristics:
+
+- High-spired shell geometry
+- Logarithmic growth with axial translation
+- Closely abutting whorls
+- Flattened aperture profile
+- Continuous gastropod-style shell growth
+- Simple growth rib ornamentation
+
+The resulting morphology resembles tower shells such as Turritella and related high-spired gastropods, where shell form emerges from the interaction between logarithmic expansion, aperture shape and the spacing between successive whorls.
+
+An interesting observation during development was that shell appearance proved highly sensitive to the relationship between aperture size and axial translation. Small changes in whorl overlap transformed the shell from a simple geometric spiral into a recognisably biological form, highlighting the importance of aperture geometry and growth trajectory alongside logarithmic expansion itself.
+
+Current limitations include:
+
+- Apertures remain vertically oriented
+- Whorl profiles are simplified relative to many real gastropods
+- Ornamentation is limited to growth ribs
+- Aperture shape remains symmetrical
+- No true spiral sculpture or shell shoulders are currently modelled
+
+Future work may explore:
+
+- Aperture inclination and rotation
+- Spiral cords and more realistic ornamentation
+- Asymmetric gastropod apertures
+- Alternative whorl profiles
+- Additional high-spired shell morphologies
+
+The tower shell model also serves as a useful comparison with a separate conical-helix implementation. Although both approaches can produce superficially similar forms, the logarithmic-growth model more naturally reproduces the appearance of accretionary shell growth, where shell form emerges from the progressive enlargement and translation of a persistent aperture.
+
 ### Observations
 
 An important aspect of logarithmic shell growth is self-similarity.
@@ -244,12 +289,15 @@ The project therefore treats shell form not simply as static geometry, but as ac
 A recurring theme across these presets is that shell morphology emerges from the interaction between only a few core mechanisms:
 
 1. Logarithmic radial growth
-2. Aperture scaling
-3. Coiling rate
-4. Ornamentation modulation
-5. Terminal aperture flare
+2. Growth trajectory and spatial translation
+3. Aperture geometry and scaling
+4. Coiling rate
+5. Ornamentation and pigmentation
+6. Terminal aperture modification
 
 Small parameter changes can produce disproportionately large morphological differences.
+
+In particular, the tower-shell experiments demonstrated that the relationship between aperture size and growth trajectory can be as important as the logarithmic spiral itself. Modest changes in whorl overlap and axial translation transformed a simple geometric spiral into a recognisably biological shell form.
 
 The project therefore acts not only as a graphics exercise, but also as a simplified exploration of computational natural history and developmental morphology.
 
@@ -257,11 +305,14 @@ In particular, separating:
 
 - Growth trajectory
 - Aperture geometry
+- Coiling geometry
 - Ornamentation
 - Pigmentation
 - Internal shell structures
 
 proved important both visually and conceptually.
+
+The tower-shell investigations additionally highlighted the value of treating growth trajectory independently from the underlying logarithmic expansion. Similar overall shell forms could be produced by both conical-helix and logarithmic-growth models, but the latter more naturally reproduced the appearance of accretionary shell growth and whorl development.
 
 This mirrors, in a highly simplified way, the layered processes involved in real biological shell formation.
 
