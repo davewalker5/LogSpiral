@@ -356,4 +356,4 @@ Inspired by the mathematics of logarithmic shell growth and the broader traditio
 
 All code and implementations in this repository are original to this project.
 
-For the historical and theoretical background, see, please see [BACKGROUND.md](https://github.com/davewalker5/LogSpiral/blob/main/BACKGROUND.md)
+For the historical and theoretical background, please see [BACKGROUND.md](https://github.com/davewalker5/LogSpiral/blob/main/BACKGROUND.md)
