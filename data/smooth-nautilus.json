@@ -41,5 +41,23 @@
     "siphuncle_offset": 0.28,
     "tube_points": 18,
     "siphuncle_end_fraction": 0.99
+  },
+  "plotting": {
+    "opaque": {
+      "enabled": true,
+      "title": "Nautilus-Like Shellwith Smooth Surface",
+      "shell_opacity": 1.0,
+      "septa_opacity": 0.75,
+      "siphuncle_opacity": 0.75,
+      "hide_axes": false
+    },
+    "transparent": {
+      "enabled": true,
+      "title": "Nautilus-Like Shell with Smooth Surface Showing Internal Structure",
+      "shell_opacity": 0.25,
+      "septa_opacity": 0.75,
+      "siphuncle_opacity": 0.75,
+      "hide_axes": false
+    }
   }
 }

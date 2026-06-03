@@ -42,5 +42,18 @@
     "tube_points": 16,
     "siphuncle_end_fraction": 0.98,
     "include_terminal_ring": true
+  },
+  "plotting": {
+    "opaque": {
+      "enabled": true,
+      "title": "Ramshorn-Like Shell",
+      "shell_opacity": 1.0,
+      "septa_opacity": 0.75,
+      "siphuncle_opacity": 0.75,
+      "hide_axes": false
+    },
+    "transparent": {
+      "enabled": false
+    }
   }
 }
