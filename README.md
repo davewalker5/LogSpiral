@@ -352,4 +352,8 @@ Future directions may include:
 
 ## Acknowledgements
 
-Inspired by the mathematics of logarithmic shell growth and the broader traditions of theoretical morphology and computational natural history, including the work of D’Arcy Wentworth Thompson and David Raup. All code and implementations in this repository are original to this project.
+Inspired by the mathematics of logarithmic shell growth and the broader traditions of theoretical morphology and computational natural history, including the work of D’Arcy Wentworth Thompson and David Raup.
+
+All code and implementations in this repository are original to this project.
+
+For the historical and theoretical background, see, please see [BACKGROUND.md](https://github.com/davewalker5/LogSpiral/blob/main/)
