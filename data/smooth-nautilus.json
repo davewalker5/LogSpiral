@@ -52,7 +52,8 @@
       "shell_opacity": 1.0,
       "septa_opacity": 0.75,
       "siphuncle_opacity": 0.75,
-      "hide_axes": false
+      "hide_axes": false,
+      "show_wireframe": false
     },
     "transparent": {
       "enabled": true,
@@ -60,7 +61,8 @@
       "shell_opacity": 0.25,
       "septa_opacity": 0.75,
       "siphuncle_opacity": 0.75,
-      "hide_axes": false
+      "hide_axes": false,
+      "show_wireframe": false
     }
   }
 }
