@@ -32,8 +32,6 @@ The emphasis is not on producing biologically exact simulations. Instead, the pr
 
 In this sense, the models can be viewed as small experiments in computational natural history. They sit somewhere between mathematical visualisation, procedural modelling and developmental morphology, using code as a tool for investigating the relationship between growth process and biological form.
 
-The chapters that follow describe the growth framework, mesh construction techniques and example shell morphologies developed during the project.
-
 ## Getting Started
 
 Further documentation, including the mathematical growth model, shell construction methods, example morphologies and modelling observations, is available in the [Wiki](https://github.com/davewalker5/LogSpiral/wiki).
