@@ -60,15 +60,7 @@
       "show_wireframe": true
     },
     "transparent": {
-      "enabled": true,
-      "title": "Ammonite-Like Shell Showing Internal Structure",
-      "shell_opacity": 0.25,
-      "septa_opacity": 0.75,
-      "siphuncle_opacity": 0.75,
-      "width": 900,
-      "height": 900,
-      "hide_axes": true,
-      "show_wireframe": false
+      "enabled": false
     }
   }
 }

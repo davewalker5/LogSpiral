@@ -4,7 +4,7 @@
   "spiral": {
     "a": 1.0,
     "b": 0.105,
-    "turns": 4.4,
+    "turns": 5.2,
     "points": 650,
     "aperture_mode": "abutting",
     "abutment_scale": 1.35,
@@ -53,6 +53,8 @@
       "shell_opacity": 1.0,
       "septa_opacity": 0.75,
       "siphuncle_opacity": 0.75,
+      "width": 900,
+      "height": 900,
       "hide_axes": false,
       "show_wireframe": false
     },
@@ -62,6 +64,8 @@
       "shell_opacity": 0.25,
       "septa_opacity": 0.75,
       "siphuncle_opacity": 0.75,
+      "width": 900,
+      "height": 900,
       "hide_axes": false,
       "show_wireframe": false
     }
