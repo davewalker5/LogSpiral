@@ -4,7 +4,7 @@
   "spiral": {
     "a": 1.0,
     "b": 0.105,
-    "turns": 4.4,
+    "turns": 5.2,
     "points": 650,
     "aperture_mode": "abutting",
     "abutment_scale": 1.42,
