@@ -27,7 +27,8 @@
     "lip_power": 3,
     "wall_enabled": true,
     "wall_thickness": 0.05,
-    "inner_surface_colour_shift": -0.12
+    "inner_surface_colour_shift": -0.12,
+    "aperture_tilt": 0.0
   },
   "chambers": { "enabled": false },
   "siphuncle": { "enabled": false },

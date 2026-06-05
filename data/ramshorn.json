@@ -28,7 +28,8 @@
 
     "wall_enabled": true,
     "wall_thickness": 0.55,
-    "inner_surface_colour_shift": -0.10
+    "inner_surface_colour_shift": -0.10,
+    "aperture_tilt": 0.0
   },
   "chambers": {
     "enabled": false,
