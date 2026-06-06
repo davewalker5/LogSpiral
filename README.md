@@ -49,10 +49,10 @@ The project currently supports:
 - Shell wall thickness
 - Siphuncle generation
 - Parameter presets for different shell forms
+- Animated shell growth
 
 Future directions may include:
 
-- Animated shell growth
 - Involute versus evolute coiling
 
 ## Acknowledgements
