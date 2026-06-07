@@ -39,7 +39,7 @@
       "siphuncle_opacity": 0.0,
       "width": 1000,
       "height": 1000,
-      "hide_axes": false,
+      "hide_axes": true,
       "show_wireframe": false
     },
     "transparent": {
