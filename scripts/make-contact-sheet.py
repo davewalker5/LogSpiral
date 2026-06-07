@@ -1,13 +1,14 @@
 import math
 import argparse
+import json
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 from datetime import datetime
 
 CAPTION_Y_OFFSET = 8
 
-DEFAULT_INPUT_FOLDER = Path(__file__).parent.parent / "renders"
-DEFAULT_OUTPUT_FILE = "contact-sheet"
+DEFAULT_CONFIG_FILE = Path(__file__).parent.parent / "data" / "contact-sheet.config"
+DEFAULT_OUTPUT_FILE = Path(__file__).parent.parent / "renders" / "contact-sheet"
 DEFAULT_ROWS = 0
 DEFAULT_COLS = 6
 DEFAULT_PAGE = 0
@@ -32,45 +33,31 @@ def print_error(message):
     print_message(f"ERROR: {message}")
 
 
-def build_image_file_list(
-    input_folder: Path | str,
-    exclude_images: list
-) -> list[Path]:
+def load_configuration(path: Path) -> dict:
     """
-    Build a list of images for the contact sheet
-    
-    :param input_folder: Folder containing the individual images
-    :param page: Page number for the sheet
-    :param rows: Number of rows in the sheet
-    :param cols: Number of columns in the sheet
-    :return: List of files
+    Load a JSON file and return a dictionary of its contents
+
+    :param path: Path to the file to load
+    :return: Dictionary of JSON contents
     """
-    print_message(f"Finding images in {input_folder}")
-
-    files = sorted(Path(input_folder).glob("*.png"))
-    files = [
-        f for f in files
-        if not any(f.stem.startswith(prefix) for prefix in exclude_images)
-    ]
-
-    print_message(f"Found {len(files)} images")
-    return files
+    with Path(path).open("r", encoding="utf-8") as f:
+        return json.load(f)
 
 
-def get_image_files_for_page(
-    files: list[Path],
+def get_config_for_page(
+    config: dict,
     page: int,
     rows: int,
     cols: int
 ) -> list[Path]:
     """
-    Extract a list of images for a specified page of the contact sheet
+    Extract a page of images for a specified page of the contact sheet
     
-    :param files: List of image files
+    :param config: Configuration for all pages of the contact sheet
     :param page: Page number for the sheet
     :param rows: Number of rows in the sheet
     :param cols: Number of columns in the sheet
-    :return: List of files for the specified page
+    :return: Dictionary of file details for the specified page
     """
 
     print_message(f"Extracting images for page {page}")
@@ -79,27 +66,19 @@ def get_image_files_for_page(
     if rows > 0 and cols > 0:
         offset = (page - 1) * rows * cols
         print_message(f"Page offset = {offset}")
-        files = files[offset:offset + rows * cols]
+        page_config = {
+            "folder": config["folder"],
+            "files": config["files"][offset:offset + rows * cols]
+        }
+    else:
+        page_config = config
 
-    print_message(f"Found {len(files)} images")
-    return files
-
-
-def get_file_annotations(
-    file: Path
-) -> str:
-    """
-    
-    """
-    parts = file.stem.split("-")
-    name = " ".join(parts[:-2]).title()
-    render_type = parts[-2].title()
-    viewpoint = parts[-1].title()
-    return name, render_type, "Isometric" if viewpoint == "Iso" else viewpoint
+    print_message(f"Found {len(page_config["files"])} images")
+    return page_config
 
 
 def make_single_contact_sheet(
-    files: list[Path],
+    config: dict,
     output_file: Path | str,
     rows: int,
     cols: int,
@@ -123,19 +102,13 @@ def make_single_contact_sheet(
     :param missing_fill: Incomplete last row fill colour
     """
     images = []
-    shell_types = []
-    render_types = []
-    viewpoints = []
-    for file in files:
-        # Get the shell type and viewpoint from the file name
-        shell_type, render_type, viewpoint = get_file_annotations(file)
-        shell_types.append(shell_type)
-        render_types.append(render_type)
-        viewpoints.append(viewpoint)
-        print_message(f"Loading {shell_type}, {viewpoint}")
+    for file in config["files"]:
+        # Get the caption
+        print_message(f"Loading {file['filename']} : {file['shell_type']}, {file['render_type']}, {file['viewpoint']}")
 
         # Load the current image
-        img = Image.open(file).convert("RGBA")
+        image_path = Path(config["folder"]) / file["filename"]
+        img = Image.open(image_path).convert("RGBA")
 
         # Calculate the aspect ratio and resized height
         aspect = img.height / img.width
@@ -177,10 +150,11 @@ def make_single_contact_sheet(
             canvas.alpha_composite(img, (x, y_img))
 
             # Define the lines in the caption
+            file = config["files"][index]
             caption_lines = [
-                shell_types[index],
-                f"{render_types[index]} render",
-                f"{viewpoints[index]} view"
+                file["shell_type"],
+                f"{file['render_type']} render",
+                f"{file['viewpoint']} view"
             ]
 
             # Measure each line
@@ -219,8 +193,7 @@ def make_single_contact_sheet(
 
 
 def make_contact_sheets(
-    files: list[Path],
-    output_folder: Path,
+    config: dict,
     output_file_name: str,
     page: int,
     rows: int,
@@ -229,9 +202,9 @@ def make_contact_sheets(
     """
     Create a set of contact sheets of given size for a list of images
 
-    :param files: List of the individual image files
-    :param output_folder: Folder to write the contact sheet images to
-    :param output_file: Output contact sheet name without path and extension
+    :param config: Contact sheet configuration 
+    :param output_file: Output contact sheet file
+    :param page: Page number to generate
     :param rows: Number of rows per sheet
     :param cols: Number of columns per sheet
     """
@@ -239,22 +212,24 @@ def make_contact_sheets(
         start_page = end_page = page
     else:
         start_page = 1
-        end_page = 1 if rows == 0 else math.ceil(len(files) / (rows * cols))
+        end_page = 1 if rows == 0 else math.ceil(len(config["files"]) / (rows * cols))
 
     print_message(f"Generating sheets for pages {start_page} to {end_page}")
 
     # If rows hasn't been specified, calculate the number of rows
     if rows == 0:
-        rows = math.ceil(len(files) / cols)
+        rows = math.ceil(len(config["files"]) / cols)
         print_message(f"Calculated number of rows is {rows}")
 
+    # Iterate over all pages
     for page in range(start_page, end_page + 1):
-        page_files = get_image_files_for_page(files, page, rows, cols)
-        if not page_files:
-            print_error(f"No images files found for page {page}")
+        # Extract the config for this page
+        page_config = get_config_for_page(config, page, rows, cols)
+        if not page_config["files"]:
+            print_error(f"No images found for page {page}")
 
-        output_file = output_folder / f"{output_file_name}-{page:04d}.png"
-        make_single_contact_sheet(page_files, output_file, rows, cols)
+        output_file = f"{output_file_name}-{page:04d}.png"
+        make_single_contact_sheet(page_config, output_file, rows, cols)
 
 
 def main() -> None:
@@ -262,25 +237,17 @@ def main() -> None:
     Entry point for the contact sheet generator
     """
     parser = argparse.ArgumentParser()
-    parser.add_argument("-i", "--input", type=Path, default=DEFAULT_INPUT_FOLDER,
-                        help="Input folder containing the images to add to the config")
-    parser.add_argument("-e", "--exclude", nargs="+", type=str,
-                        help="List of file names to exclude (without path and extension)")
-    parser.add_argument("-o", "--output", default=DEFAULT_OUTPUT_FILE, help="Output contact sheet name")
+    parser.add_argument("-cfg", "--configuration", type=Path, default=DEFAULT_CONFIG_FILE,
+                        help="Contact sheet configuration file")
+    parser.add_argument("-o", "--output", default=DEFAULT_OUTPUT_FILE, help="Output contact sheet path")
     parser.add_argument("-r", "--rows", type=int, default=DEFAULT_ROWS, help="Number of rows per page")
     parser.add_argument("-c", "--cols", type=int, default=DEFAULT_COLS, help="Number of columns per page")
     parser.add_argument("-p", "--page", type=int, default=DEFAULT_PAGE,
                         help="Page number to generate or 0 for all pages")
     args = parser.parse_args()
 
-    input_folder = Path(args.input)
-    exclude_images = [args.output, *(args.exclude or [])]
-    files = build_image_file_list(input_folder, exclude_images)
-    if not files:
-        print_error("No images files found")
-
-    output_file_prefix = input_folder / args.output
-    make_contact_sheets(files, input_folder, output_file_prefix, args.page, args.rows, args.cols)
+    config = load_configuration(args.configuration)
+    make_contact_sheets(config, args.output, args.page, args.rows, args.cols)
 
 
 if __name__ == "__main__":

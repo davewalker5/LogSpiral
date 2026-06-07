@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 from datetime import datetime
 
+DEFAULT_CONTACT_SHEET_IMAGE_NAME = "contact-sheet"
 DEFAULT_INPUT_FOLDER = Path(__file__).parent.parent / "renders"
 DEFAULT_OUTPUT_FILE = Path(__file__).parent.parent / "data" / "contact-sheet.config"
 
@@ -54,7 +55,7 @@ def build_config(
 
     # Build the configuration dictionary
     config = {
-        "input_folder": str(input_folder.relative_to(Path.cwd())),
+        "folder": str(input_folder.relative_to(Path.cwd())),
         "files": []
     }
 
@@ -62,7 +63,7 @@ def build_config(
     for file in file_names:
         shell_type, render_type, viewpoint = get_file_annotations(file)
         config["files"].append({
-            "filename": file.stem,
+            "filename": file.name,
             "shell_type": shell_type,
             "render_type": render_type,
             "viewpoint": viewpoint
@@ -99,7 +100,7 @@ def main() -> None:
     parser.add_argument("-o", "--output", default=DEFAULT_OUTPUT_FILE, help="Output configuration file name")
     args = parser.parse_args()
 
-    excluded_images = [*(args.exclude or [])]
+    excluded_images = [DEFAULT_CONTACT_SHEET_IMAGE_NAME, *(args.exclude or [])]
     config = build_config(Path(args.input), excluded_images)
     write_config(Path(args.output), config)
 
