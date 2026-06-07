@@ -4,6 +4,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 from datetime import datetime
 
+CAPTION_Y_OFFSET = 8
 
 DEFAULT_INPUT_FOLDER = Path(__file__).parent.parent / "renders"
 DEFAULT_OUTPUT_FILE = "contact-sheet"
@@ -87,10 +88,14 @@ def get_image_files_for_page(
 def get_file_annotations(
     file: Path
 ) -> str:
+    """
+    
+    """
     parts = file.stem.split("-")
     name = " ".join(parts[:-2]).title()
+    render_type = parts[-2].title()
     viewpoint = parts[-1].title()
-    return name, "Isometric" if viewpoint == "Iso" else viewpoint
+    return name, render_type, "Isometric" if viewpoint == "Iso" else viewpoint
 
 
 def make_single_contact_sheet(
@@ -119,11 +124,13 @@ def make_single_contact_sheet(
     """
     images = []
     shell_types = []
+    render_types = []
     viewpoints = []
     for file in files:
         # Get the shell type and viewpoint from the file name
-        shell_type, viewpoint = get_file_annotations(file)
+        shell_type, render_type, viewpoint = get_file_annotations(file)
         shell_types.append(shell_type)
+        render_types.append(render_type)
         viewpoints.append(viewpoint)
         print_message(f"Loading {shell_type}, {viewpoint}")
 
@@ -140,7 +147,7 @@ def make_single_contact_sheet(
 
     # Calculate the cell dimensions
     font = ImageFont.load_default()
-    caption_height = 35
+    caption_height = 55
 
     image_cell_height = max(img.height for img in images)
     cell_width = image_width
@@ -161,7 +168,7 @@ def make_single_contact_sheet(
 
         # Determine X and Y coordinates on the canvas, accounting for padding
         x = padding + col * (cell_width + padding)
-        y = padding + row * (cell_height + padding)
+        y = (row - 1) * padding +  row * cell_height
 
         if index < len(images):
             # We have an image at this index so draw it into the canvas
@@ -170,7 +177,11 @@ def make_single_contact_sheet(
             canvas.alpha_composite(img, (x, y_img))
 
             # Define the lines in the caption
-            caption_lines = [shell_types[index], viewpoints[index]]
+            caption_lines = [
+                shell_types[index],
+                f"{render_types[index]} render",
+                f"{viewpoints[index]} view"
+            ]
 
             # Measure each line
             draw = ImageDraw.Draw(canvas)
@@ -183,7 +194,7 @@ def make_single_contact_sheet(
 
             # Position the whole text block within the caption area
             caption_top = y + image_cell_height
-            block_y = caption_top + (caption_height - total_text_height) + 4
+            block_y = caption_top + (caption_height - total_text_height) + CAPTION_Y_OFFSET
 
             # Draw each line centred
             current_y = block_y

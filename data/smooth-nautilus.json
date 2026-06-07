@@ -55,7 +55,7 @@
       "siphuncle_opacity": 0.75,
       "width": 900,
       "height": 900,
-      "hide_axes": false,
+      "hide_axes": true,
       "show_wireframe": false
     },
     "transparent": {
@@ -66,7 +66,7 @@
       "siphuncle_opacity": 0.75,
       "width": 900,
       "height": 900,
-      "hide_axes": false,
+      "hide_axes": true,
       "show_wireframe": false
     }
   }
