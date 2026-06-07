@@ -263,7 +263,7 @@ def main() -> None:
     """
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input", type=Path, default=DEFAULT_INPUT_FOLDER,
-                        help="Canonical feature matrix JSON output path")
+                        help="Input folder containing the images to add to the config")
     parser.add_argument("-e", "--exclude", nargs="+", type=str,
                         help="List of file names to exclude (without path and extension)")
     parser.add_argument("-o", "--output", default=DEFAULT_OUTPUT_FILE, help="Output contact sheet name")
