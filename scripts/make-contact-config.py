@@ -8,7 +8,9 @@ DEFAULT_INPUT_FOLDER = Path(__file__).parent.parent / "renders"
 DEFAULT_OUTPUT_FILE = Path(__file__).parent.parent / "data" / "contact-sheet.config"
 
 
-def print_message(message: str) -> None:
+def print_message(
+    message: str
+) -> None:
     """
     Show a timestamped message
 

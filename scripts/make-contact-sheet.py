@@ -13,8 +13,14 @@ DEFAULT_ROWS = 0
 DEFAULT_COLS = 6
 DEFAULT_PAGE = 0
 
+GROUP_BY_SHELL = "shell"
+GROUP_BY_RENDER = "render"
+GROUP_BY_VIEW = "view"
 
-def print_message(message: str) -> None:
+
+def print_message(
+    message: str
+) -> None:
     """
     Show a timestamped message
 
@@ -24,7 +30,9 @@ def print_message(message: str) -> None:
     print(f"{timestamp} : {message}")
 
 
-def print_error(message):
+def print_error(
+    message: str
+) -> None:
     """
     Show a timestamped error message
 
@@ -33,7 +41,10 @@ def print_error(message):
     print_message(f"ERROR: {message}")
 
 
-def load_configuration(path: Path) -> dict:
+def load_configuration(
+    path: Path,
+    group_by: str
+) -> dict:
     """
     Load a JSON file and return a dictionary of its contents
 
@@ -41,7 +52,16 @@ def load_configuration(path: Path) -> dict:
     :return: Dictionary of JSON contents
     """
     with Path(path).open("r", encoding="utf-8") as f:
-        return json.load(f)
+        config = json.load(f)
+
+    if group_by == GROUP_BY_RENDER:
+        config["files"] = sorted(config["files"], key=lambda r: (r["render_type"], r["shell_type"]))
+    elif group_by == GROUP_BY_VIEW:
+        config["files"] = sorted(config["files"], key=lambda r: (r["viewpoint"], r["shell_type"]))
+    else:
+        config["files"] = sorted(config["files"], key=lambda r: (r["shell_type"]))
+
+    return config
 
 
 def get_config_for_page(
@@ -244,10 +264,13 @@ def main() -> None:
     parser.add_argument("-c", "--cols", type=int, default=DEFAULT_COLS, help="Number of columns per page")
     parser.add_argument("-p", "--page", type=int, default=DEFAULT_PAGE,
                         help="Page number to generate or 0 for all pages")
+    parser.add_argument("-g", "--group-by", choices=[GROUP_BY_SHELL, GROUP_BY_RENDER, GROUP_BY_VIEW],
+                        default=GROUP_BY_SHELL, help="Specify the grouping option for the contact sheet")
     args = parser.parse_args()
 
-    config = load_configuration(args.configuration)
-    make_contact_sheets(config, args.output, args.page, args.rows, args.cols)
+    config = load_configuration(args.configuration, args.group_by)
+    output = f"{args.output}-{args.group_by}"
+    make_contact_sheets(config, output, args.page, args.rows, args.cols)
 
 
 if __name__ == "__main__":
