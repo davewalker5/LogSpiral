@@ -3,4 +3,4 @@
 export PROJECT_ROOT=$( cd "$(dirname "$0")/.." ; pwd -P )
 . "$PROJECT_ROOT/venv/bin/activate"
 
-python "$PROJECT_ROOT/scripts/make-contact-sheet.py" --exclude ammonite-with-wireframe "$@"
+python "$PROJECT_ROOT/scripts/make-contact-sheet.py" "$@"
