@@ -1,15 +1,15 @@
 {
   "name": "Flared Shell",
   "description": "A gastropod-inspired shell form with an open spiral, raised coiling and a strongly flared final aperture.",
-  "spiral": {
+  "growth": {
+    "mode": "log_spiral",
     "a": 1.0,
     "b": 0.145,
     "turns": 3.6,
     "points": 650,
     "aperture_mode": "proportional",
     "aperture_width_multiplier": 0.26,
-    "aperture_height_multiplier": 0.16,
-    "growth_mode": "log_spiral"
+    "aperture_height_multiplier": 0.16
   },
   "shell": {
     "z_scale": 0.18,

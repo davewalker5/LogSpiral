@@ -1,15 +1,15 @@
 {
   "name": "Ammonite-Like Shell",
   "description": "A ribbed ammonite-inspired shell with tighter coiling, pronounced growth ornamentation, curved septa and a visible siphuncle.",
-  "spiral": {
+  "growth": {
+    "mode": "log_spiral",
     "a": 1.0,
     "b": 0.125,
     "turns": 5.2,
     "points": 850,
     "aperture_mode": "abutting",
     "abutment_scale": 1.58,
-    "abutment_height_ratio": 0.58,
-    "growth_mode": "log_spiral"
+    "abutment_height_ratio": 0.58
   },
   "shell": {
     "z_scale": 0.0,

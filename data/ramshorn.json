@@ -1,15 +1,15 @@
 {
   "name": "Ramshorn-Like Shell",
   "description": "A smooth flat-coiled gastropod-inspired shell with rounded abutting whorls, subtle pigmentation and no internal chambering.",
-  "spiral": {
+  "growth": {
+    "mode": "log_spiral",
     "a": 1.0,
     "b": 0.115,
     "turns": 4.8,
     "points": 700,
     "aperture_mode": "abutting",
     "abutment_scale": 1.45,
-    "abutment_height_ratio": 0.85,
-    "growth_mode": "log_spiral"
+    "abutment_height_ratio": 0.85
   },
   "shell": {
     "z_scale": 0.0,
