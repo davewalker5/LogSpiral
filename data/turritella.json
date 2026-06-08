@@ -28,8 +28,12 @@
     "inner_surface_colour_shift": -0.12,
     "aperture_tilt": 0.20
   },
-  "chambers": { "enabled": false },
-  "siphuncle": { "enabled": false },
+  "chambers": {
+    "enabled": false
+  },
+  "siphuncle": {
+    "enabled": false
+  },
   "plotting": {
     "opaque": {
       "enabled": true,
