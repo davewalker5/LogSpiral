@@ -33,14 +33,12 @@
   },
   "chambers": {
     "enabled": true,
-    "aperture_points": 56,
     "chamber_spacing": 0.58,
     "septum_rings": 12,
     "septum_depth": 0.28
   },
   "siphuncle": {
     "enabled": true,
-    "aperture_points": 56,
     "siphuncle_radius": 0.35,
     "siphuncle_offset": 0.28,
     "tube_points": 18,
