@@ -1,7 +1,8 @@
 {
   "name": "Turritella-Like Tower Shell",
   "description": "A high-spired gastropod shell built from a tight conical helix rather than a flat logarithmic coil",
-  "spiral": {
+  "growth": {
+    "mode": "conical_helix",
     "a": 0.85,
     "b": 0.018,
     "turns": 9.5,
@@ -10,8 +11,7 @@
     "cone_taper": 0.85,
     "aperture_mode": "proportional",
     "aperture_width_multiplier": 0.34,
-    "aperture_height_multiplier": 0.44,
-    "growth_mode": "conical_helix"
+    "aperture_height_multiplier": 0.44
   },
   "shell": {
     "z_scale": 0.0,
@@ -30,8 +30,12 @@
     "inner_surface_colour_shift": -0.12,
     "aperture_tilt": 0.0
   },
-  "chambers": { "enabled": false },
-  "siphuncle": { "enabled": false },
+  "chambers": {
+    "enabled": false
+  },
+  "siphuncle": {
+    "enabled": false
+  },
   "plotting": {
     "opaque": {
       "enabled": true,
@@ -42,7 +46,9 @@
       "width": 1000,
       "height": 1000,
       "hide_axes": true,
-      "show_wireframe": false
+      "show_wireframe": false,
+      "viewpoint": "iso",
+      "zoom": 1.0
     },
     "transparent": {
       "enabled": false

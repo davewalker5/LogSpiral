@@ -1,15 +1,15 @@
 {
   "name": "Nautilus-Like Shell",
   "description": "A ribbed, flat-coiled chambered shell with abutting whorls, visible shell thickness, curved septa and a simplified siphuncle.",
-  "spiral": {
+  "growth": {
+    "mode": "log_spiral",
     "a": 1.0,
     "b": 0.105,
     "turns": 5.2,
     "points": 650,
     "aperture_mode": "abutting",
     "abutment_scale": 1.42,
-    "abutment_height_ratio": 0.78,
-    "growth_mode": "log_spiral"
+    "abutment_height_ratio": 0.78
   },
   "shell": {
     "z_scale": 0.0,
@@ -33,18 +33,22 @@
   },
   "chambers": {
     "enabled": true,
-    "aperture_points": 56,
     "chamber_spacing": 0.58,
     "septum_rings": 12,
     "septum_depth": 0.28
   },
   "siphuncle": {
     "enabled": true,
-    "aperture_points": 56,
     "siphuncle_radius": 0.35,
+    "siphuncle_taper_enabled": false,
+    "siphuncle_taper_power": 0.0,
+    "siphuncle_min_radius": 0.0,
+    "siphuncle_max_radius": 0.0,
     "siphuncle_offset": 0.28,
     "tube_points": 18,
-    "siphuncle_end_fraction": 0.99
+    "siphuncle_end_fraction": 0.98,
+    "include_terminal_ring": true,
+    "fixed_offset_angle": null
   },
   "plotting": {
     "opaque": {
@@ -56,7 +60,9 @@
       "width": 900,
       "height": 900,
       "hide_axes": true,
-      "show_wireframe": false
+      "show_wireframe": false,
+      "viewpoint": "iso",
+      "zoom": 1.0
     },
     "transparent": {
       "enabled": true,
@@ -67,7 +73,9 @@
       "width": 900,
       "height": 900,
       "hide_axes": true,
-      "show_wireframe": false
+      "show_wireframe": false,
+      "viewpoint": "iso",
+      "zoom": 1.0
     }
   }
 }

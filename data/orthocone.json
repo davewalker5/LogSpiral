@@ -1,0 +1,80 @@
+{
+  "name": "Orthocone-Like Shell",
+  "description": "",
+  "growth": {
+    "mode": "orthocone",
+    "length": 10.0,
+    "points": 500,
+    "initial_radius": 0.35,
+    "growth_rate": 1.0,
+    "aperture_width_multiplier": 1.0,
+    "aperture_height_multiplier": 0.85,
+    "taper_mode": "linear"
+  },
+  "shell": {
+    "z_scale": 0.0,
+    "automatic_z_path": false,
+    "aperture_points": 64,
+
+    "ribbing_enabled": false,
+    "ribbing_amplitude": 0.00,
+    "ribbing_frequency": 0,
+
+    "lip_enabled": false,
+    "lip_start": 0.0,
+    "lip_strength": 0.0,
+    "lip_power": 0,
+
+    "wall_enabled": true,
+    "wall_thickness": 0.025,
+    "inner_surface_colour_shift": -0.18,
+    "aperture_tilt": 0.0
+  },
+  "chambers": {
+    "enabled": true,
+    "chamber_spacing": 0.5,
+    "septum_rings": 18,
+    "septum_depth": 0.25
+  },
+  "siphuncle": {
+    "enabled": true,
+    "siphuncle_radius": 0.1,
+    "siphuncle_taper_enabled": true,
+    "siphuncle_taper_power": 0.5,
+    "siphuncle_min_radius": 0.025,
+    "siphuncle_max_radius": 0.1,
+    "siphuncle_offset": 0.9,
+    "tube_points": 18,
+    "siphuncle_end_fraction": 0.985,
+    "include_terminal_ring": false,
+    "fixed_offset_angle": 0.0
+  },
+  "plotting": {
+    "opaque": {
+      "enabled": true,
+      "title": "Orthocone-Like Shell",
+      "shell_opacity": 1.0,
+      "septa_opacity": 0.75,
+      "siphuncle_opacity": 0.75,
+      "width": 900,
+      "height": 900,
+      "hide_axes": true,
+      "show_wireframe": false,
+      "viewpoint": "iso",
+      "zoom": 1.5
+    },
+    "transparent": {
+      "enabled": true,
+      "title": "Orthocone-Like Shell Showing Internal Structure",
+      "shell_opacity": 0.25,
+      "septa_opacity": 0.75,
+      "siphuncle_opacity": 0.75,
+      "width": 900,
+      "height": 900,
+      "hide_axes": true,
+      "show_wireframe": false,
+      "viewpoint": "iso",
+      "zoom": 1.5
+    }
+  }
+}
