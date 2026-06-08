@@ -40,6 +40,10 @@
   "siphuncle": {
     "enabled": true,
     "siphuncle_radius": 0.24,
+    "siphuncle_taper_enabled": false,
+    "siphuncle_taper_power": 0.0,
+    "siphuncle_min_radius": 0.0,
+    "siphuncle_max_radius": 0.0,
     "siphuncle_offset": 0.18,
     "tube_points": 18,
     "siphuncle_end_fraction": 0.985,
