@@ -44,7 +44,9 @@
       "width": 1000,
       "height": 1000,
       "hide_axes": true,
-      "show_wireframe": false
+      "show_wireframe": false,
+      "viewpoint": "iso",
+      "zoom": 1.0
     },
     "transparent": {
       "enabled": false

@@ -60,7 +60,9 @@
       "width": 900,
       "height": 900,
       "hide_axes": true,
-      "show_wireframe": false
+      "show_wireframe": false,
+      "viewpoint": "iso",
+      "zoom": 1.0
     },
     "transparent": {
       "enabled": true,
@@ -71,7 +73,9 @@
       "width": 900,
       "height": 900,
       "hide_axes": true,
-      "show_wireframe": false
+      "show_wireframe": false,
+      "viewpoint": "iso",
+      "zoom": 1.0
     }
   }
 }
