@@ -1,12 +1,13 @@
 {
-  "name": "Orthocone-Like Shell",
-  "description": "",
+  "name": "Cyrtocone-Like Shell",
+  "description": "A straight-shelled cephalopod form generated through linear growth, with internal chamber septa and a longitudinal siphuncle",
   "growth": {
     "mode": "orthocone",
     "length": 10.0,
     "points": 500,
     "initial_radius": 0.35,
     "growth_rate": 1.0,
+    "curvature": null,
     "aperture_width_multiplier": 1.0,
     "aperture_height_multiplier": 0.85,
     "taper_mode": "linear"
