@@ -1,6 +1,9 @@
 {
   "name": "Ammonite-Like Shell",
   "description": "A ribbed ammonite-inspired shell with tighter coiling, pronounced growth ornamentation, curved septa and a visible siphuncle.",
+  "geometry": "log-spiral",
+  "form": "planispiral",
+  "family": "coiled-cephalopod",
   "growth": {
     "mode": "log_spiral",
     "a": 1.0,
