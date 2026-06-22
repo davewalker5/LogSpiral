@@ -1,6 +1,9 @@
 {
   "name": "Turritella-Like Tower Shell",
   "description": "A high-spired gastropod shell generated through logarithmic expansion and axial translation, with closely overlapping whorls, inclined aperture geometry and simple growth rib ornamentation.",
+  "geometry": "log-spiral",
+  "form": "high-spired",
+  "family": "gastropod",
   "growth": {
     "mode": "log_spiral",
     "a": 0.85,

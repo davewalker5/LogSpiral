@@ -24,13 +24,23 @@ def get_file_annotations(
     file: Path
 ) -> str:
     """
-    
+    Break an image file name down into its preset name, shell type, render type
+    and view. Files are in the form:
+
+    <shell>-<render>-<view>.png
+
+    where the shell type, <shell>, may contain "-" characters. For example:
+
+    smooth-nautilus-transparent-presentation.png
+
+    :param file: Path to the image file
     """
     parts = file.stem.split("-")
+    preset = "-".join(parts[:-2])
     name = " ".join(parts[:-2]).title()
     render_type = parts[-2].title()
     viewpoint = parts[-1].title()
-    return name, render_type, "Isometric" if viewpoint == "Iso" else viewpoint
+    return preset, name, render_type, "Isometric" if viewpoint == "Iso" else viewpoint
 
 
 def build_config(
@@ -63,12 +73,13 @@ def build_config(
 
     # Add the files to the configuration dictionary
     for file in file_names:
-        shell_type, render_type, viewpoint = get_file_annotations(file)
+        preset, shell_type, render_type, viewpoint = get_file_annotations(file)
         config["files"].append({
+            "preset": preset,
             "filename": file.name,
             "shell_type": shell_type,
-            "render_type": render_type,
-            "viewpoint": viewpoint
+            "render": render_type,
+            "view": viewpoint
         })
 
     print_message(f"Found {len(file_names)} images")

@@ -1,6 +1,9 @@
 {
   "name": "Nautilus-Like Shell",
   "description": "A ribbed, flat-coiled chambered shell with abutting whorls, visible shell thickness, curved septa and a simplified siphuncle.",
+  "geometry": "log-spiral",
+  "form": "planispiral",
+  "family": "coiled-cephalopod",
   "growth": {
     "mode": "log_spiral",
     "a": 1.0,

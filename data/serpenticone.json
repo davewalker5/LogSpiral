@@ -1,6 +1,9 @@
 {
   "name": "Serpenticone Ammonite-Like Shell",
   "description": "A ribbed serpenticone ammonite-inspired shell with slow shell expansion, pronounced growth ornamentation, curved septa and a visible siphuncle.",
+  "geometry": "log-spiral",
+  "form": "compressed-planispiral",
+  "family": "coiled-cephalopod",
   "growth": {
     "mode": "log_spiral",
     "a": 1.0,

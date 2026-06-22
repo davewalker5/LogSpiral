@@ -1,6 +1,9 @@
 {
   "name": "Crioceratite-Like Shell",
   "description": "A ribbed crioceratite-inspired shell with open coiling, pronounced growth ornamentation, curved septa and a visible siphuncle.",
+  "geometry": "log-spiral",
+  "form": "open",
+  "family": "coiled-cephalopod",
   "growth": {
     "mode": "log_spiral",
     "a": 1.0,
