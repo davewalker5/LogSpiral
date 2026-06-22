@@ -14,18 +14,18 @@ DEFAULT_ROWS = 0
 DEFAULT_COLS = 6
 DEFAULT_PAGE = 0
 
-GROUP_BY_SHELL = "shell"
-GROUP_BY_RENDER = "render"
-GROUP_BY_VIEW = "view"
-GROUP_BY_GEOMETRY = "geometry"
-GROUP_BY_FAMILY = "family"
+BY_SHELL = "shell"
+BY_RENDER = "render"
+BY_VIEW = "view"
+BY_GEOMETRY = "geometry"
+BY_FAMILY = "family"
 
-GROUP_BY_CHOICES = [
-    GROUP_BY_SHELL,
-    GROUP_BY_RENDER,
-    GROUP_BY_VIEW,
-    GROUP_BY_GEOMETRY,
-    GROUP_BY_FAMILY
+BY_CHOICES = [
+    BY_SHELL,
+    BY_RENDER,
+    BY_VIEW,
+    BY_GEOMETRY,
+    BY_FAMILY
 ]
 
 
@@ -52,15 +52,132 @@ def print_error(
     print_message(f"ERROR: {message}")
 
 
+def parse_filter_by_value(value):
+    """
+    """
+    try:
+        property, filter_value = value.split("=", 1)
+
+    except ValueError:
+        raise argparse.ArgumentTypeError(
+            "Expected format: property=value"
+        )
+
+    if property not in BY_CHOICES:
+        raise argparse.ArgumentTypeError(
+            f"Property must be one of: {', '.join(sorted(BY_CHOICES))}"
+        )
+
+    return {property: filter_value}
+
+
+def attach_preset_properties(
+    contact_sheet_config: dict,
+    presets_folder: Path
+):
+    """
+    For each preset referenced by the contact sheet, attach geometry, form and family
+    information for captioning
+    
+    :param contact_sheet_config: Contact sheet configuration dictionary
+    :param presets_folder: Folder containing the presets
+    """
+
+    # Iterate over and load each preset and merge the geometry, form and family into the
+    # contact sheet config
+    preset_names = {f["preset"] for f in contact_sheet_config["files"]}
+    for preset in preset_names:
+        # Load this preset
+        with (presets_folder / f"{preset}.json").open("r", encoding="utf-8") as f:
+            preset_config = json.load(f)
+
+            # Extract the properties to attach to the contact sheet entries
+            geometry = preset_config["geometry"]
+            form = preset_config["form"]
+            family = preset_config["family"]
+
+            # Construct display names for each
+            geometry_name = " ".join(preset_config["geometry"].split("-")).title()
+            form_name = " ".join(preset_config["form"].split("-")).title()
+            family_name = " ".join(preset_config["family"].split("-")).title()
+
+            # Find and iterate over matching files
+            matching_files = [f for f in contact_sheet_config["files"] if f["preset"] == preset]
+            for f in matching_files:
+                # Raw properties
+                f["geometry"] = geometry
+                f["form"] = form
+                f["family"] = family
+
+                # Caption values
+                f["geometry_name"] = f"{geometry_name} ({form_name})"
+                f["family_name"] = family_name
+
+
+def normalise_filters(
+    filter_by: dict | None
+) -> dict:
+    """
+    The filtering argument uses the "append" option so we may have a list of individual
+    dictionaries rather than one dictionary of filtering properties:
+    
+    [{"family": "ammonite"}, {"geometry": "log-spiral"}]
+
+    Normalise, first, to return one filtering dictionary:
+
+    {"family": "ammonite", "geometry": "log-spiral"}
+
+    :param filter_by: List of filtering dictionaries
+    :return: Normalised dictionary of filter properties
+    """
+    if not filter_by:
+        return {}
+
+    if isinstance(filter_by, dict):
+        return filter_by
+
+    filters = {}
+    for item in filter_by:
+        filters.update(item)
+
+    return filters
+
+
+def apply_filters(
+    files: list[dict],
+    filter_by: dict | None
+) -> list[dict]:
+    """
+    Filter a list of files from the configuration using a dictionary of filtering
+    options
+    
+    :param files: List of image file definitions
+    :param filter_by: Normalised dictionary of filtering options
+    :return: Filtered list of image file definitions
+    """
+    if not filter_by:
+        return files
+
+    return [
+        file
+        for file in files
+        if all(file.get(key).casefold() == value.casefold() for key, value in filter_by.items())
+    ]
+
+
 def load_configuration(
     presets_folder: Path,
     path: Path,
-    group_by: str
+    group_by: str,
+    filter_by
 ) -> dict:
     """
     Load a JSON file and return a dictionary of its contents
 
+    :param presets_folder: Path to the folder containing the preset files
     :param path: Path to the file to load
+    :param group_by: Group by option from the command line
+    :param filter_by: Filtering options from the command line
     :return: Dictionary of JSON contents
     """
 
@@ -68,28 +185,21 @@ def load_configuration(
     with Path(path).open("r", encoding="utf-8") as f:
         config = json.load(f)
 
-    # Iterate over and load each preset and merge the geometry, form and family into the
-    # contact sheet config
-    preset_names = {f["preset"] for f in config["files"]}
-    for preset in preset_names:
-        with (presets_folder / f"{preset}.json").open("r", encoding="utf-8") as f:
-            preset_config = json.load(f)
-            geometry = " ".join(preset_config["geometry"].split("-")).title()
-            form = " ".join(preset_config["form"].split("-")).title()
-            family = " ".join(preset_config["family"].split("-")).title()
-            matching_files = [f for f in config["files"] if f["preset"] == preset]
-            for f in matching_files:
-                f["geometry"] = f"{geometry} ({form})"
-                # f["form"] = form
-                f["family"] = family
+    # Attach required properties from the referenced presets
+    attach_preset_properties(config, presets_folder)
 
-    if group_by == GROUP_BY_RENDER:
-        config["files"] = sorted(config["files"], key=lambda r: (r["render_type"], r["shell_type"]))
-    elif group_by == GROUP_BY_VIEW:
+    # Filter the data before grouping
+    filters = normalise_filters(filter_by)
+    config["files"] = apply_filters(config["files"], filters)
+
+    # Apply grouping
+    if group_by == BY_RENDER:
+        config["files"] = sorted(config["files"], key=lambda r: (r["render"], r["shell_type"]))
+    elif group_by == BY_VIEW:
         config["files"] = sorted(config["files"], key=lambda r: (r["viewpoint"], r["shell_type"]))
-    elif group_by == GROUP_BY_GEOMETRY:
+    elif group_by == BY_GEOMETRY:
         config["files"] = sorted(config["files"], key=lambda r: (r["geometry"], r["shell_type"]))
-    elif group_by == GROUP_BY_FAMILY:
+    elif group_by == BY_FAMILY:
         config["files"] = sorted(config["files"], key=lambda r: (r["family"], r["shell_type"]))
     else:
         config["files"] = sorted(config["files"], key=lambda r: (r["shell_type"]))
@@ -157,7 +267,7 @@ def make_single_contact_sheet(
     images = []
     for file in config["files"]:
         # Get the caption
-        print_message(f"Loading {file['filename']} : {file['shell_type']}, {file['render_type']}, {file['viewpoint']}")
+        print_message(f"Loading {file['filename']} : {file['shell_type']}, {file['render']}, {file['view']}")
 
         # Load the current image
         image_path = Path(config["folder"]) / file["filename"]
@@ -206,10 +316,9 @@ def make_single_contact_sheet(
             file = config["files"][index]
             caption_lines = [
                 file["shell_type"],
-                file["family"],
-                file["geometry"],
-                # file["form"],
-                f"{file['viewpoint']} view"
+                file["family_name"],
+                file["geometry_name"],
+                f"{file['view']} view"
             ]
 
             # Measure each line
@@ -301,11 +410,13 @@ def main() -> None:
     parser.add_argument("-c", "--cols", type=int, default=DEFAULT_COLS, help="Number of columns per page")
     parser.add_argument("-p", "--page", type=int, default=DEFAULT_PAGE,
                         help="Page number to generate or 0 for all pages")
-    parser.add_argument("-g", "--group-by", choices=GROUP_BY_CHOICES, default=GROUP_BY_SHELL,
+    parser.add_argument("-g", "--group-by", choices=BY_CHOICES, default=BY_SHELL,
                         help="Specify the grouping option for the contact sheet")
+    parser.add_argument("-f", "--filter-by", action="append", type=parse_filter_by_value, metavar="PROPERTY=VALUE",
+                        help="Filter the included renders for the contact sheet")
     args = parser.parse_args()
 
-    config = load_configuration(args.presets_folder, args.configuration, args.group_by)
+    config = load_configuration(args.presets_folder, args.configuration, args.group_by, args.filter_by)
     output = f"{args.output}-{args.group_by}"
     make_contact_sheets(config, output, args.page, args.rows, args.cols)
 
