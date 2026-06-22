@@ -5,9 +5,10 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 from datetime import datetime
 
-CAPTION_Y_OFFSET = 8
+CAPTION_Y_OFFSET = 24
 
-DEFAULT_CONFIG_FILE = Path(__file__).parent.parent / "data" / "contact-sheet.config"
+DEFAULT_PRESETS_FOLDER = Path(__file__).parent.parent / "data"
+DEFAULT_CONFIG_FILE = DEFAULT_PRESETS_FOLDER / "contact-sheet.config"
 DEFAULT_OUTPUT_FILE = Path(__file__).parent.parent / "renders" / "contact-sheet"
 DEFAULT_ROWS = 0
 DEFAULT_COLS = 6
@@ -16,6 +17,16 @@ DEFAULT_PAGE = 0
 GROUP_BY_SHELL = "shell"
 GROUP_BY_RENDER = "render"
 GROUP_BY_VIEW = "view"
+GROUP_BY_GEOMETRY = "geometry"
+GROUP_BY_FAMILY = "family"
+
+GROUP_BY_CHOICES = [
+    GROUP_BY_SHELL,
+    GROUP_BY_RENDER,
+    GROUP_BY_VIEW,
+    GROUP_BY_GEOMETRY,
+    GROUP_BY_FAMILY
+]
 
 
 def print_message(
@@ -42,6 +53,7 @@ def print_error(
 
 
 def load_configuration(
+    presets_folder: Path,
     path: Path,
     group_by: str
 ) -> dict:
@@ -51,13 +63,34 @@ def load_configuration(
     :param path: Path to the file to load
     :return: Dictionary of JSON contents
     """
+
+    # Load the raw contact sheet config
     with Path(path).open("r", encoding="utf-8") as f:
         config = json.load(f)
+
+    # Iterate over and load each preset and merge the geometry, form and family into the
+    # contact sheet config
+    preset_names = {f["preset"] for f in config["files"]}
+    for preset in preset_names:
+        with (presets_folder / f"{preset}.json").open("r", encoding="utf-8") as f:
+            preset_config = json.load(f)
+            geometry = " ".join(preset_config["geometry"].split("-")).title()
+            form = " ".join(preset_config["form"].split("-")).title()
+            family = " ".join(preset_config["family"].split("-")).title()
+            matching_files = [f for f in config["files"] if f["preset"] == preset]
+            for f in matching_files:
+                f["geometry"] = f"{geometry} ({form})"
+                # f["form"] = form
+                f["family"] = family
 
     if group_by == GROUP_BY_RENDER:
         config["files"] = sorted(config["files"], key=lambda r: (r["render_type"], r["shell_type"]))
     elif group_by == GROUP_BY_VIEW:
         config["files"] = sorted(config["files"], key=lambda r: (r["viewpoint"], r["shell_type"]))
+    elif group_by == GROUP_BY_GEOMETRY:
+        config["files"] = sorted(config["files"], key=lambda r: (r["geometry"], r["shell_type"]))
+    elif group_by == GROUP_BY_FAMILY:
+        config["files"] = sorted(config["files"], key=lambda r: (r["family"], r["shell_type"]))
     else:
         config["files"] = sorted(config["files"], key=lambda r: (r["shell_type"]))
 
@@ -102,7 +135,7 @@ def make_single_contact_sheet(
     output_file: Path | str,
     rows: int,
     cols: int,
-    image_width: int = 120,
+    image_width: int = 180,
     padding: int = 10,
     caption_spacing: int = 2,
     background: tuple = (25, 25, 25),
@@ -173,7 +206,9 @@ def make_single_contact_sheet(
             file = config["files"][index]
             caption_lines = [
                 file["shell_type"],
-                f"{file['render_type']} render",
+                file["family"],
+                file["geometry"],
+                # file["form"],
                 f"{file['viewpoint']} view"
             ]
 
@@ -259,16 +294,18 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("-cfg", "--configuration", type=Path, default=DEFAULT_CONFIG_FILE,
                         help="Contact sheet configuration file")
+    parser.add_argument("-pf", "--presets-folder", type=Path, default=DEFAULT_PRESETS_FOLDER,
+                        help="Path to the folder containing the presets")
     parser.add_argument("-o", "--output", default=DEFAULT_OUTPUT_FILE, help="Output contact sheet path")
     parser.add_argument("-r", "--rows", type=int, default=DEFAULT_ROWS, help="Number of rows per page")
     parser.add_argument("-c", "--cols", type=int, default=DEFAULT_COLS, help="Number of columns per page")
     parser.add_argument("-p", "--page", type=int, default=DEFAULT_PAGE,
                         help="Page number to generate or 0 for all pages")
-    parser.add_argument("-g", "--group-by", choices=[GROUP_BY_SHELL, GROUP_BY_RENDER, GROUP_BY_VIEW],
-                        default=GROUP_BY_SHELL, help="Specify the grouping option for the contact sheet")
+    parser.add_argument("-g", "--group-by", choices=GROUP_BY_CHOICES, default=GROUP_BY_SHELL,
+                        help="Specify the grouping option for the contact sheet")
     args = parser.parse_args()
 
-    config = load_configuration(args.configuration, args.group_by)
+    config = load_configuration(args.presets_folder, args.configuration, args.group_by)
     output = f"{args.output}-{args.group_by}"
     make_contact_sheets(config, output, args.page, args.rows, args.cols)
 

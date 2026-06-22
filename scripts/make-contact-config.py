@@ -27,10 +27,11 @@ def get_file_annotations(
     
     """
     parts = file.stem.split("-")
+    preset = "-".join(parts[:-2])
     name = " ".join(parts[:-2]).title()
     render_type = parts[-2].title()
     viewpoint = parts[-1].title()
-    return name, render_type, "Isometric" if viewpoint == "Iso" else viewpoint
+    return preset, name, render_type, "Isometric" if viewpoint == "Iso" else viewpoint
 
 
 def build_config(
@@ -63,8 +64,9 @@ def build_config(
 
     # Add the files to the configuration dictionary
     for file in file_names:
-        shell_type, render_type, viewpoint = get_file_annotations(file)
+        preset, shell_type, render_type, viewpoint = get_file_annotations(file)
         config["files"].append({
+            "preset": preset,
             "filename": file.name,
             "shell_type": shell_type,
             "render_type": render_type,
