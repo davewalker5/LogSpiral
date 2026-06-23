@@ -1,16 +1,16 @@
 {
-  "name": "Orthocone-Like Shell",
-  "description": "A curve-shelled cephalopod form generated through linear growth, with internal chamber septa and a longitudinal siphuncle",
+  "name": "Cyrtocone-Like Shell",
+  "description": "A straight-shelled cephalopod form generated through linear growth, with internal chamber septa and a longitudinal siphuncle",
   "geometry": "centreline-conical",
-  "form": "curved",
+  "form": "straight",
   "family": "straight-shelled-cephalopod",
   "growth": {
-    "mode": "cyrtocone",
+    "mode": "orthocone",
     "length": 10.0,
     "points": 500,
     "initial_radius": 0.35,
     "growth_rate": 1.0,
-    "curvature": 0.35,
+    "curvature": null,
     "aperture_width_multiplier": 1.0,
     "aperture_height_multiplier": 0.85,
     "taper_mode": "linear"
@@ -20,10 +20,13 @@
     "automatic_z_path": false,
     "aperture_points": 64,
 
-    "ribbing_enabled": false,
-    "ribbing_amplitude": 0.00,
-    "ribbing_frequency": 0,
-    "ribbing_mode": "sinusoidal",
+    "ribbing_enabled": true,
+    "ribbing_amplitude": 0.05,
+    "ribbing_frequency": 3,
+    "ribbing_mode": "segmented",
+    "segment_to_septum_ratio": 0.5,
+    "ribbing_groove_width": 0.22,
+    "ribbing_groove_depth": 1.15,
 
     "lip_enabled": false,
     "lip_start": 0.0,
@@ -37,7 +40,7 @@
   },
   "chambers": {
     "enabled": true,
-    "chamber_spacing": 0.5,
+    "chamber_spacing": 1.0,
     "septum_rings": 18,
     "septum_depth": 0.25
   },
@@ -57,7 +60,7 @@
   "plotting": {
     "opaque": {
       "enabled": true,
-      "title": "Cyrtocone-Like Shell",
+      "title": "Orthocone-Like Shell",
       "shell_opacity": 1.0,
       "septa_opacity": 0.75,
       "siphuncle_opacity": 0.75,
@@ -70,7 +73,7 @@
     },
     "transparent": {
       "enabled": true,
-      "title": "Cyrtocone-Like Shell Showing Internal Structure",
+      "title": "Orthocone-Like Shell Showing Internal Structure",
       "shell_opacity": 0.25,
       "septa_opacity": 0.75,
       "siphuncle_opacity": 0.75,

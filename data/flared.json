@@ -23,6 +23,7 @@
     "ribbing_enabled": true,
     "ribbing_amplitude": 0.025,
     "ribbing_frequency": 16,
+    "ribbing_mode": "sinusoidal",
 
     "lip_enabled": true,
     "lip_start": 0.76,
