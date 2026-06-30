@@ -1,13 +1,13 @@
-shell,Ammonite-Like Shell,Annulated Orthocone-Like Shell,Crioceratite-Like Shell,Orthocone-Like Shell (cyrtocone),Flared Shell,Nautilus-Like Shell,Orthocone-Like Shell (orthocone),Ramshorn-Like Shell,Serpenticone Ammonite-Like Shell,Nautilus-Like Shell with Smooth Surface,Turritella-Like Tower Shell (turritella-helix),Turritella-Like Tower Shell (turritella)
-Ammonite-Like Shell,100.0,0.0,33.3,0.0,12.5,33.3,0.0,50.0,66.7,33.3,0.0,14.3
-Annulated Orthocone-Like Shell,0.0,100.0,0.0,60.0,0.0,0.0,100.0,0.0,0.0,0.0,0.0,0.0
-Crioceratite-Like Shell,33.3,0.0,100.0,0.0,12.5,16.7,0.0,16.7,33.3,16.7,0.0,14.3
-Orthocone-Like Shell (cyrtocone),0.0,60.0,0.0,100.0,0.0,0.0,60.0,0.0,0.0,0.0,0.0,0.0
-Flared Shell,12.5,0.0,12.5,0.0,100.0,12.5,0.0,25.0,12.5,12.5,14.3,28.6
-Nautilus-Like Shell,33.3,0.0,16.7,0.0,12.5,100.0,0.0,33.3,33.3,100.0,0.0,14.3
-Orthocone-Like Shell (orthocone),0.0,100.0,0.0,60.0,0.0,0.0,100.0,0.0,0.0,0.0,0.0,0.0
-Ramshorn-Like Shell,50.0,0.0,16.7,0.0,25.0,33.3,0.0,100.0,66.7,33.3,14.3,28.6
-Serpenticone Ammonite-Like Shell,66.7,0.0,33.3,0.0,12.5,33.3,0.0,66.7,100.0,33.3,0.0,14.3
-Nautilus-Like Shell with Smooth Surface,33.3,0.0,16.7,0.0,12.5,100.0,0.0,33.3,33.3,100.0,0.0,14.3
-Turritella-Like Tower Shell (turritella-helix),0.0,0.0,0.0,0.0,14.3,0.0,0.0,14.3,0.0,0.0,100.0,83.3
-Turritella-Like Tower Shell (turritella),14.3,0.0,14.3,0.0,28.6,14.3,0.0,28.6,14.3,14.3,83.3,100.0
+shell,Orthocone-Like Shell (cyrtocone),Annulated Orthocone-Like Shell,Orthocone-Like Shell (orthocone),Crioceratite-Like Shell,Nautilus-Like Shell,Nautilus-Like Shell with Smooth Surface,Ramshorn-Like Shell,Ammonite-Like Shell,Serpenticone Ammonite-Like Shell,Flared Shell,Turritella-Like Tower Shell (turritella-helix),Turritella-Like Tower Shell (turritella)
+Orthocone-Like Shell (cyrtocone),100.0,60.0,60.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Annulated Orthocone-Like Shell,60.0,100.0,100.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Orthocone-Like Shell (orthocone),60.0,100.0,100.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Crioceratite-Like Shell,0.0,0.0,0.0,100.0,16.7,16.7,16.7,33.3,33.3,12.5,0.0,14.3
+Nautilus-Like Shell,0.0,0.0,0.0,16.7,100.0,100.0,33.3,33.3,33.3,12.5,0.0,14.3
+Nautilus-Like Shell with Smooth Surface,0.0,0.0,0.0,16.7,100.0,100.0,33.3,33.3,33.3,12.5,0.0,14.3
+Ramshorn-Like Shell,0.0,0.0,0.0,16.7,33.3,33.3,100.0,50.0,66.7,25.0,14.3,28.6
+Ammonite-Like Shell,0.0,0.0,0.0,33.3,33.3,33.3,50.0,100.0,66.7,12.5,0.0,14.3
+Serpenticone Ammonite-Like Shell,0.0,0.0,0.0,33.3,33.3,33.3,66.7,66.7,100.0,12.5,0.0,14.3
+Flared Shell,0.0,0.0,0.0,12.5,12.5,12.5,25.0,12.5,12.5,100.0,14.3,28.6
+Turritella-Like Tower Shell (turritella-helix),0.0,0.0,0.0,0.0,0.0,0.0,14.3,0.0,0.0,14.3,100.0,83.3
+Turritella-Like Tower Shell (turritella),0.0,0.0,0.0,14.3,14.3,14.3,28.6,14.3,14.3,28.6,83.3,100.0

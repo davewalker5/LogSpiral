@@ -83,12 +83,13 @@ def write_pairwise_csv(presets, weights, output_file: Path) -> None:
 
 def write_matrix_csv(presets, weights, output_file: Path) -> None:
     """
-    Write the all-against-all similarity matrix as CSV.
+    Write the all-against-all similarity matrix as CSV in dendrogram order.
 
     :param presets: Shell presets to compare
     :param weights: Classification field weighting table
     :param output_file: CSV file to write
     """
+    presets = order_presets_by_dendrogram(presets, weights)
     matrix = build_comparison_matrix(presets, weights)
     names = display_names(presets)
     output_file.parent.mkdir(parents=True, exist_ok=True)
@@ -109,13 +110,14 @@ def write_matrix_csv(presets, weights, output_file: Path) -> None:
 
 def write_matrix_plot_png(presets, weights, output_file: Path) -> None:
     """
-    Write the all-against-all similarity matrix as an annotated PNG plot.
+    Write the all-against-all similarity matrix as an annotated PNG plot in dendrogram order.
 
     :param presets: Shell presets to compare
     :param weights: Classification field weighting table
     :param output_file: PNG file to write
     """
     plt = configure_matplotlib()
+    presets = order_presets_by_dendrogram(presets, weights)
     matrix = build_comparison_matrix(presets, weights)
     names = display_names(presets)
     labels = [names[preset.filename] for preset in presets]
@@ -267,6 +269,34 @@ def assign_dendrogram_positions(node: dict, positions: dict[int, float], next_po
     return node["x"]
 
 
+def dendrogram_leaf_order(presets, weights) -> list[int]:
+    """
+    Get preset indexes in dendrogram leaf order.
+
+    :param presets: Shell presets to cluster
+    :param weights: Classification field weighting table
+    :return: Preset indexes ordered by dendrogram leaf position
+    """
+    if len(presets) < 2:
+        return list(range(len(presets)))
+
+    root = build_similarity_dendrogram(presets, weights)
+    positions = {}
+    assign_dendrogram_positions(root, positions, [0])
+    return sorted(positions, key=lambda index: positions[index])
+
+
+def order_presets_by_dendrogram(presets, weights):
+    """
+    Sort shell presets by dendrogram leaf order.
+
+    :param presets: Shell presets to order
+    :param weights: Classification field weighting table
+    :return: Shell presets ordered by clustering position
+    """
+    return [presets[index] for index in dendrogram_leaf_order(presets, weights)]
+
+
 def draw_dendrogram_node(ax, node: dict) -> None:
     """
     Draw one dendrogram node and its children.
@@ -287,6 +317,17 @@ def draw_dendrogram_node(ax, node: dict) -> None:
     ax.plot([x, x], [left["x"], right["x"]], color="#9c2f1a", linewidth=1.8)
     draw_dendrogram_node(ax, left)
     draw_dendrogram_node(ax, right)
+
+
+def draw_dendrogram_leaf_extensions(ax, y_positions: list[float]) -> None:
+    """
+    Draw terminal branches from each leaf node to the label edge.
+
+    :param ax: Matplotlib axes to draw on
+    :param y_positions: Y-axis positions for dendrogram leaves
+    """
+    for y_position in y_positions:
+        ax.plot([100.0, 102.0], [y_position, y_position], color="#9c2f1a", linewidth=1.8)
 
 
 def write_dendrogram_png(presets, weights, output_file: Path) -> None:
@@ -310,9 +351,11 @@ def write_dendrogram_png(presets, weights, output_file: Path) -> None:
     height = max(8.0, min(18.0, len(presets) * 0.55))
     fig, ax = plt.subplots(figsize=(12.0, height), constrained_layout=True)
     draw_dendrogram_node(ax, root)
+    draw_dendrogram_leaf_extensions(ax, y_positions)
     ax.set_title("Morphological Similarity Dendrogram")
     ax.set_xlabel("Merge similarity (%)")
-    ax.set_xlim(left=0.0, right=100.0)
+    ax.set_xlim(left=0.0, right=102.0)
+    ax.set_xticks([0, 20, 40, 60, 80, 100])
     ax.set_yticks(y_positions, labels=labels)
     ax.yaxis.tick_right()
     ax.tick_params(axis="y", labelright=True, labelleft=False)
