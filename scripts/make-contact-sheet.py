@@ -19,14 +19,32 @@ BY_RENDER = "render"
 BY_VIEW = "view"
 BY_GEOMETRY = "geometry"
 BY_FAMILY = "family"
-
-BY_CHOICES = [
+BY_FORM = "form"
+BY_COILING = "coiling"
+BY_APERTURE = "aperture"
+BY_AXIS = "axis"
+BY_SPIRE = "spire"
+BY_UMBILICUS = "umbilicus"
+BY_WHORL_CONTACT = "whorl_contact"
+STATIC_BY_CHOICES = [
     BY_SHELL,
     BY_RENDER,
-    BY_VIEW,
-    BY_GEOMETRY,
-    BY_FAMILY
+    BY_VIEW
 ]
+
+CLASSIFICATION_BY_CHOICES = [
+    BY_GEOMETRY,
+    BY_FAMILY,
+    BY_FORM,
+    BY_COILING,
+    BY_APERTURE,
+    BY_AXIS,
+    BY_SPIRE,
+    BY_UMBILICUS,
+    BY_WHORL_CONTACT
+]
+
+BY_CHOICES = STATIC_BY_CHOICES + CLASSIFICATION_BY_CHOICES
 
 
 def print_message(
@@ -71,20 +89,37 @@ def parse_filter_by_value(value):
     return {property: filter_value}
 
 
+def flatten_classification(
+    classification: dict
+) -> dict:
+    """
+    Flatten classification leaves for filtering and grouping.
+
+    :param classification: Preset classification dictionary
+    :return: Flat dictionary of classification leaf values
+    """
+    morphology = classification.get("morphology", {})
+    return {
+        "family": classification.get("family", ""),
+        "geometry": classification.get("geometry", ""),
+        **morphology
+    }
+
+
 def attach_preset_properties(
     contact_sheet_config: dict,
     presets_folder: Path
 ):
     """
-    For each preset referenced by the contact sheet, attach geometry, form and family
-    information for captioning
+    For each preset referenced by the contact sheet, attach classification
+    information for captioning, filtering and grouping
     
     :param contact_sheet_config: Contact sheet configuration dictionary
     :param presets_folder: Folder containing the presets
     """
 
-    # Iterate over and load each preset and merge the geometry, form and family into the
-    # contact sheet config
+    # Iterate over and load each preset and merge classification leaves into the
+    # contact sheet config.
     preset_names = {f["preset"] for f in contact_sheet_config["files"]}
     for preset in preset_names:
         # Load this preset
@@ -92,22 +127,18 @@ def attach_preset_properties(
             preset_config = json.load(f)
 
             # Extract the properties to attach to the contact sheet entries
-            geometry = preset_config["geometry"]
-            form = preset_config["form"]
-            family = preset_config["family"]
+            classification = flatten_classification(preset_config["classification"])
 
             # Construct display names for each
-            geometry_name = " ".join(preset_config["geometry"].split("-")).title()
-            form_name = " ".join(preset_config["form"].split("-")).title()
-            family_name = " ".join(preset_config["family"].split("-")).title()
+            geometry_name = " ".join(classification.get("geometry", "").split("-")).title()
+            form_name = " ".join(classification.get("form", "").split("-")).title()
+            family_name = " ".join(classification.get("family", "").split("-")).title()
 
             # Find and iterate over matching files
             matching_files = [f for f in contact_sheet_config["files"] if f["preset"] == preset]
             for f in matching_files:
                 # Raw properties
-                f["geometry"] = geometry
-                f["form"] = form
-                f["family"] = family
+                f.update(classification)
 
                 # Caption values
                 f["geometry_name"] = f"{geometry_name} ({form_name})"
@@ -161,7 +192,7 @@ def apply_filters(
     return [
         file
         for file in files
-        if all(file.get(key).casefold() == value.casefold() for key, value in filter_by.items())
+        if all(file.get(key, "").casefold() == value.casefold() for key, value in filter_by.items())
     ]
 
 
@@ -193,14 +224,8 @@ def load_configuration(
     config["files"] = apply_filters(config["files"], filters)
 
     # Apply grouping
-    if group_by == BY_RENDER:
-        config["files"] = sorted(config["files"], key=lambda r: (r["render"], r["shell_type"]))
-    elif group_by == BY_VIEW:
-        config["files"] = sorted(config["files"], key=lambda r: (r["viewpoint"], r["shell_type"]))
-    elif group_by == BY_GEOMETRY:
-        config["files"] = sorted(config["files"], key=lambda r: (r["geometry"], r["shell_type"]))
-    elif group_by == BY_FAMILY:
-        config["files"] = sorted(config["files"], key=lambda r: (r["family"], r["shell_type"]))
+    if group_by in {*STATIC_BY_CHOICES[1:], *CLASSIFICATION_BY_CHOICES}:
+        config["files"] = sorted(config["files"], key=lambda r: (r.get(group_by, ""), r["shell_type"]))
     else:
         config["files"] = sorted(config["files"], key=lambda r: (r["shell_type"]))
 

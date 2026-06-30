@@ -1,9 +1,15 @@
 {
   "name": "Orthocone-Like Shell",
   "description": "A straight-shelled cephalopod form generated through linear growth, with internal chamber septa and a longitudinal siphuncle",
-  "geometry": "centreline-conical",
-  "form": "straight",
-  "family": "straight-shelled-cephalopod",
+  "classification": {
+    "family": "orthoceratoid",
+    "geometry": "centreline-conical",
+    "morphology": {
+      "form": "orthoconic",
+      "coiling": "none",
+      "axis": "straight"
+    }
+  },
   "growth": {
     "mode": "orthocone",
     "length": 10.0,
@@ -19,17 +25,14 @@
     "z_scale": 0.0,
     "automatic_z_path": false,
     "aperture_points": 64,
-
     "ribbing_enabled": false,
-    "ribbing_amplitude": 0.00,
+    "ribbing_amplitude": 0.0,
     "ribbing_frequency": 0,
     "ribbing_mode": "sinusoidal",
-
     "lip_enabled": false,
     "lip_start": 0.0,
     "lip_strength": 0.0,
     "lip_power": 0,
-
     "wall_enabled": true,
     "wall_thickness": 0.025,
     "inner_surface_colour_shift": -0.18,
