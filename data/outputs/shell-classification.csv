@@ -1,0 +1,13 @@
+filename,geometry,family,form,coiling,umbilicus,whorl_contact,axis,spire,aperture
+ammonite,log-spiral,ammonoid,coiled-cephalopod,planispiral,moderate,touching,,,
+annulated-orthocone,centreline-conical,orthoceratoid,orthoconic,none,,,straight,,
+crioceratite,log-spiral,ammonoid,crioconic,open-planispiral,open,detached,,,
+cyrtocone,centreline-conical,orthoceratoid,cyrtoconic,none,,,curved,,
+flared,log-spiral,gastropod,flared,low-spired,,,,low,expanded
+nautilus,log-spiral,nautiloid,nautiliconic,planispiral,narrow,overlapping,,,
+orthocone,centreline-conical,orthoceratoid,orthoconic,none,,,straight,,
+ramshorn,log-spiral,gastropod,planispiral,planispiral,wide,touching,,,
+serpenticone,log-spiral,ammonoid,serpenticonic,planispiral,wide,touching,,,
+smooth-nautilus,log-spiral,nautiloid,nautiliconic,planispiral,narrow,overlapping,,,
+turritella-helix,conical-helix,gastropod,turriform,high-spired,,stacked,,high,
+turritella,log-spiral,gastropod,turriform,high-spired,,stacked,,high,
