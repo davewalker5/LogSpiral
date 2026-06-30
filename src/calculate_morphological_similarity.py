@@ -289,6 +289,17 @@ def draw_dendrogram_node(ax, node: dict) -> None:
     draw_dendrogram_node(ax, right)
 
 
+def draw_dendrogram_leaf_extensions(ax, y_positions: list[float]) -> None:
+    """
+    Draw terminal branches from each leaf node to the label edge.
+
+    :param ax: Matplotlib axes to draw on
+    :param y_positions: Y-axis positions for dendrogram leaves
+    """
+    for y_position in y_positions:
+        ax.plot([100.0, 102.0], [y_position, y_position], color="#9c2f1a", linewidth=1.8)
+
+
 def write_dendrogram_png(presets, weights, output_file: Path) -> None:
     """
     Write a similarity dendrogram as a PNG image.
@@ -310,9 +321,11 @@ def write_dendrogram_png(presets, weights, output_file: Path) -> None:
     height = max(8.0, min(18.0, len(presets) * 0.55))
     fig, ax = plt.subplots(figsize=(12.0, height), constrained_layout=True)
     draw_dendrogram_node(ax, root)
+    draw_dendrogram_leaf_extensions(ax, y_positions)
     ax.set_title("Morphological Similarity Dendrogram")
     ax.set_xlabel("Merge similarity (%)")
-    ax.set_xlim(left=0.0, right=100.0)
+    ax.set_xlim(left=0.0, right=102.0)
+    ax.set_xticks([0, 20, 40, 60, 80, 100])
     ax.set_yticks(y_positions, labels=labels)
     ax.yaxis.tick_right()
     ax.tick_params(axis="y", labelright=True, labelleft=False)
