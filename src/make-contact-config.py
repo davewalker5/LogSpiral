@@ -5,7 +5,7 @@ from datetime import datetime
 
 DEFAULT_CONTACT_SHEET_IMAGE_NAME = "contact-sheet"
 DEFAULT_INPUT_FOLDER = Path(__file__).parent.parent / "renders"
-DEFAULT_OUTPUT_FILE = Path(__file__).parent.parent / "data" / "contact-sheet.config"
+DEFAULT_OUTPUT_FILE = Path(__file__).parent.parent / "data" / "config" / "contact-sheet.config"
 
 
 def print_message(
@@ -107,7 +107,7 @@ def main() -> None:
     """
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input", type=Path, default=DEFAULT_INPUT_FOLDER,
-                        help="Input folder containing the images to add to the config")
+                        help="Input folder containing the presets to add to the config")
     parser.add_argument("-e", "--exclude", nargs="+", type=str,
                         help="List of file names to exclude (without path and extension)")
     parser.add_argument("-o", "--output", default=DEFAULT_OUTPUT_FILE, help="Output configuration file name")

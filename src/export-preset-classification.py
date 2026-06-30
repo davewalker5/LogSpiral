@@ -4,7 +4,7 @@ import json
 import sys
 from pathlib import Path
 
-DEFAULT_INPUT_FOLDER = Path(__file__).parent.parent / "data"
+DEFAULT_INPUT_FOLDER = Path(__file__).parent.parent / "data" / "presets"
 DEFAULT_CLASSIFICATION_FIELDS = ["geometry", "family"]
 
 

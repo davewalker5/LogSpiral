@@ -13,5 +13,5 @@ declare -a GROUPINGS=(
 
 
 for grouping in "${GROUPINGS[@]}"; do
-    python "$PROJECT_ROOT/scripts/make-contact-sheet.py" --group-by $grouping
+    python "$PROJECT_ROOT/src/make-contact-sheet.py" --group-by $grouping
 done

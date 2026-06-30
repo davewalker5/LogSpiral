@@ -7,8 +7,8 @@ from datetime import datetime
 
 CAPTION_Y_OFFSET = 24
 
-DEFAULT_PRESETS_FOLDER = Path(__file__).parent.parent / "data"
-DEFAULT_CONFIG_FILE = DEFAULT_PRESETS_FOLDER / "contact-sheet.config"
+DEFAULT_PRESETS_FOLDER = Path(__file__).parent.parent / "data" / "presets"
+DEFAULT_CONFIG_FILE = Path(__file__).parent.parent / "data" / "config" / "contact-sheet.config"
 DEFAULT_OUTPUT_FILE = Path(__file__).parent.parent / "renders" / "contact-sheet"
 DEFAULT_ROWS = 0
 DEFAULT_COLS = 6
