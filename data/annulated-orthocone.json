@@ -1,9 +1,15 @@
 {
   "name": "Annulated Orthocone-Like Shell",
   "description": "A straight-shelled cephalopod form generated through linear growth, with annulated shell ornamentation, internal chamber septa and a longitudinal siphuncle",
-  "geometry": "centreline-conical",
-  "form": "straight",
-  "family": "straight-shelled-cephalopod",
+  "classification": {
+    "family": "orthoceratoid",
+    "geometry": "centreline-conical",
+    "morphology": {
+      "form": "orthoconic",
+      "coiling": "none",
+      "axis": "straight"
+    }
+  },
   "growth": {
     "mode": "orthocone",
     "length": 10.0,
@@ -19,7 +25,6 @@
     "z_scale": 0.0,
     "automatic_z_path": false,
     "aperture_points": 64,
-
     "ribbing_enabled": true,
     "ribbing_amplitude": 0.05,
     "ribbing_frequency": 3,
@@ -27,12 +32,10 @@
     "segment_to_septum_ratio": 0.5,
     "ribbing_groove_width": 0.22,
     "ribbing_groove_depth": 1.15,
-
     "lip_enabled": false,
     "lip_start": 0.0,
     "lip_strength": 0.0,
     "lip_power": 0,
-
     "wall_enabled": true,
     "wall_thickness": 0.025,
     "inner_surface_colour_shift": -0.18,
