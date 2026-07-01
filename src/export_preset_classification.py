@@ -67,7 +67,7 @@ def write_csv(rows: list[dict[str, str]], output_file: Path | None = None) -> No
     Write extracted rows as CSV.
 
     :param rows: CSV row dictionaries
-    :param output_file: Optional output file path. Writes to stdout when omitted.
+    :param output_file: Optional output file path
     """
     if output_file:
         output_file.parent.mkdir(parents=True, exist_ok=True)
@@ -77,24 +77,38 @@ def write_csv(rows: list[dict[str, str]], output_file: Path | None = None) -> No
             writer.writerows(rows)
         return
 
-    writer = csv.DictWriter(sys.stdout, fieldnames=get_csv_fields(rows), restval="")
-    writer.writeheader()
-    writer.writerows(rows)
+
+def write_json(rows: list[dict[str, str]], output_file: Path) -> None:
+    """
+    Write extracted rows as JSON.
+
+    :param rows: Classification row dictionaries
+    :param output_file: Output JSON file path
+    """
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+    with output_file.open("w", encoding="utf-8") as f:
+        json.dump(rows, f, indent=2)
+        f.write("\n")
 
 
 def main() -> None:
     """
-    Entry point for the preset taxonomy CSV exporter.
+    Entry point for the preset taxonomy exporter.
     """
     parser = argparse.ArgumentParser()
     parser.add_argument("-i", "--input", type=Path, default=DEFAULT_INPUT_FOLDER,
                         help="Input folder containing JSON preset files")
-    parser.add_argument("-o", "--output", type=Path,
-                        help="Output CSV file. Prints to stdout when omitted")
+    parser.add_argument("-c", "--csv", dest="csv", type=Path, help="Output CSV file")
+    parser.add_argument("-j", "--json", type=Path, help="Output JSON file")
     args = parser.parse_args()
 
     rows = collect_rows(Path(args.input))
-    write_csv(rows, args.output)
+
+    if args.csv:
+        write_csv(rows, args.csv)
+
+    if args.json:
+        write_json(rows, args.json)
 
 
 if __name__ == "__main__":

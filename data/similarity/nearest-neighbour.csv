@@ -1,0 +1,13 @@
+shell,closest_shell,closest_similarity,most_distinct_shell,most_distinct_similarity
+Ammonite-Like Shell,Serpenticone Ammonite-Like Shell,66.7,Annulated Orthocone-Like Shell,0.0
+Annulated Orthocone-Like Shell,Orthocone-Like Shell (orthocone),100.0,Ammonite-Like Shell,0.0
+Crioceratite-Like Shell,Serpenticone Ammonite-Like Shell,33.3,Annulated Orthocone-Like Shell,0.0
+Orthocone-Like Shell (cyrtocone),Orthocone-Like Shell (orthocone),60.0,Ammonite-Like Shell,0.0
+Flared Shell,Turritella-Like Tower Shell (turritella),28.6,Annulated Orthocone-Like Shell,0.0
+Nautilus-Like Shell,Nautilus-Like Shell with Smooth Surface,100.0,Annulated Orthocone-Like Shell,0.0
+Orthocone-Like Shell (orthocone),Annulated Orthocone-Like Shell,100.0,Ammonite-Like Shell,0.0
+Ramshorn-Like Shell,Serpenticone Ammonite-Like Shell,66.7,Annulated Orthocone-Like Shell,0.0
+Serpenticone Ammonite-Like Shell,Ramshorn-Like Shell,66.7,Annulated Orthocone-Like Shell,0.0
+Nautilus-Like Shell with Smooth Surface,Nautilus-Like Shell,100.0,Annulated Orthocone-Like Shell,0.0
+Turritella-Like Tower Shell (turritella-helix),Turritella-Like Tower Shell (turritella),83.3,Ammonite-Like Shell,0.0
+Turritella-Like Tower Shell (turritella),Turritella-Like Tower Shell (turritella-helix),83.3,Annulated Orthocone-Like Shell,0.0

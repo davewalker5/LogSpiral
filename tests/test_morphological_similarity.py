@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 
 
-sys.path.insert(0, str(Path(__file__).parent.parent / "scripts"))
+sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from morphological_similarity import ShellPreset, compare_presets, display_names
 

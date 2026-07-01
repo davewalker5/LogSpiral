@@ -142,3 +142,4 @@ cython_debug/
 .idea/
 proto/
 frames/
+morphospace-explorer.html
