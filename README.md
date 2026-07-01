@@ -7,16 +7,7 @@
 
 # LogSpiral - Procedural Shell Morphology
 
-<table>
-  <tr>
-    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/ammonite-opaque-presentation.png" width="100%"></td>
-    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/ammonite-transparent-top.png" width="100%"></td>
-  </tr>
-  <tr>
-    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/turritella-opaque-presentation.png" width="100%"></td>
-    <td><img src="https://github.com/davewalker5/LogSpiral/blob/main/images/smooth-nautilus-opaque-presentation.png" width="100%"></td>
-  </tr>
-</table>
+<img src="https://github.com/davewalker5/LogSpiral/blob/main/images/morphospace-explorer.png" width="100%">
 
 This project explores computational shell morphology through mathematical growth models, procedural geometry and quantitative morphological analysis.
 
