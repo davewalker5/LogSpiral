@@ -742,11 +742,11 @@ def main() -> None:
                         help="Input folder containing precomputed shell mesh folders")
     parser.add_argument("-o", "--output", type=Path, default=DEFAULT_OUTPUT_FILE,
                         help="Output HTML file")
-    parser.add_argument("-pr" "--mesh-url-prefix",
+    parser.add_argument("-pr", "--mesh-url-prefix",
                         help="URL/path prefix used by the generated page to fetch mesh JSON files")
     parser.add_argument("-s", "--serve", action="store_true",
                         help="Start a local HTTP server after writing the explorer HTML")
-    parser.add_argument("-h", "--host", default="127.0.0.1", help="Host for --serve")
+    parser.add_argument("-ho", "--host", default="127.0.0.1", help="Host for --serve")
     parser.add_argument("-p", "--port", type=int, default=8000,
                         help="Port for --serve; use 0 to choose an available port")
     args = parser.parse_args()
