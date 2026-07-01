@@ -8,8 +8,10 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from morphospace_explorer import (
+    append_query,
     build_records,
     classification_fields,
+    current_asset_version,
     explorer_payload,
     filter_options,
     output_url_path,
@@ -46,6 +48,64 @@ class MorphospaceExplorerTests(unittest.TestCase):
         self.assertEqual(records[0].meshes["shell"], "meshes/ammonite/shell.json")
         self.assertEqual(records[0].meshes["siphuncle"], "meshes/ammonite/siphuncle.json")
         self.assertNotIn("chamber-septa", records[0].meshes)
+
+    def test_current_asset_version_uses_timestamp_format(self):
+        self.assertRegex(current_asset_version(), r"^\d{14}$")
+
+    def test_records_can_version_mesh_urls(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            mesh_folder = Path(tmp)
+            shell_folder = mesh_folder / "ammonite"
+            shell_folder.mkdir()
+            (shell_folder / "shell.json").write_text("{}", encoding="utf-8")
+
+            records = build_records(
+                [{"filename": "ammonite", "family": "ammonoid"}],
+                ["family"],
+                mesh_folder,
+                "https://assets.example.test/meshes",
+                "20260701",
+            )
+
+        self.assertEqual(
+            records[0].meshes["shell"],
+            "https://assets.example.test/meshes/ammonite/shell.json?v=20260701",
+        )
+
+    def test_append_query_preserves_existing_query_parameters(self):
+        url = append_query("https://assets.example.test/meshes/shell.json?x=1", {"v": "20260701"})
+
+        self.assertEqual(url, "https://assets.example.test/meshes/shell.json?x=1&v=20260701")
+
+    def test_write_explorer_versions_mesh_urls_by_default(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            classification_file = tmp_path / "classification.json"
+            mesh_folder = tmp_path / "meshes"
+            output_file = tmp_path / "explorer.html"
+            shell_folder = mesh_folder / "ammonite"
+            shell_folder.mkdir(parents=True)
+            classification_file.write_text(
+                json.dumps([{"filename": "ammonite", "family": "ammonoid"}]),
+                encoding="utf-8",
+            )
+            (shell_folder / "shell.json").write_text("{}", encoding="utf-8")
+
+            from morphospace_explorer import write_explorer
+
+            write_explorer(
+                classification_file=classification_file,
+                mesh_folder=mesh_folder,
+                output_file=output_file,
+                mesh_url_prefix="https://assets.example.test/meshes",
+            )
+
+            html = output_file.read_text(encoding="utf-8")
+
+        self.assertRegex(
+            html,
+            r"https://assets[.]example[.]test/meshes/ammonite/shell[.]json[?]v=\d{14}",
+        )
 
     def test_filter_options_exclude_missing_values(self):
         records = [
