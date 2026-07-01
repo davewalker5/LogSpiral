@@ -1,18 +1,21 @@
 from __future__ import annotations
 
 import argparse
+from datetime import datetime
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 import json
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlencode
 
 
 PROJECT_ROOT = Path(__file__).parent.parent
 DEFAULT_CLASSIFICATION_FILE = PROJECT_ROOT / "data" / "similarity" / "shell-classification.json"
 DEFAULT_MESH_FOLDER = PROJECT_ROOT / "data" / "meshes"
 DEFAULT_OUTPUT_FILE = PROJECT_ROOT / "data" / "morphospace-explorer.html"
+DEFAULT_ASSET_VERSION = datetime.now().strftime("%Y%m%d%H%M%S")
 MESH_PARTS = ("shell", "chamber-septa", "siphuncle")
 
 
@@ -77,7 +80,27 @@ def classification_fields(rows: list[dict[str, Any]]) -> list[str]:
     return fields
 
 
-def mesh_manifest(filename: str, mesh_folder: Path, mesh_url_prefix: str) -> dict[str, str]:
+def append_query(url: str, params: dict[str, str]) -> str:
+    """
+    Append query parameters to a URL or URL path.
+
+    :param url: Base URL or path
+    :param params: Query parameters to append
+    :return: URL with query parameters
+    """
+    if not params:
+        return url
+
+    separator = "&" if "?" in url else "?"
+    return f"{url}{separator}{urlencode(params)}"
+
+
+def mesh_manifest(
+    filename: str,
+    mesh_folder: Path,
+    mesh_url_prefix: str,
+    mesh_asset_version: str | None = None,
+) -> dict[str, str]:
     """
     Build URL mappings for the mesh files available for one shell.
 
@@ -90,7 +113,11 @@ def mesh_manifest(filename: str, mesh_folder: Path, mesh_url_prefix: str) -> dic
     for part in MESH_PARTS:
         mesh_file = mesh_folder / filename / f"{part}.json"
         if mesh_file.exists():
-            meshes[part] = f"{mesh_url_prefix.rstrip('/')}/{filename}/{part}.json"
+            mesh_url = f"{mesh_url_prefix.rstrip('/')}/{filename}/{part}.json"
+            meshes[part] = append_query(
+                mesh_url,
+                {"v": mesh_asset_version} if mesh_asset_version else {},
+            )
 
     if "shell" not in meshes:
         raise FileNotFoundError(f"Missing required shell mesh: {mesh_folder / filename / 'shell.json'}")
@@ -103,6 +130,7 @@ def build_records(
     fields: list[str],
     mesh_folder: Path,
     mesh_url_prefix: str,
+    mesh_asset_version: str | None = None,
 ) -> list[ShellRecord]:
     """
     Combine classification metadata with a mesh availability manifest.
@@ -124,7 +152,12 @@ def build_records(
                     for field in fields
                     if row.get(field) not in ("", None)
                 },
-                meshes=mesh_manifest(filename, mesh_folder, mesh_url_prefix),
+                meshes=mesh_manifest(
+                    filename,
+                    mesh_folder,
+                    mesh_url_prefix,
+                    mesh_asset_version,
+                ),
             )
         )
     return records
@@ -670,6 +703,7 @@ def write_explorer(
     mesh_folder: Path = DEFAULT_MESH_FOLDER,
     output_file: Path = DEFAULT_OUTPUT_FILE,
     mesh_url_prefix: str | None = None,
+    mesh_asset_version: str | None = DEFAULT_ASSET_VERSION,
 ) -> None:
     """
     Write a static Morphospace Explorer HTML file.
@@ -678,13 +712,14 @@ def write_explorer(
     :param mesh_folder: Local mesh folder
     :param output_file: Output HTML file
     :param mesh_url_prefix: Optional mesh URL/path prefix for HTML fetches
+    :param mesh_asset_version: Version appended to mesh URLs as a query string
     """
     if mesh_url_prefix is None:
         mesh_url_prefix = str(Path("../data/meshes"))
 
     rows = load_classification(classification_file)
     fields = classification_fields(rows)
-    records = build_records(rows, fields, mesh_folder, mesh_url_prefix)
+    records = build_records(rows, fields, mesh_folder, mesh_url_prefix, mesh_asset_version)
     html = render_html(explorer_payload(records, fields))
 
     output_file.parent.mkdir(parents=True, exist_ok=True)
@@ -744,6 +779,8 @@ def main() -> None:
                         help="Output HTML file")
     parser.add_argument("-pr", "--mesh-url-prefix",
                         help="URL/path prefix used by the generated page to fetch mesh JSON files")
+    parser.add_argument("-mv", "--mesh-asset-version", default=DEFAULT_ASSET_VERSION,
+                        help="Version appended to mesh URLs, defaulting to the current date and timestamp")
     parser.add_argument("-s", "--serve", action="store_true",
                         help="Start a local HTTP server after writing the explorer HTML")
     parser.add_argument("-ho", "--host", default="127.0.0.1", help="Host for --serve")
@@ -756,6 +793,7 @@ def main() -> None:
         mesh_folder=args.meshes,
         output_file=args.output,
         mesh_url_prefix=args.mesh_url_prefix,
+        mesh_asset_version=args.mesh_asset_version,
     )
 
     if args.serve:
