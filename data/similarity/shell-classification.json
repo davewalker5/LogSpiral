@@ -1,0 +1,107 @@
+[
+  {
+    "filename": "ammonite",
+    "geometry": "log-spiral",
+    "family": "ammonoid",
+    "form": "coiled-cephalopod",
+    "coiling": "planispiral",
+    "umbilicus": "moderate",
+    "whorl_contact": "touching"
+  },
+  {
+    "filename": "annulated-orthocone",
+    "geometry": "centreline-conical",
+    "family": "orthoceratoid",
+    "form": "orthoconic",
+    "coiling": "none",
+    "axis": "straight"
+  },
+  {
+    "filename": "crioceratite",
+    "geometry": "log-spiral",
+    "family": "ammonoid",
+    "form": "crioconic",
+    "coiling": "open-planispiral",
+    "umbilicus": "open",
+    "whorl_contact": "detached"
+  },
+  {
+    "filename": "cyrtocone",
+    "geometry": "centreline-conical",
+    "family": "orthoceratoid",
+    "form": "cyrtoconic",
+    "coiling": "none",
+    "axis": "curved"
+  },
+  {
+    "filename": "flared",
+    "geometry": "log-spiral",
+    "family": "gastropod",
+    "form": "flared",
+    "coiling": "low-spired",
+    "spire": "low",
+    "aperture": "expanded"
+  },
+  {
+    "filename": "nautilus",
+    "geometry": "log-spiral",
+    "family": "nautiloid",
+    "form": "nautiliconic",
+    "coiling": "planispiral",
+    "umbilicus": "narrow",
+    "whorl_contact": "overlapping"
+  },
+  {
+    "filename": "orthocone",
+    "geometry": "centreline-conical",
+    "family": "orthoceratoid",
+    "form": "orthoconic",
+    "coiling": "none",
+    "axis": "straight"
+  },
+  {
+    "filename": "ramshorn",
+    "geometry": "log-spiral",
+    "family": "gastropod",
+    "form": "planispiral",
+    "coiling": "planispiral",
+    "umbilicus": "wide",
+    "whorl_contact": "touching"
+  },
+  {
+    "filename": "serpenticone",
+    "geometry": "log-spiral",
+    "family": "ammonoid",
+    "form": "serpenticonic",
+    "coiling": "planispiral",
+    "umbilicus": "wide",
+    "whorl_contact": "touching"
+  },
+  {
+    "filename": "smooth-nautilus",
+    "geometry": "log-spiral",
+    "family": "nautiloid",
+    "form": "nautiliconic",
+    "coiling": "planispiral",
+    "umbilicus": "narrow",
+    "whorl_contact": "overlapping"
+  },
+  {
+    "filename": "turritella-helix",
+    "geometry": "conical-helix",
+    "family": "gastropod",
+    "form": "turriform",
+    "coiling": "high-spired",
+    "spire": "high",
+    "whorl_contact": "stacked"
+  },
+  {
+    "filename": "turritella",
+    "geometry": "log-spiral",
+    "family": "gastropod",
+    "form": "turriform",
+    "coiling": "high-spired",
+    "spire": "high",
+    "whorl_contact": "stacked"
+  }
+]
