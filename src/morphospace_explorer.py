@@ -15,7 +15,16 @@ PROJECT_ROOT = Path(__file__).parent.parent
 DEFAULT_CLASSIFICATION_FILE = PROJECT_ROOT / "data" / "similarity" / "shell-classification.json"
 DEFAULT_MESH_FOLDER = PROJECT_ROOT / "data" / "meshes"
 DEFAULT_OUTPUT_FILE = PROJECT_ROOT / "data" / "morphospace-explorer.html"
-DEFAULT_ASSET_VERSION = datetime.now().strftime("%Y%m%d%H%M%S")
+def current_asset_version() -> str:
+    """
+    Build a timestamp suitable for mesh asset cache busting.
+
+    :return: Current timestamp as YYYYMMDDHHMMSS
+    """
+    return datetime.now().strftime("%Y%m%d%H%M%S")
+
+
+DEFAULT_ASSET_VERSION = current_asset_version()
 MESH_PARTS = ("shell", "chamber-septa", "siphuncle")
 
 
@@ -222,6 +231,14 @@ HTML_TEMPLATE = r"""<!doctype html>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Morphospace Explorer</title>
+  <script>
+    (() => {
+      const localHosts = new Set(["localhost", "127.0.0.1", "::1", "[::1]"]);
+      if (window.location.protocol === "http:" && !localHosts.has(window.location.hostname)) {
+        window.location.replace(`https:${window.location.href.slice(window.location.protocol.length)}`);
+      }
+    })();
+  </script>
   <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
   <style>
     :root {
