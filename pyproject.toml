@@ -21,3 +21,6 @@ dependencies = [
 
 [tool.setuptools]
 py-modules = []
+
+[tool.poetry]
+package-mode = false

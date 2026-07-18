@@ -143,3 +143,7 @@ cython_debug/
 proto/
 frames/
 morphospace-explorer.html
+
+# Streamlit generates its static explorer and mesh mirror at startup.
+src/static/*
+!src/static/.gitkeep
