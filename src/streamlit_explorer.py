@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 import shutil
 from pathlib import Path
+from urllib.parse import urljoin
 
 from morphospace_explorer import (
     DEFAULT_CLASSIFICATION_FILE,
@@ -61,6 +62,7 @@ def prepare_streamlit_explorer(
     classification_file: Path = DEFAULT_CLASSIFICATION_FILE,
     mesh_folder: Path = DEFAULT_MESH_FOLDER,
     static_folder: Path = DEFAULT_STATIC_FOLDER,
+    mesh_url_prefix: str = "/app/static/meshes",
 ) -> Path:
     """Prepare the existing explorer and its meshes for Streamlit static serving."""
     static_mesh_folder = static_folder / "meshes"
@@ -71,9 +73,14 @@ def prepare_streamlit_explorer(
         classification_file=classification_file,
         mesh_folder=mesh_folder,
         output_file=output_file,
-        mesh_url_prefix="/app/static/meshes",
+        mesh_url_prefix=mesh_url_prefix,
     )
     return output_file
+
+
+def streamlit_mesh_url(app_url: str) -> str:
+    """Build an absolute static mesh URL from Streamlit's browser-visible URL."""
+    return urljoin(app_url.rstrip("/") + "/", "app/static/meshes")
 
 
 def main() -> None:
@@ -83,7 +90,9 @@ def main() -> None:
     st.set_page_config(page_title="Morphospace Explorer", layout="wide")
 
     try:
-        explorer_file = prepare_streamlit_explorer()
+        explorer_file = prepare_streamlit_explorer(
+            mesh_url_prefix=streamlit_mesh_url(st.context.url),
+        )
     except (FileNotFoundError, ValueError) as exc:
         st.error(f"Unable to prepare the Morphospace Explorer: {exc}")
         st.stop()
