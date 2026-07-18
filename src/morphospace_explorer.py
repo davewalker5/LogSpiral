@@ -233,6 +233,19 @@ HTML_TEMPLATE = r"""<!doctype html>
   <title>Morphospace Explorer</title>
   <script>
     (() => {
+      if (window.parent !== window) {
+        window.parent.postMessage({
+          isStreamlitMessage: true,
+          type: "streamlit:componentReady",
+          apiVersion: 1,
+        }, "*");
+        window.parent.postMessage({
+          isStreamlitMessage: true,
+          type: "streamlit:setFrameHeight",
+          height: 900,
+        }, "*");
+      }
+
       const localHosts = new Set(["localhost", "127.0.0.1", "::1", "[::1]"]);
       if (window.location.protocol === "http:" && !localHosts.has(window.location.hostname)) {
         window.location.replace(`https:${window.location.href.slice(window.location.protocol.length)}`);
