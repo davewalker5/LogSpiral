@@ -7,7 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
-from streamlit_explorer import mirror_meshes, prepare_streamlit_explorer, streamlit_mesh_url
+from streamlit_explorer import mirror_meshes, prepare_streamlit_explorer
 
 
 class StreamlitExplorerTests(unittest.TestCase):
@@ -50,18 +50,8 @@ class StreamlitExplorerTests(unittest.TestCase):
             output = prepare_streamlit_explorer(classification, meshes, static)
 
             html = output.read_text(encoding="utf-8")
-            self.assertIn("/app/static/meshes/ammonite/shell.json", html)
+            self.assertIn("meshes/ammonite/shell.json", html)
             self.assertTrue((static / "meshes" / "ammonite" / "shell.json").exists())
-
-    def test_streamlit_mesh_url_uses_browser_visible_app_url(self):
-        self.assertEqual(
-            streamlit_mesh_url("https://logspiral.streamlit.app"),
-            "https://logspiral.streamlit.app/app/static/meshes",
-        )
-        self.assertEqual(
-            streamlit_mesh_url("http://localhost:8501/explorer"),
-            "http://localhost:8501/explorer/app/static/meshes",
-        )
 
 
 if __name__ == "__main__":

@@ -3,7 +3,6 @@ from __future__ import annotations
 import os
 import shutil
 from pathlib import Path
-from urllib.parse import urljoin
 
 from morphospace_explorer import (
     DEFAULT_CLASSIFICATION_FILE,
@@ -15,7 +14,7 @@ from morphospace_explorer import (
 PROJECT_ROOT = Path(__file__).parent.parent
 DEFAULT_STATIC_FOLDER = Path(__file__).parent / "static"
 DEFAULT_STATIC_MESH_FOLDER = DEFAULT_STATIC_FOLDER / "meshes"
-DEFAULT_STATIC_EXPLORER = DEFAULT_STATIC_FOLDER / "morphospace-explorer.html"
+DEFAULT_STATIC_EXPLORER = DEFAULT_STATIC_FOLDER / "index.html"
 
 
 def link_or_copy(source: Path, destination: Path) -> None:
@@ -62,11 +61,11 @@ def prepare_streamlit_explorer(
     classification_file: Path = DEFAULT_CLASSIFICATION_FILE,
     mesh_folder: Path = DEFAULT_MESH_FOLDER,
     static_folder: Path = DEFAULT_STATIC_FOLDER,
-    mesh_url_prefix: str = "/app/static/meshes",
+    mesh_url_prefix: str = "meshes",
 ) -> Path:
     """Prepare the existing explorer and its meshes for Streamlit static serving."""
     static_mesh_folder = static_folder / "meshes"
-    output_file = static_folder / "morphospace-explorer.html"
+    output_file = static_folder / "index.html"
 
     mirror_meshes(mesh_folder, static_mesh_folder)
     write_explorer(
@@ -78,30 +77,24 @@ def prepare_streamlit_explorer(
     return output_file
 
 
-def streamlit_mesh_url(app_url: str) -> str:
-    """Build an absolute static mesh URL from Streamlit's browser-visible URL."""
-    return urljoin(app_url.rstrip("/") + "/", "app/static/meshes")
-
-
 def main() -> None:
     """Run the Morphospace Explorer inside Streamlit."""
     import streamlit as st
+    import streamlit.components.v1 as components
 
     st.set_page_config(page_title="Morphospace Explorer", layout="wide")
 
     try:
-        explorer_file = prepare_streamlit_explorer(
-            mesh_url_prefix=streamlit_mesh_url(st.context.url),
-        )
+        explorer_file = prepare_streamlit_explorer()
     except (FileNotFoundError, ValueError) as exc:
         st.error(f"Unable to prepare the Morphospace Explorer: {exc}")
         st.stop()
 
-    st.iframe(
-        explorer_file,
-        width="stretch",
-        height=900,
+    explorer_component = components.declare_component(
+        "morphospace_explorer",
+        path=explorer_file.parent,
     )
+    explorer_component(key="morphospace-explorer")
 
 
 if __name__ == "__main__":
