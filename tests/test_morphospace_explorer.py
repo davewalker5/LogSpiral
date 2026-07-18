@@ -137,6 +137,8 @@ class MorphospaceExplorerTests(unittest.TestCase):
         self.assertIn("window.location.replace", html)
         self.assertIn('"127.0.0.1"', html)
         self.assertIn("Local file mode cannot load mesh JSON", html)
+        self.assertIn("Morphospace Explorer failed while", html)
+        self.assertIn("await Plotly.react", html)
         self.assertIn('paper_bgcolor: "#000000"', html)
         self.assertIn("const YL_OR_BR_COLORSCALE = [", html)
         self.assertIn('trace.colorscale = YL_OR_BR_COLORSCALE', html)

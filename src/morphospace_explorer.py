@@ -584,23 +584,37 @@ HTML_TEMPLATE = r"""<!doctype html>
       plotElement.className = "loading-state";
       plotElement.textContent = "Loading geometry...";
 
+      let stage = "starting geometry load";
       try {
         const traces = [];
-        traces.push(makeTrace("shell", await loadMesh(shell.meshes.shell), shell));
+        stage = `loading shell mesh from ${shell.meshes.shell}`;
+        const shellMesh = await loadMesh(shell.meshes.shell);
+        stage = "building shell trace";
+        traces.push(makeTrace("shell", shellMesh, shell));
 
         if (shell.meshes["chamber-septa"]) {
-          traces.push(makeTrace("chamber-septa", await loadMesh(shell.meshes["chamber-septa"]), shell));
+          stage = `loading chamber-septa mesh from ${shell.meshes["chamber-septa"]}`;
+          const chamberMesh = await loadMesh(shell.meshes["chamber-septa"]);
+          stage = "building chamber-septa trace";
+          traces.push(makeTrace("chamber-septa", chamberMesh, shell));
         }
 
         if (shell.meshes.siphuncle) {
-          traces.push(makeTrace("siphuncle", await loadMesh(shell.meshes.siphuncle), shell));
+          stage = `loading siphuncle mesh from ${shell.meshes.siphuncle}`;
+          const siphuncleMesh = await loadMesh(shell.meshes.siphuncle);
+          stage = "building siphuncle trace";
+          traces.push(makeTrace("siphuncle", siphuncleMesh, shell));
         }
 
         state.traces = traces;
-        renderPlot();
+        stage = "rendering Plotly geometry";
+        await renderPlot();
       } catch (error) {
+        console.error(`Morphospace Explorer failed while ${stage}`, error);
         plotElement.className = "error-state";
-        plotElement.textContent = `Unable to load geometry for ${shell.name}: ${error.message}`;
+        const errorName = error?.name ? `${error.name}: ` : "";
+        const errorMessage = error?.message || String(error);
+        plotElement.textContent = `Unable to load geometry for ${shell.name} while ${stage}: ${errorName}${errorMessage}`;
       }
     }
 
@@ -668,7 +682,7 @@ HTML_TEMPLATE = r"""<!doctype html>
       return trace;
     }
 
-    function renderPlot() {
+    async function renderPlot() {
       if (!state.selected || state.traces.length === 0) {
         return;
       }
@@ -683,7 +697,7 @@ HTML_TEMPLATE = r"""<!doctype html>
       plotElement.className = "";
       plotElement.textContent = "";
 
-      Plotly.react(plotElement, state.traces, {
+      await Plotly.react(plotElement, state.traces, {
         margin: {l: 0, r: 0, t: 0, b: 0},
         paper_bgcolor: "#000000",
         plot_bgcolor: "#000000",
@@ -705,7 +719,11 @@ HTML_TEMPLATE = r"""<!doctype html>
       }, {responsive: true, displaylogo: false});
     }
 
-    transparentShellElement.addEventListener("change", renderPlot);
+    transparentShellElement.addEventListener("change", () => {
+      renderPlot().catch(error => {
+        console.error("Morphospace Explorer failed while updating shell transparency", error);
+      });
+    });
 
     renderFilters();
     renderShellList();
