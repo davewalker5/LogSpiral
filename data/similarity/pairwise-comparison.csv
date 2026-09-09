@@ -12,6 +12,7 @@ Ammonite-Like Shell,Nautilus-Like Shell with Smooth Surface,0.333333,2,6,geometr
 Ammonite-Like Shell,Turrilites-Like,0.285714,2,7,family; geometry,form; coiling; umbilicus; whorl_contact; spire
 Ammonite-Like Shell,Turritella-Like Tower Shell (turritella-helix),0.000000,0,7,,family; geometry; form; coiling; umbilicus; whorl_contact; spire
 Ammonite-Like Shell,Turritella-Like Tower Shell (turritella),0.142857,1,7,geometry,family; form; coiling; umbilicus; whorl_contact; spire
+Ammonite-Like Shell,Tusk Shell-Like,0.000000,0,7,,family; geometry; form; coiling; umbilicus; whorl_contact; axis
 Annulated Orthocone-Like Shell,Crioceratite-Like Shell,0.000000,0,7,,family; geometry; form; coiling; umbilicus; whorl_contact; axis
 Annulated Orthocone-Like Shell,Orthocone-Like Shell (cyrtocone),0.600000,3,5,family; geometry; coiling,form; axis
 Annulated Orthocone-Like Shell,Flared Shell,0.000000,0,7,,family; geometry; form; coiling; axis; spire; aperture
@@ -24,6 +25,7 @@ Annulated Orthocone-Like Shell,Nautilus-Like Shell with Smooth Surface,0.000000,
 Annulated Orthocone-Like Shell,Turrilites-Like,0.000000,0,7,,family; geometry; form; coiling; whorl_contact; axis; spire
 Annulated Orthocone-Like Shell,Turritella-Like Tower Shell (turritella-helix),0.000000,0,7,,family; geometry; form; coiling; whorl_contact; axis; spire
 Annulated Orthocone-Like Shell,Turritella-Like Tower Shell (turritella),0.000000,0,7,,family; geometry; form; coiling; whorl_contact; axis; spire
+Annulated Orthocone-Like Shell,Tusk Shell-Like,0.400000,2,5,geometry; coiling,family; form; axis
 Crioceratite-Like Shell,Orthocone-Like Shell (cyrtocone),0.000000,0,7,,family; geometry; form; coiling; umbilicus; whorl_contact; axis
 Crioceratite-Like Shell,Flared Shell,0.125000,1,8,geometry,family; form; coiling; umbilicus; whorl_contact; spire; aperture
 Crioceratite-Like Shell,Nautilus-Like Shell,0.166667,1,6,geometry,family; form; coiling; umbilicus; whorl_contact
@@ -35,6 +37,7 @@ Crioceratite-Like Shell,Nautilus-Like Shell with Smooth Surface,0.166667,1,6,geo
 Crioceratite-Like Shell,Turrilites-Like,0.285714,2,7,family; geometry,form; coiling; umbilicus; whorl_contact; spire
 Crioceratite-Like Shell,Turritella-Like Tower Shell (turritella-helix),0.000000,0,7,,family; geometry; form; coiling; umbilicus; whorl_contact; spire
 Crioceratite-Like Shell,Turritella-Like Tower Shell (turritella),0.142857,1,7,geometry,family; form; coiling; umbilicus; whorl_contact; spire
+Crioceratite-Like Shell,Tusk Shell-Like,0.000000,0,7,,family; geometry; form; coiling; umbilicus; whorl_contact; axis
 Orthocone-Like Shell (cyrtocone),Flared Shell,0.000000,0,7,,family; geometry; form; coiling; axis; spire; aperture
 Orthocone-Like Shell (cyrtocone),Nautilus-Like Shell,0.000000,0,7,,family; geometry; form; coiling; umbilicus; whorl_contact; axis
 Orthocone-Like Shell (cyrtocone),Necklace Shell-Like Moon Snail,0.000000,0,7,,family; geometry; form; coiling; whorl_contact; axis; spire
@@ -45,6 +48,7 @@ Orthocone-Like Shell (cyrtocone),Nautilus-Like Shell with Smooth Surface,0.00000
 Orthocone-Like Shell (cyrtocone),Turrilites-Like,0.000000,0,7,,family; geometry; form; coiling; whorl_contact; axis; spire
 Orthocone-Like Shell (cyrtocone),Turritella-Like Tower Shell (turritella-helix),0.000000,0,7,,family; geometry; form; coiling; whorl_contact; axis; spire
 Orthocone-Like Shell (cyrtocone),Turritella-Like Tower Shell (turritella),0.000000,0,7,,family; geometry; form; coiling; whorl_contact; axis; spire
+Orthocone-Like Shell (cyrtocone),Tusk Shell-Like,0.800000,4,5,geometry; form; coiling; axis,family
 Flared Shell,Nautilus-Like Shell,0.125000,1,8,geometry,family; form; coiling; umbilicus; whorl_contact; spire; aperture
 Flared Shell,Necklace Shell-Like Moon Snail,0.571429,4,7,family; geometry; coiling; spire,form; whorl_contact; aperture
 Flared Shell,Orthocone-Like Shell (orthocone),0.000000,0,7,,family; geometry; form; coiling; axis; spire; aperture
@@ -54,6 +58,7 @@ Flared Shell,Nautilus-Like Shell with Smooth Surface,0.125000,1,8,geometry,famil
 Flared Shell,Turrilites-Like,0.142857,1,7,geometry,family; form; coiling; whorl_contact; spire; aperture
 Flared Shell,Turritella-Like Tower Shell (turritella-helix),0.142857,1,7,family,geometry; form; coiling; whorl_contact; spire; aperture
 Flared Shell,Turritella-Like Tower Shell (turritella),0.285714,2,7,family; geometry,form; coiling; whorl_contact; spire; aperture
+Flared Shell,Tusk Shell-Like,0.000000,0,7,,family; geometry; form; coiling; axis; spire; aperture
 Nautilus-Like Shell,Necklace Shell-Like Moon Snail,0.285714,2,7,geometry; whorl_contact,family; form; coiling; umbilicus; spire
 Nautilus-Like Shell,Orthocone-Like Shell (orthocone),0.000000,0,7,,family; geometry; form; coiling; umbilicus; whorl_contact; axis
 Nautilus-Like Shell,Ramshorn-Like Shell,0.333333,2,6,geometry; coiling,family; form; umbilicus; whorl_contact
@@ -62,6 +67,7 @@ Nautilus-Like Shell,Nautilus-Like Shell with Smooth Surface,1.000000,6,6,family;
 Nautilus-Like Shell,Turrilites-Like,0.142857,1,7,geometry,family; form; coiling; umbilicus; whorl_contact; spire
 Nautilus-Like Shell,Turritella-Like Tower Shell (turritella-helix),0.000000,0,7,,family; geometry; form; coiling; umbilicus; whorl_contact; spire
 Nautilus-Like Shell,Turritella-Like Tower Shell (turritella),0.142857,1,7,geometry,family; form; coiling; umbilicus; whorl_contact; spire
+Nautilus-Like Shell,Tusk Shell-Like,0.000000,0,7,,family; geometry; form; coiling; umbilicus; whorl_contact; axis
 Necklace Shell-Like Moon Snail,Orthocone-Like Shell (orthocone),0.000000,0,7,,family; geometry; form; coiling; whorl_contact; axis; spire
 Necklace Shell-Like Moon Snail,Ramshorn-Like Shell,0.285714,2,7,family; geometry,form; coiling; umbilicus; whorl_contact; spire
 Necklace Shell-Like Moon Snail,Serpenticone Ammonite-Like Shell,0.142857,1,7,geometry,family; form; coiling; umbilicus; whorl_contact; spire
@@ -69,24 +75,32 @@ Necklace Shell-Like Moon Snail,Nautilus-Like Shell with Smooth Surface,0.285714,
 Necklace Shell-Like Moon Snail,Turrilites-Like,0.166667,1,6,geometry,family; form; coiling; whorl_contact; spire
 Necklace Shell-Like Moon Snail,Turritella-Like Tower Shell (turritella-helix),0.166667,1,6,family,geometry; form; coiling; whorl_contact; spire
 Necklace Shell-Like Moon Snail,Turritella-Like Tower Shell (turritella),0.333333,2,6,family; geometry,form; coiling; whorl_contact; spire
+Necklace Shell-Like Moon Snail,Tusk Shell-Like,0.000000,0,7,,family; geometry; form; coiling; whorl_contact; axis; spire
 Orthocone-Like Shell (orthocone),Ramshorn-Like Shell,0.000000,0,7,,family; geometry; form; coiling; umbilicus; whorl_contact; axis
 Orthocone-Like Shell (orthocone),Serpenticone Ammonite-Like Shell,0.000000,0,7,,family; geometry; form; coiling; umbilicus; whorl_contact; axis
 Orthocone-Like Shell (orthocone),Nautilus-Like Shell with Smooth Surface,0.000000,0,7,,family; geometry; form; coiling; umbilicus; whorl_contact; axis
 Orthocone-Like Shell (orthocone),Turrilites-Like,0.000000,0,7,,family; geometry; form; coiling; whorl_contact; axis; spire
 Orthocone-Like Shell (orthocone),Turritella-Like Tower Shell (turritella-helix),0.000000,0,7,,family; geometry; form; coiling; whorl_contact; axis; spire
 Orthocone-Like Shell (orthocone),Turritella-Like Tower Shell (turritella),0.000000,0,7,,family; geometry; form; coiling; whorl_contact; axis; spire
+Orthocone-Like Shell (orthocone),Tusk Shell-Like,0.400000,2,5,geometry; coiling,family; form; axis
 Ramshorn-Like Shell,Serpenticone Ammonite-Like Shell,0.666667,4,6,geometry; coiling; umbilicus; whorl_contact,family; form
 Ramshorn-Like Shell,Nautilus-Like Shell with Smooth Surface,0.333333,2,6,geometry; coiling,family; form; umbilicus; whorl_contact
 Ramshorn-Like Shell,Turrilites-Like,0.142857,1,7,geometry,family; form; coiling; umbilicus; whorl_contact; spire
 Ramshorn-Like Shell,Turritella-Like Tower Shell (turritella-helix),0.142857,1,7,family,geometry; form; coiling; umbilicus; whorl_contact; spire
 Ramshorn-Like Shell,Turritella-Like Tower Shell (turritella),0.285714,2,7,family; geometry,form; coiling; umbilicus; whorl_contact; spire
+Ramshorn-Like Shell,Tusk Shell-Like,0.000000,0,7,,family; geometry; form; coiling; umbilicus; whorl_contact; axis
 Serpenticone Ammonite-Like Shell,Nautilus-Like Shell with Smooth Surface,0.333333,2,6,geometry; coiling,family; form; umbilicus; whorl_contact
 Serpenticone Ammonite-Like Shell,Turrilites-Like,0.285714,2,7,family; geometry,form; coiling; umbilicus; whorl_contact; spire
 Serpenticone Ammonite-Like Shell,Turritella-Like Tower Shell (turritella-helix),0.000000,0,7,,family; geometry; form; coiling; umbilicus; whorl_contact; spire
 Serpenticone Ammonite-Like Shell,Turritella-Like Tower Shell (turritella),0.142857,1,7,geometry,family; form; coiling; umbilicus; whorl_contact; spire
+Serpenticone Ammonite-Like Shell,Tusk Shell-Like,0.000000,0,7,,family; geometry; form; coiling; umbilicus; whorl_contact; axis
 Nautilus-Like Shell with Smooth Surface,Turrilites-Like,0.142857,1,7,geometry,family; form; coiling; umbilicus; whorl_contact; spire
 Nautilus-Like Shell with Smooth Surface,Turritella-Like Tower Shell (turritella-helix),0.000000,0,7,,family; geometry; form; coiling; umbilicus; whorl_contact; spire
 Nautilus-Like Shell with Smooth Surface,Turritella-Like Tower Shell (turritella),0.142857,1,7,geometry,family; form; coiling; umbilicus; whorl_contact; spire
+Nautilus-Like Shell with Smooth Surface,Tusk Shell-Like,0.000000,0,7,,family; geometry; form; coiling; umbilicus; whorl_contact; axis
 Turrilites-Like,Turritella-Like Tower Shell (turritella-helix),0.666667,4,6,form; coiling; whorl_contact; spire,family; geometry
 Turrilites-Like,Turritella-Like Tower Shell (turritella),0.833333,5,6,geometry; form; coiling; whorl_contact; spire,family
+Turrilites-Like,Tusk Shell-Like,0.000000,0,7,,family; geometry; form; coiling; whorl_contact; axis; spire
 Turritella-Like Tower Shell (turritella-helix),Turritella-Like Tower Shell (turritella),0.833333,5,6,family; form; coiling; whorl_contact; spire,geometry
+Turritella-Like Tower Shell (turritella-helix),Tusk Shell-Like,0.000000,0,7,,family; geometry; form; coiling; whorl_contact; axis; spire
+Turritella-Like Tower Shell (turritella),Tusk Shell-Like,0.000000,0,7,,family; geometry; form; coiling; whorl_contact; axis; spire

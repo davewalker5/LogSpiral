@@ -226,6 +226,21 @@
       ]
     },
     {
+      "left": "ammonite",
+      "right": "tusk",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "umbilicus",
+        "whorl_contact",
+        "axis"
+      ]
+    },
+    {
       "left": "annulated-orthocone",
       "right": "ammonite",
       "similarity": 0.0,
@@ -428,6 +443,20 @@
         "whorl_contact",
         "axis",
         "spire"
+      ]
+    },
+    {
+      "left": "annulated-orthocone",
+      "right": "tusk",
+      "similarity": 0.4,
+      "matching_characteristics": [
+        "geometry",
+        "coiling"
+      ],
+      "differing_characteristics": [
+        "family",
+        "form",
+        "axis"
       ]
     },
     {
@@ -645,6 +674,21 @@
       ]
     },
     {
+      "left": "crioceratite",
+      "right": "tusk",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "umbilicus",
+        "whorl_contact",
+        "axis"
+      ]
+    },
+    {
       "left": "cyrtocone",
       "right": "ammonite",
       "similarity": 0.0,
@@ -848,6 +892,20 @@
         "whorl_contact",
         "axis",
         "spire"
+      ]
+    },
+    {
+      "left": "cyrtocone",
+      "right": "tusk",
+      "similarity": 0.8,
+      "matching_characteristics": [
+        "geometry",
+        "form",
+        "coiling",
+        "axis"
+      ],
+      "differing_characteristics": [
+        "family"
       ]
     },
     {
@@ -1076,6 +1134,21 @@
       ]
     },
     {
+      "left": "flared",
+      "right": "tusk",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "axis",
+        "spire",
+        "aperture"
+      ]
+    },
+    {
       "left": "nautilus",
       "right": "ammonite",
       "similarity": 0.3333333333333333,
@@ -1286,6 +1359,21 @@
         "umbilicus",
         "whorl_contact",
         "spire"
+      ]
+    },
+    {
+      "left": "nautilus",
+      "right": "tusk",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "umbilicus",
+        "whorl_contact",
+        "axis"
       ]
     },
     {
@@ -1505,6 +1593,21 @@
       ]
     },
     {
+      "left": "necklace",
+      "right": "tusk",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "whorl_contact",
+        "axis",
+        "spire"
+      ]
+    },
+    {
       "left": "orthocone",
       "right": "ammonite",
       "similarity": 0.0,
@@ -1707,6 +1810,20 @@
         "whorl_contact",
         "axis",
         "spire"
+      ]
+    },
+    {
+      "left": "orthocone",
+      "right": "tusk",
+      "similarity": 0.4,
+      "matching_characteristics": [
+        "geometry",
+        "coiling"
+      ],
+      "differing_characteristics": [
+        "family",
+        "form",
+        "axis"
       ]
     },
     {
@@ -1925,6 +2042,21 @@
       ]
     },
     {
+      "left": "ramshorn",
+      "right": "tusk",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "umbilicus",
+        "whorl_contact",
+        "axis"
+      ]
+    },
+    {
       "left": "serpenticone",
       "right": "ammonite",
       "similarity": 0.6666666666666666,
@@ -2139,6 +2271,21 @@
       ]
     },
     {
+      "left": "serpenticone",
+      "right": "tusk",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "umbilicus",
+        "whorl_contact",
+        "axis"
+      ]
+    },
+    {
       "left": "smooth-nautilus",
       "right": "ammonite",
       "similarity": 0.3333333333333333,
@@ -2352,6 +2499,21 @@
       ]
     },
     {
+      "left": "smooth-nautilus",
+      "right": "tusk",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "umbilicus",
+        "whorl_contact",
+        "axis"
+      ]
+    },
+    {
       "left": "turrilites",
       "right": "ammonite",
       "similarity": 0.2857142857142857,
@@ -2568,6 +2730,21 @@
       ]
     },
     {
+      "left": "turrilites",
+      "right": "tusk",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "whorl_contact",
+        "axis",
+        "spire"
+      ]
+    },
+    {
       "left": "turritella-helix",
       "right": "ammonite",
       "similarity": 0.0,
@@ -2776,6 +2953,21 @@
       ],
       "differing_characteristics": [
         "geometry"
+      ]
+    },
+    {
+      "left": "turritella-helix",
+      "right": "tusk",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "whorl_contact",
+        "axis",
+        "spire"
       ]
     },
     {
@@ -2991,6 +3183,241 @@
         "coiling",
         "whorl_contact",
         "spire"
+      ],
+      "differing_characteristics": []
+    },
+    {
+      "left": "turritella",
+      "right": "tusk",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "whorl_contact",
+        "axis",
+        "spire"
+      ]
+    },
+    {
+      "left": "tusk",
+      "right": "ammonite",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "umbilicus",
+        "whorl_contact",
+        "axis"
+      ]
+    },
+    {
+      "left": "tusk",
+      "right": "annulated-orthocone",
+      "similarity": 0.4,
+      "matching_characteristics": [
+        "geometry",
+        "coiling"
+      ],
+      "differing_characteristics": [
+        "family",
+        "form",
+        "axis"
+      ]
+    },
+    {
+      "left": "tusk",
+      "right": "crioceratite",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "umbilicus",
+        "whorl_contact",
+        "axis"
+      ]
+    },
+    {
+      "left": "tusk",
+      "right": "cyrtocone",
+      "similarity": 0.8,
+      "matching_characteristics": [
+        "geometry",
+        "form",
+        "coiling",
+        "axis"
+      ],
+      "differing_characteristics": [
+        "family"
+      ]
+    },
+    {
+      "left": "tusk",
+      "right": "flared",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "axis",
+        "spire",
+        "aperture"
+      ]
+    },
+    {
+      "left": "tusk",
+      "right": "nautilus",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "umbilicus",
+        "whorl_contact",
+        "axis"
+      ]
+    },
+    {
+      "left": "tusk",
+      "right": "necklace",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "whorl_contact",
+        "axis",
+        "spire"
+      ]
+    },
+    {
+      "left": "tusk",
+      "right": "orthocone",
+      "similarity": 0.4,
+      "matching_characteristics": [
+        "geometry",
+        "coiling"
+      ],
+      "differing_characteristics": [
+        "family",
+        "form",
+        "axis"
+      ]
+    },
+    {
+      "left": "tusk",
+      "right": "ramshorn",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "umbilicus",
+        "whorl_contact",
+        "axis"
+      ]
+    },
+    {
+      "left": "tusk",
+      "right": "serpenticone",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "umbilicus",
+        "whorl_contact",
+        "axis"
+      ]
+    },
+    {
+      "left": "tusk",
+      "right": "smooth-nautilus",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "umbilicus",
+        "whorl_contact",
+        "axis"
+      ]
+    },
+    {
+      "left": "tusk",
+      "right": "turrilites",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "whorl_contact",
+        "axis",
+        "spire"
+      ]
+    },
+    {
+      "left": "tusk",
+      "right": "turritella-helix",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "whorl_contact",
+        "axis",
+        "spire"
+      ]
+    },
+    {
+      "left": "tusk",
+      "right": "turritella",
+      "similarity": 0.0,
+      "matching_characteristics": [],
+      "differing_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "whorl_contact",
+        "axis",
+        "spire"
+      ]
+    },
+    {
+      "left": "tusk",
+      "right": "tusk",
+      "similarity": 1.0,
+      "matching_characteristics": [
+        "family",
+        "geometry",
+        "form",
+        "coiling",
+        "axis"
       ],
       "differing_characteristics": []
     }
