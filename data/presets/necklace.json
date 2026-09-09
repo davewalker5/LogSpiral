@@ -1,0 +1,66 @@
+{
+  "name": "Necklace Shell-Like Moon Snail",
+  "description": "A necklace-shell-inspired gastropod with a smooth, globose shell, a low spire, overlapping whorls and a dominant rounded body whorl ending in a broad aperture, with no internal chambering.",
+  "classification": {
+    "family": "gastropod",
+    "geometry": "log-spiral",
+    "morphology": {
+      "form": "globose",
+      "coiling": "low-spired",
+      "spire": "low",
+      "whorl_contact": "overlapping"
+    }
+  },
+  "growth": {
+    "mode": "log_spiral",
+    "a": 0.15,
+    "b": 0.12,
+    "turns": 3,
+    "points": 950,
+    "aperture_mode": "proportional",
+    "aperture_width_multiplier": 1.25,
+    "aperture_height_multiplier": 1.1
+  },
+  "shell": {
+    "z_scale": 0.0,
+    "automatic_z_path": true,
+    "whorl_abutment": 0.6,
+    "aperture_points": 80,
+    "ribbing_enabled": false,
+    "ribbing_amplitude": 0,
+    "ribbing_frequency": 0,
+    "ribbing_mode": "",
+    "lip_enabled": true,
+    "lip_start": 0.94,
+    "lip_strength": 0.005,
+    "lip_power": 3,
+    "wall_enabled": true,
+    "wall_thickness": 0.05,
+    "inner_surface_colour_shift": -0.12,
+    "aperture_tilt": 0.0
+  },
+  "chambers": {
+    "enabled": false
+  },
+  "siphuncle": {
+    "enabled": false
+  },
+  "plotting": {
+    "opaque": {
+      "enabled": true,
+      "title": "Necklace Shell-Like Moon Snail",
+      "shell_opacity": 1.0,
+      "septa_opacity": 0.0,
+      "siphuncle_opacity": 0.0,
+      "width": 1000,
+      "height": 1000,
+      "hide_axes": true,
+      "show_wireframe": false,
+      "viewpoint": "iso",
+      "zoom": 1.0
+    },
+    "transparent": {
+      "enabled": false
+    }
+  }
+}

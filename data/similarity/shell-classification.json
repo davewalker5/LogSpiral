@@ -52,6 +52,15 @@
     "whorl_contact": "overlapping"
   },
   {
+    "filename": "necklace",
+    "geometry": "log-spiral",
+    "family": "gastropod",
+    "form": "globose",
+    "coiling": "low-spired",
+    "spire": "low",
+    "whorl_contact": "overlapping"
+  },
+  {
     "filename": "orthocone",
     "geometry": "centreline-conical",
     "family": "orthoceratoid",
@@ -85,6 +94,15 @@
     "coiling": "planispiral",
     "umbilicus": "narrow",
     "whorl_contact": "overlapping"
+  },
+  {
+    "filename": "turrilites",
+    "geometry": "log-spiral",
+    "family": "ammonoid",
+    "form": "turriform",
+    "coiling": "high-spired",
+    "spire": "high",
+    "whorl_contact": "stacked"
   },
   {
     "filename": "turritella-helix",
