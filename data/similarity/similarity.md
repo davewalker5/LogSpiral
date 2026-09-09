@@ -18,20 +18,22 @@ Similarity is calculated from preset classification metadata only. Mesh geometry
 
 ## Similarity Matrix
 
-| Shell | Ammonite-Like Shell | Annulated Orthocone-Like Shell | Crioceratite-Like Shell | Orthocone-Like Shell (cyrtocone) | Flared Shell | Nautilus-Like Shell | Orthocone-Like Shell (orthocone) | Ramshorn-Like Shell | Serpenticone Ammonite-Like Shell | Nautilus-Like Shell with Smooth Surface | Turritella-Like Tower Shell (turritella-helix) | Turritella-Like Tower Shell (turritella) |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| Ammonite-Like Shell | 100% | 0% | 33.3% | 0% | 12.5% | 33.3% | 0% | 50% | 66.7% | 33.3% | 0% | 14.3% |
-| Annulated Orthocone-Like Shell | 0% | 100% | 0% | 60% | 0% | 0% | 100% | 0% | 0% | 0% | 0% | 0% |
-| Crioceratite-Like Shell | 33.3% | 0% | 100% | 0% | 12.5% | 16.7% | 0% | 16.7% | 33.3% | 16.7% | 0% | 14.3% |
-| Orthocone-Like Shell (cyrtocone) | 0% | 60% | 0% | 100% | 0% | 0% | 60% | 0% | 0% | 0% | 0% | 0% |
-| Flared Shell | 12.5% | 0% | 12.5% | 0% | 100% | 12.5% | 0% | 25% | 12.5% | 12.5% | 14.3% | 28.6% |
-| Nautilus-Like Shell | 33.3% | 0% | 16.7% | 0% | 12.5% | 100% | 0% | 33.3% | 33.3% | 100% | 0% | 14.3% |
-| Orthocone-Like Shell (orthocone) | 0% | 100% | 0% | 60% | 0% | 0% | 100% | 0% | 0% | 0% | 0% | 0% |
-| Ramshorn-Like Shell | 50% | 0% | 16.7% | 0% | 25% | 33.3% | 0% | 100% | 66.7% | 33.3% | 14.3% | 28.6% |
-| Serpenticone Ammonite-Like Shell | 66.7% | 0% | 33.3% | 0% | 12.5% | 33.3% | 0% | 66.7% | 100% | 33.3% | 0% | 14.3% |
-| Nautilus-Like Shell with Smooth Surface | 33.3% | 0% | 16.7% | 0% | 12.5% | 100% | 0% | 33.3% | 33.3% | 100% | 0% | 14.3% |
-| Turritella-Like Tower Shell (turritella-helix) | 0% | 0% | 0% | 0% | 14.3% | 0% | 0% | 14.3% | 0% | 0% | 100% | 83.3% |
-| Turritella-Like Tower Shell (turritella) | 14.3% | 0% | 14.3% | 0% | 28.6% | 14.3% | 0% | 28.6% | 14.3% | 14.3% | 83.3% | 100% |
+| Shell | Ammonite-Like Shell | Annulated Orthocone-Like Shell | Crioceratite-Like Shell | Orthocone-Like Shell (cyrtocone) | Flared Shell | Nautilus-Like Shell | Necklace Shell-Like Moon Snail | Orthocone-Like Shell (orthocone) | Ramshorn-Like Shell | Serpenticone Ammonite-Like Shell | Nautilus-Like Shell with Smooth Surface | Turrilites-Like | Turritella-Like Tower Shell (turritella-helix) | Turritella-Like Tower Shell (turritella) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Ammonite-Like Shell | 100% | 0% | 33.3% | 0% | 12.5% | 33.3% | 14.3% | 0% | 50% | 66.7% | 33.3% | 28.6% | 0% | 14.3% |
+| Annulated Orthocone-Like Shell | 0% | 100% | 0% | 60% | 0% | 0% | 0% | 100% | 0% | 0% | 0% | 0% | 0% | 0% |
+| Crioceratite-Like Shell | 33.3% | 0% | 100% | 0% | 12.5% | 16.7% | 14.3% | 0% | 16.7% | 33.3% | 16.7% | 28.6% | 0% | 14.3% |
+| Orthocone-Like Shell (cyrtocone) | 0% | 60% | 0% | 100% | 0% | 0% | 0% | 60% | 0% | 0% | 0% | 0% | 0% | 0% |
+| Flared Shell | 12.5% | 0% | 12.5% | 0% | 100% | 12.5% | 57.1% | 0% | 25% | 12.5% | 12.5% | 14.3% | 14.3% | 28.6% |
+| Nautilus-Like Shell | 33.3% | 0% | 16.7% | 0% | 12.5% | 100% | 28.6% | 0% | 33.3% | 33.3% | 100% | 14.3% | 0% | 14.3% |
+| Necklace Shell-Like Moon Snail | 14.3% | 0% | 14.3% | 0% | 57.1% | 28.6% | 100% | 0% | 28.6% | 14.3% | 28.6% | 16.7% | 16.7% | 33.3% |
+| Orthocone-Like Shell (orthocone) | 0% | 100% | 0% | 60% | 0% | 0% | 0% | 100% | 0% | 0% | 0% | 0% | 0% | 0% |
+| Ramshorn-Like Shell | 50% | 0% | 16.7% | 0% | 25% | 33.3% | 28.6% | 0% | 100% | 66.7% | 33.3% | 14.3% | 14.3% | 28.6% |
+| Serpenticone Ammonite-Like Shell | 66.7% | 0% | 33.3% | 0% | 12.5% | 33.3% | 14.3% | 0% | 66.7% | 100% | 33.3% | 28.6% | 0% | 14.3% |
+| Nautilus-Like Shell with Smooth Surface | 33.3% | 0% | 16.7% | 0% | 12.5% | 100% | 28.6% | 0% | 33.3% | 33.3% | 100% | 14.3% | 0% | 14.3% |
+| Turrilites-Like | 28.6% | 0% | 28.6% | 0% | 14.3% | 14.3% | 16.7% | 0% | 14.3% | 28.6% | 14.3% | 100% | 66.7% | 83.3% |
+| Turritella-Like Tower Shell (turritella-helix) | 0% | 0% | 0% | 0% | 14.3% | 0% | 16.7% | 0% | 14.3% | 0% | 0% | 66.7% | 100% | 83.3% |
+| Turritella-Like Tower Shell (turritella) | 14.3% | 0% | 14.3% | 0% | 28.6% | 14.3% | 33.3% | 0% | 28.6% | 14.3% | 14.3% | 83.3% | 83.3% | 100% |
 
 ## Nearest Neighbours
 
@@ -57,12 +59,17 @@ Similarity is calculated from preset classification metadata only. Mesh geometry
 
 ### Flared Shell
 
-- Closest: Turritella-Like Tower Shell (turritella) (28.6%)
+- Closest: Necklace Shell-Like Moon Snail (57.1%)
 - Most distinct: Annulated Orthocone-Like Shell (0%)
 
 ### Nautilus-Like Shell
 
 - Closest: Nautilus-Like Shell with Smooth Surface (100%)
+- Most distinct: Annulated Orthocone-Like Shell (0%)
+
+### Necklace Shell-Like Moon Snail
+
+- Closest: Flared Shell (57.1%)
 - Most distinct: Annulated Orthocone-Like Shell (0%)
 
 ### Orthocone-Like Shell (orthocone)
@@ -83,6 +90,11 @@ Similarity is calculated from preset classification metadata only. Mesh geometry
 ### Nautilus-Like Shell with Smooth Surface
 
 - Closest: Nautilus-Like Shell (100%)
+- Most distinct: Annulated Orthocone-Like Shell (0%)
+
+### Turrilites-Like
+
+- Closest: Turritella-Like Tower Shell (turritella) (83.3%)
 - Most distinct: Annulated Orthocone-Like Shell (0%)
 
 ### Turritella-Like Tower Shell (turritella-helix)
@@ -173,6 +185,21 @@ Differences:
 - Umbilicus: Ammonite-Like Shell = moderate; Nautilus-Like Shell = narrow
 - Whorl Contact: Ammonite-Like Shell = touching; Nautilus-Like Shell = overlapping
 
+### Ammonite-Like Shell <-> Necklace Shell-Like Moon Snail
+
+Similarity: 14.3%
+
+Shared:
+- Geometry: log-spiral
+
+Differences:
+- Family: Ammonite-Like Shell = ammonoid; Necklace Shell-Like Moon Snail = gastropod
+- Form: Ammonite-Like Shell = coiled-cephalopod; Necklace Shell-Like Moon Snail = globose
+- Coiling: Ammonite-Like Shell = planispiral; Necklace Shell-Like Moon Snail = low-spired
+- Umbilicus: Ammonite-Like Shell = moderate; Necklace Shell-Like Moon Snail = not classified
+- Whorl Contact: Ammonite-Like Shell = touching; Necklace Shell-Like Moon Snail = overlapping
+- Spire: Ammonite-Like Shell = not classified; Necklace Shell-Like Moon Snail = low
+
 ### Ammonite-Like Shell <-> Orthocone-Like Shell (orthocone)
 
 Similarity: 0%
@@ -230,6 +257,21 @@ Differences:
 - Form: Ammonite-Like Shell = coiled-cephalopod; Nautilus-Like Shell with Smooth Surface = nautiliconic
 - Umbilicus: Ammonite-Like Shell = moderate; Nautilus-Like Shell with Smooth Surface = narrow
 - Whorl Contact: Ammonite-Like Shell = touching; Nautilus-Like Shell with Smooth Surface = overlapping
+
+### Ammonite-Like Shell <-> Turrilites-Like
+
+Similarity: 28.6%
+
+Shared:
+- Family: ammonoid
+- Geometry: log-spiral
+
+Differences:
+- Form: Ammonite-Like Shell = coiled-cephalopod; Turrilites-Like = turriform
+- Coiling: Ammonite-Like Shell = planispiral; Turrilites-Like = high-spired
+- Umbilicus: Ammonite-Like Shell = moderate; Turrilites-Like = not classified
+- Whorl Contact: Ammonite-Like Shell = touching; Turrilites-Like = stacked
+- Spire: Ammonite-Like Shell = not classified; Turrilites-Like = high
 
 ### Ammonite-Like Shell <-> Turritella-Like Tower Shell (turritella-helix)
 
@@ -323,6 +365,22 @@ Differences:
 - Whorl Contact: Annulated Orthocone-Like Shell = not classified; Nautilus-Like Shell = overlapping
 - Axis: Annulated Orthocone-Like Shell = straight; Nautilus-Like Shell = not classified
 
+### Annulated Orthocone-Like Shell <-> Necklace Shell-Like Moon Snail
+
+Similarity: 0%
+
+Shared:
+- None
+
+Differences:
+- Family: Annulated Orthocone-Like Shell = orthoceratoid; Necklace Shell-Like Moon Snail = gastropod
+- Geometry: Annulated Orthocone-Like Shell = centreline-conical; Necklace Shell-Like Moon Snail = log-spiral
+- Form: Annulated Orthocone-Like Shell = orthoconic; Necklace Shell-Like Moon Snail = globose
+- Coiling: Annulated Orthocone-Like Shell = none; Necklace Shell-Like Moon Snail = low-spired
+- Whorl Contact: Annulated Orthocone-Like Shell = not classified; Necklace Shell-Like Moon Snail = overlapping
+- Axis: Annulated Orthocone-Like Shell = straight; Necklace Shell-Like Moon Snail = not classified
+- Spire: Annulated Orthocone-Like Shell = not classified; Necklace Shell-Like Moon Snail = low
+
 ### Annulated Orthocone-Like Shell <-> Orthocone-Like Shell (orthocone)
 
 Similarity: 100%
@@ -384,6 +442,22 @@ Differences:
 - Umbilicus: Annulated Orthocone-Like Shell = not classified; Nautilus-Like Shell with Smooth Surface = narrow
 - Whorl Contact: Annulated Orthocone-Like Shell = not classified; Nautilus-Like Shell with Smooth Surface = overlapping
 - Axis: Annulated Orthocone-Like Shell = straight; Nautilus-Like Shell with Smooth Surface = not classified
+
+### Annulated Orthocone-Like Shell <-> Turrilites-Like
+
+Similarity: 0%
+
+Shared:
+- None
+
+Differences:
+- Family: Annulated Orthocone-Like Shell = orthoceratoid; Turrilites-Like = ammonoid
+- Geometry: Annulated Orthocone-Like Shell = centreline-conical; Turrilites-Like = log-spiral
+- Form: Annulated Orthocone-Like Shell = orthoconic; Turrilites-Like = turriform
+- Coiling: Annulated Orthocone-Like Shell = none; Turrilites-Like = high-spired
+- Whorl Contact: Annulated Orthocone-Like Shell = not classified; Turrilites-Like = stacked
+- Axis: Annulated Orthocone-Like Shell = straight; Turrilites-Like = not classified
+- Spire: Annulated Orthocone-Like Shell = not classified; Turrilites-Like = high
 
 ### Annulated Orthocone-Like Shell <-> Turritella-Like Tower Shell (turritella-helix)
 
@@ -463,6 +537,21 @@ Differences:
 - Umbilicus: Crioceratite-Like Shell = open; Nautilus-Like Shell = narrow
 - Whorl Contact: Crioceratite-Like Shell = detached; Nautilus-Like Shell = overlapping
 
+### Crioceratite-Like Shell <-> Necklace Shell-Like Moon Snail
+
+Similarity: 14.3%
+
+Shared:
+- Geometry: log-spiral
+
+Differences:
+- Family: Crioceratite-Like Shell = ammonoid; Necklace Shell-Like Moon Snail = gastropod
+- Form: Crioceratite-Like Shell = crioconic; Necklace Shell-Like Moon Snail = globose
+- Coiling: Crioceratite-Like Shell = open-planispiral; Necklace Shell-Like Moon Snail = low-spired
+- Umbilicus: Crioceratite-Like Shell = open; Necklace Shell-Like Moon Snail = not classified
+- Whorl Contact: Crioceratite-Like Shell = detached; Necklace Shell-Like Moon Snail = overlapping
+- Spire: Crioceratite-Like Shell = not classified; Necklace Shell-Like Moon Snail = low
+
 ### Crioceratite-Like Shell <-> Orthocone-Like Shell (orthocone)
 
 Similarity: 0%
@@ -520,6 +609,21 @@ Differences:
 - Coiling: Crioceratite-Like Shell = open-planispiral; Nautilus-Like Shell with Smooth Surface = planispiral
 - Umbilicus: Crioceratite-Like Shell = open; Nautilus-Like Shell with Smooth Surface = narrow
 - Whorl Contact: Crioceratite-Like Shell = detached; Nautilus-Like Shell with Smooth Surface = overlapping
+
+### Crioceratite-Like Shell <-> Turrilites-Like
+
+Similarity: 28.6%
+
+Shared:
+- Family: ammonoid
+- Geometry: log-spiral
+
+Differences:
+- Form: Crioceratite-Like Shell = crioconic; Turrilites-Like = turriform
+- Coiling: Crioceratite-Like Shell = open-planispiral; Turrilites-Like = high-spired
+- Umbilicus: Crioceratite-Like Shell = open; Turrilites-Like = not classified
+- Whorl Contact: Crioceratite-Like Shell = detached; Turrilites-Like = stacked
+- Spire: Crioceratite-Like Shell = not classified; Turrilites-Like = high
 
 ### Crioceratite-Like Shell <-> Turritella-Like Tower Shell (turritella-helix)
 
@@ -584,6 +688,22 @@ Differences:
 - Whorl Contact: Orthocone-Like Shell (cyrtocone) = not classified; Nautilus-Like Shell = overlapping
 - Axis: Orthocone-Like Shell (cyrtocone) = curved; Nautilus-Like Shell = not classified
 
+### Orthocone-Like Shell (cyrtocone) <-> Necklace Shell-Like Moon Snail
+
+Similarity: 0%
+
+Shared:
+- None
+
+Differences:
+- Family: Orthocone-Like Shell (cyrtocone) = orthoceratoid; Necklace Shell-Like Moon Snail = gastropod
+- Geometry: Orthocone-Like Shell (cyrtocone) = centreline-conical; Necklace Shell-Like Moon Snail = log-spiral
+- Form: Orthocone-Like Shell (cyrtocone) = cyrtoconic; Necklace Shell-Like Moon Snail = globose
+- Coiling: Orthocone-Like Shell (cyrtocone) = none; Necklace Shell-Like Moon Snail = low-spired
+- Whorl Contact: Orthocone-Like Shell (cyrtocone) = not classified; Necklace Shell-Like Moon Snail = overlapping
+- Axis: Orthocone-Like Shell (cyrtocone) = curved; Necklace Shell-Like Moon Snail = not classified
+- Spire: Orthocone-Like Shell (cyrtocone) = not classified; Necklace Shell-Like Moon Snail = low
+
 ### Orthocone-Like Shell (cyrtocone) <-> Orthocone-Like Shell (orthocone)
 
 Similarity: 60%
@@ -645,6 +765,22 @@ Differences:
 - Whorl Contact: Orthocone-Like Shell (cyrtocone) = not classified; Nautilus-Like Shell with Smooth Surface = overlapping
 - Axis: Orthocone-Like Shell (cyrtocone) = curved; Nautilus-Like Shell with Smooth Surface = not classified
 
+### Orthocone-Like Shell (cyrtocone) <-> Turrilites-Like
+
+Similarity: 0%
+
+Shared:
+- None
+
+Differences:
+- Family: Orthocone-Like Shell (cyrtocone) = orthoceratoid; Turrilites-Like = ammonoid
+- Geometry: Orthocone-Like Shell (cyrtocone) = centreline-conical; Turrilites-Like = log-spiral
+- Form: Orthocone-Like Shell (cyrtocone) = cyrtoconic; Turrilites-Like = turriform
+- Coiling: Orthocone-Like Shell (cyrtocone) = none; Turrilites-Like = high-spired
+- Whorl Contact: Orthocone-Like Shell (cyrtocone) = not classified; Turrilites-Like = stacked
+- Axis: Orthocone-Like Shell (cyrtocone) = curved; Turrilites-Like = not classified
+- Spire: Orthocone-Like Shell (cyrtocone) = not classified; Turrilites-Like = high
+
 ### Orthocone-Like Shell (cyrtocone) <-> Turritella-Like Tower Shell (turritella-helix)
 
 Similarity: 0%
@@ -692,6 +828,21 @@ Differences:
 - Whorl Contact: Flared Shell = not classified; Nautilus-Like Shell = overlapping
 - Spire: Flared Shell = low; Nautilus-Like Shell = not classified
 - Aperture: Flared Shell = expanded; Nautilus-Like Shell = not classified
+
+### Flared Shell <-> Necklace Shell-Like Moon Snail
+
+Similarity: 57.1%
+
+Shared:
+- Family: gastropod
+- Geometry: log-spiral
+- Coiling: low-spired
+- Spire: low
+
+Differences:
+- Form: Flared Shell = flared; Necklace Shell-Like Moon Snail = globose
+- Whorl Contact: Flared Shell = not classified; Necklace Shell-Like Moon Snail = overlapping
+- Aperture: Flared Shell = expanded; Necklace Shell-Like Moon Snail = not classified
 
 ### Flared Shell <-> Orthocone-Like Shell (orthocone)
 
@@ -757,6 +908,21 @@ Differences:
 - Spire: Flared Shell = low; Nautilus-Like Shell with Smooth Surface = not classified
 - Aperture: Flared Shell = expanded; Nautilus-Like Shell with Smooth Surface = not classified
 
+### Flared Shell <-> Turrilites-Like
+
+Similarity: 14.3%
+
+Shared:
+- Geometry: log-spiral
+
+Differences:
+- Family: Flared Shell = gastropod; Turrilites-Like = ammonoid
+- Form: Flared Shell = flared; Turrilites-Like = turriform
+- Coiling: Flared Shell = low-spired; Turrilites-Like = high-spired
+- Whorl Contact: Flared Shell = not classified; Turrilites-Like = stacked
+- Spire: Flared Shell = low; Turrilites-Like = high
+- Aperture: Flared Shell = expanded; Turrilites-Like = not classified
+
 ### Flared Shell <-> Turritella-Like Tower Shell (turritella-helix)
 
 Similarity: 14.3%
@@ -786,6 +952,21 @@ Differences:
 - Whorl Contact: Flared Shell = not classified; Turritella-Like Tower Shell (turritella) = stacked
 - Spire: Flared Shell = low; Turritella-Like Tower Shell (turritella) = high
 - Aperture: Flared Shell = expanded; Turritella-Like Tower Shell (turritella) = not classified
+
+### Nautilus-Like Shell <-> Necklace Shell-Like Moon Snail
+
+Similarity: 28.6%
+
+Shared:
+- Geometry: log-spiral
+- Whorl Contact: overlapping
+
+Differences:
+- Family: Nautilus-Like Shell = nautiloid; Necklace Shell-Like Moon Snail = gastropod
+- Form: Nautilus-Like Shell = nautiliconic; Necklace Shell-Like Moon Snail = globose
+- Coiling: Nautilus-Like Shell = planispiral; Necklace Shell-Like Moon Snail = low-spired
+- Umbilicus: Nautilus-Like Shell = narrow; Necklace Shell-Like Moon Snail = not classified
+- Spire: Nautilus-Like Shell = not classified; Necklace Shell-Like Moon Snail = low
 
 ### Nautilus-Like Shell <-> Orthocone-Like Shell (orthocone)
 
@@ -846,6 +1027,21 @@ Shared:
 Differences:
 - None
 
+### Nautilus-Like Shell <-> Turrilites-Like
+
+Similarity: 14.3%
+
+Shared:
+- Geometry: log-spiral
+
+Differences:
+- Family: Nautilus-Like Shell = nautiloid; Turrilites-Like = ammonoid
+- Form: Nautilus-Like Shell = nautiliconic; Turrilites-Like = turriform
+- Coiling: Nautilus-Like Shell = planispiral; Turrilites-Like = high-spired
+- Umbilicus: Nautilus-Like Shell = narrow; Turrilites-Like = not classified
+- Whorl Contact: Nautilus-Like Shell = overlapping; Turrilites-Like = stacked
+- Spire: Nautilus-Like Shell = not classified; Turrilites-Like = high
+
 ### Nautilus-Like Shell <-> Turritella-Like Tower Shell (turritella-helix)
 
 Similarity: 0%
@@ -876,6 +1072,109 @@ Differences:
 - Umbilicus: Nautilus-Like Shell = narrow; Turritella-Like Tower Shell (turritella) = not classified
 - Whorl Contact: Nautilus-Like Shell = overlapping; Turritella-Like Tower Shell (turritella) = stacked
 - Spire: Nautilus-Like Shell = not classified; Turritella-Like Tower Shell (turritella) = high
+
+### Necklace Shell-Like Moon Snail <-> Orthocone-Like Shell (orthocone)
+
+Similarity: 0%
+
+Shared:
+- None
+
+Differences:
+- Family: Necklace Shell-Like Moon Snail = gastropod; Orthocone-Like Shell (orthocone) = orthoceratoid
+- Geometry: Necklace Shell-Like Moon Snail = log-spiral; Orthocone-Like Shell (orthocone) = centreline-conical
+- Form: Necklace Shell-Like Moon Snail = globose; Orthocone-Like Shell (orthocone) = orthoconic
+- Coiling: Necklace Shell-Like Moon Snail = low-spired; Orthocone-Like Shell (orthocone) = none
+- Whorl Contact: Necklace Shell-Like Moon Snail = overlapping; Orthocone-Like Shell (orthocone) = not classified
+- Axis: Necklace Shell-Like Moon Snail = not classified; Orthocone-Like Shell (orthocone) = straight
+- Spire: Necklace Shell-Like Moon Snail = low; Orthocone-Like Shell (orthocone) = not classified
+
+### Necklace Shell-Like Moon Snail <-> Ramshorn-Like Shell
+
+Similarity: 28.6%
+
+Shared:
+- Family: gastropod
+- Geometry: log-spiral
+
+Differences:
+- Form: Necklace Shell-Like Moon Snail = globose; Ramshorn-Like Shell = planispiral
+- Coiling: Necklace Shell-Like Moon Snail = low-spired; Ramshorn-Like Shell = planispiral
+- Umbilicus: Necklace Shell-Like Moon Snail = not classified; Ramshorn-Like Shell = wide
+- Whorl Contact: Necklace Shell-Like Moon Snail = overlapping; Ramshorn-Like Shell = touching
+- Spire: Necklace Shell-Like Moon Snail = low; Ramshorn-Like Shell = not classified
+
+### Necklace Shell-Like Moon Snail <-> Serpenticone Ammonite-Like Shell
+
+Similarity: 14.3%
+
+Shared:
+- Geometry: log-spiral
+
+Differences:
+- Family: Necklace Shell-Like Moon Snail = gastropod; Serpenticone Ammonite-Like Shell = ammonoid
+- Form: Necklace Shell-Like Moon Snail = globose; Serpenticone Ammonite-Like Shell = serpenticonic
+- Coiling: Necklace Shell-Like Moon Snail = low-spired; Serpenticone Ammonite-Like Shell = planispiral
+- Umbilicus: Necklace Shell-Like Moon Snail = not classified; Serpenticone Ammonite-Like Shell = wide
+- Whorl Contact: Necklace Shell-Like Moon Snail = overlapping; Serpenticone Ammonite-Like Shell = touching
+- Spire: Necklace Shell-Like Moon Snail = low; Serpenticone Ammonite-Like Shell = not classified
+
+### Necklace Shell-Like Moon Snail <-> Nautilus-Like Shell with Smooth Surface
+
+Similarity: 28.6%
+
+Shared:
+- Geometry: log-spiral
+- Whorl Contact: overlapping
+
+Differences:
+- Family: Necklace Shell-Like Moon Snail = gastropod; Nautilus-Like Shell with Smooth Surface = nautiloid
+- Form: Necklace Shell-Like Moon Snail = globose; Nautilus-Like Shell with Smooth Surface = nautiliconic
+- Coiling: Necklace Shell-Like Moon Snail = low-spired; Nautilus-Like Shell with Smooth Surface = planispiral
+- Umbilicus: Necklace Shell-Like Moon Snail = not classified; Nautilus-Like Shell with Smooth Surface = narrow
+- Spire: Necklace Shell-Like Moon Snail = low; Nautilus-Like Shell with Smooth Surface = not classified
+
+### Necklace Shell-Like Moon Snail <-> Turrilites-Like
+
+Similarity: 16.7%
+
+Shared:
+- Geometry: log-spiral
+
+Differences:
+- Family: Necklace Shell-Like Moon Snail = gastropod; Turrilites-Like = ammonoid
+- Form: Necklace Shell-Like Moon Snail = globose; Turrilites-Like = turriform
+- Coiling: Necklace Shell-Like Moon Snail = low-spired; Turrilites-Like = high-spired
+- Whorl Contact: Necklace Shell-Like Moon Snail = overlapping; Turrilites-Like = stacked
+- Spire: Necklace Shell-Like Moon Snail = low; Turrilites-Like = high
+
+### Necklace Shell-Like Moon Snail <-> Turritella-Like Tower Shell (turritella-helix)
+
+Similarity: 16.7%
+
+Shared:
+- Family: gastropod
+
+Differences:
+- Geometry: Necklace Shell-Like Moon Snail = log-spiral; Turritella-Like Tower Shell (turritella-helix) = conical-helix
+- Form: Necklace Shell-Like Moon Snail = globose; Turritella-Like Tower Shell (turritella-helix) = turriform
+- Coiling: Necklace Shell-Like Moon Snail = low-spired; Turritella-Like Tower Shell (turritella-helix) = high-spired
+- Whorl Contact: Necklace Shell-Like Moon Snail = overlapping; Turritella-Like Tower Shell (turritella-helix) = stacked
+- Spire: Necklace Shell-Like Moon Snail = low; Turritella-Like Tower Shell (turritella-helix) = high
+
+### Necklace Shell-Like Moon Snail <-> Turritella-Like Tower Shell (turritella)
+
+Similarity: 33.3%
+
+Shared:
+- Family: gastropod
+- Geometry: log-spiral
+
+Differences:
+- Form: Necklace Shell-Like Moon Snail = globose; Turritella-Like Tower Shell (turritella) = turriform
+- Coiling: Necklace Shell-Like Moon Snail = low-spired; Turritella-Like Tower Shell (turritella) = high-spired
+- Whorl Contact: Necklace Shell-Like Moon Snail = overlapping; Turritella-Like Tower Shell (turritella) = stacked
+- Spire: Necklace Shell-Like Moon Snail = low; Turritella-Like Tower Shell (turritella) = high
 
 ### Orthocone-Like Shell (orthocone) <-> Ramshorn-Like Shell
 
@@ -924,6 +1223,22 @@ Differences:
 - Umbilicus: Orthocone-Like Shell (orthocone) = not classified; Nautilus-Like Shell with Smooth Surface = narrow
 - Whorl Contact: Orthocone-Like Shell (orthocone) = not classified; Nautilus-Like Shell with Smooth Surface = overlapping
 - Axis: Orthocone-Like Shell (orthocone) = straight; Nautilus-Like Shell with Smooth Surface = not classified
+
+### Orthocone-Like Shell (orthocone) <-> Turrilites-Like
+
+Similarity: 0%
+
+Shared:
+- None
+
+Differences:
+- Family: Orthocone-Like Shell (orthocone) = orthoceratoid; Turrilites-Like = ammonoid
+- Geometry: Orthocone-Like Shell (orthocone) = centreline-conical; Turrilites-Like = log-spiral
+- Form: Orthocone-Like Shell (orthocone) = orthoconic; Turrilites-Like = turriform
+- Coiling: Orthocone-Like Shell (orthocone) = none; Turrilites-Like = high-spired
+- Whorl Contact: Orthocone-Like Shell (orthocone) = not classified; Turrilites-Like = stacked
+- Axis: Orthocone-Like Shell (orthocone) = straight; Turrilites-Like = not classified
+- Spire: Orthocone-Like Shell (orthocone) = not classified; Turrilites-Like = high
 
 ### Orthocone-Like Shell (orthocone) <-> Turritella-Like Tower Shell (turritella-helix)
 
@@ -985,6 +1300,21 @@ Differences:
 - Umbilicus: Ramshorn-Like Shell = wide; Nautilus-Like Shell with Smooth Surface = narrow
 - Whorl Contact: Ramshorn-Like Shell = touching; Nautilus-Like Shell with Smooth Surface = overlapping
 
+### Ramshorn-Like Shell <-> Turrilites-Like
+
+Similarity: 14.3%
+
+Shared:
+- Geometry: log-spiral
+
+Differences:
+- Family: Ramshorn-Like Shell = gastropod; Turrilites-Like = ammonoid
+- Form: Ramshorn-Like Shell = planispiral; Turrilites-Like = turriform
+- Coiling: Ramshorn-Like Shell = planispiral; Turrilites-Like = high-spired
+- Umbilicus: Ramshorn-Like Shell = wide; Turrilites-Like = not classified
+- Whorl Contact: Ramshorn-Like Shell = touching; Turrilites-Like = stacked
+- Spire: Ramshorn-Like Shell = not classified; Turrilites-Like = high
+
 ### Ramshorn-Like Shell <-> Turritella-Like Tower Shell (turritella-helix)
 
 Similarity: 14.3%
@@ -1029,6 +1359,21 @@ Differences:
 - Umbilicus: Serpenticone Ammonite-Like Shell = wide; Nautilus-Like Shell with Smooth Surface = narrow
 - Whorl Contact: Serpenticone Ammonite-Like Shell = touching; Nautilus-Like Shell with Smooth Surface = overlapping
 
+### Serpenticone Ammonite-Like Shell <-> Turrilites-Like
+
+Similarity: 28.6%
+
+Shared:
+- Family: ammonoid
+- Geometry: log-spiral
+
+Differences:
+- Form: Serpenticone Ammonite-Like Shell = serpenticonic; Turrilites-Like = turriform
+- Coiling: Serpenticone Ammonite-Like Shell = planispiral; Turrilites-Like = high-spired
+- Umbilicus: Serpenticone Ammonite-Like Shell = wide; Turrilites-Like = not classified
+- Whorl Contact: Serpenticone Ammonite-Like Shell = touching; Turrilites-Like = stacked
+- Spire: Serpenticone Ammonite-Like Shell = not classified; Turrilites-Like = high
+
 ### Serpenticone Ammonite-Like Shell <-> Turritella-Like Tower Shell (turritella-helix)
 
 Similarity: 0%
@@ -1060,6 +1405,21 @@ Differences:
 - Whorl Contact: Serpenticone Ammonite-Like Shell = touching; Turritella-Like Tower Shell (turritella) = stacked
 - Spire: Serpenticone Ammonite-Like Shell = not classified; Turritella-Like Tower Shell (turritella) = high
 
+### Nautilus-Like Shell with Smooth Surface <-> Turrilites-Like
+
+Similarity: 14.3%
+
+Shared:
+- Geometry: log-spiral
+
+Differences:
+- Family: Nautilus-Like Shell with Smooth Surface = nautiloid; Turrilites-Like = ammonoid
+- Form: Nautilus-Like Shell with Smooth Surface = nautiliconic; Turrilites-Like = turriform
+- Coiling: Nautilus-Like Shell with Smooth Surface = planispiral; Turrilites-Like = high-spired
+- Umbilicus: Nautilus-Like Shell with Smooth Surface = narrow; Turrilites-Like = not classified
+- Whorl Contact: Nautilus-Like Shell with Smooth Surface = overlapping; Turrilites-Like = stacked
+- Spire: Nautilus-Like Shell with Smooth Surface = not classified; Turrilites-Like = high
+
 ### Nautilus-Like Shell with Smooth Surface <-> Turritella-Like Tower Shell (turritella-helix)
 
 Similarity: 0%
@@ -1090,6 +1450,34 @@ Differences:
 - Umbilicus: Nautilus-Like Shell with Smooth Surface = narrow; Turritella-Like Tower Shell (turritella) = not classified
 - Whorl Contact: Nautilus-Like Shell with Smooth Surface = overlapping; Turritella-Like Tower Shell (turritella) = stacked
 - Spire: Nautilus-Like Shell with Smooth Surface = not classified; Turritella-Like Tower Shell (turritella) = high
+
+### Turrilites-Like <-> Turritella-Like Tower Shell (turritella-helix)
+
+Similarity: 66.7%
+
+Shared:
+- Form: turriform
+- Coiling: high-spired
+- Whorl Contact: stacked
+- Spire: high
+
+Differences:
+- Family: Turrilites-Like = ammonoid; Turritella-Like Tower Shell (turritella-helix) = gastropod
+- Geometry: Turrilites-Like = log-spiral; Turritella-Like Tower Shell (turritella-helix) = conical-helix
+
+### Turrilites-Like <-> Turritella-Like Tower Shell (turritella)
+
+Similarity: 83.3%
+
+Shared:
+- Geometry: log-spiral
+- Form: turriform
+- Coiling: high-spired
+- Whorl Contact: stacked
+- Spire: high
+
+Differences:
+- Family: Turrilites-Like = ammonoid; Turritella-Like Tower Shell (turritella) = gastropod
 
 ### Turritella-Like Tower Shell (turritella-helix) <-> Turritella-Like Tower Shell (turritella)
 
