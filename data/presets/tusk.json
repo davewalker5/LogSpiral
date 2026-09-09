@@ -1,0 +1,65 @@
+{
+  "name": "Tusk Shell-Like",
+  "description": "A tusk-shell-inspired scaphopod with a slender, gently curved, tapering tube, a smooth surface and circular openings at both ends, with no internal chambers or siphuncle.",
+  "classification": {
+    "family": "scaphopod",
+    "geometry": "centreline-conical",
+    "morphology": {
+      "form": "cyrtoconic",
+      "coiling": "none",
+      "axis": "curved"
+    }
+  },
+  "growth": {
+    "mode": "cyrtocone",
+    "length": 10.0,
+    "points": 500,
+    "initial_radius": 0.20,
+    "growth_rate": 0.75,
+    "curvature": 0.35,
+    "aperture_width_multiplier": 1.0,
+    "aperture_height_multiplier": 1.0,
+    "taper_mode": "linear"
+  },
+  "shell": {
+    "z_scale": 0.0,
+    "automatic_z_path": false,
+    "aperture_points": 64,
+    "ribbing_enabled": false,
+    "ribbing_amplitude": 0.0,
+    "ribbing_frequency": 0,
+    "ribbing_mode": "sinusoidal",
+    "lip_enabled": false,
+    "lip_start": 0.0,
+    "lip_strength": 0.0,
+    "lip_power": 0,
+    "wall_enabled": true,
+    "wall_thickness": 0.025,
+    "inner_surface_colour_shift": -0.18,
+    "aperture_tilt": 0.0
+  },
+  "chambers": {
+    "enabled": false
+  },
+  "siphuncle": {
+    "enabled": false
+  },
+  "plotting": {
+    "opaque": {
+      "enabled": true,
+      "title": "Tusk Shell-Like",
+      "shell_opacity": 1.0,
+      "septa_opacity": 0.75,
+      "siphuncle_opacity": 0.75,
+      "width": 900,
+      "height": 900,
+      "hide_axes": true,
+      "show_wireframe": false,
+      "viewpoint": "iso",
+      "zoom": 1.5
+    },
+    "transparent": {
+      "enabled": false
+    }
+  }
+}

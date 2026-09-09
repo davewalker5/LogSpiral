@@ -121,5 +121,13 @@
     "coiling": "high-spired",
     "spire": "high",
     "whorl_contact": "stacked"
+  },
+  {
+    "filename": "tusk",
+    "geometry": "centreline-conical",
+    "family": "scaphopod",
+    "form": "cyrtoconic",
+    "coiling": "none",
+    "axis": "curved"
   }
 ]

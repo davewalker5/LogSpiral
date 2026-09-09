@@ -18,22 +18,23 @@ Similarity is calculated from preset classification metadata only. Mesh geometry
 
 ## Similarity Matrix
 
-| Shell | Ammonite-Like Shell | Annulated Orthocone-Like Shell | Crioceratite-Like Shell | Orthocone-Like Shell (cyrtocone) | Flared Shell | Nautilus-Like Shell | Necklace Shell-Like Moon Snail | Orthocone-Like Shell (orthocone) | Ramshorn-Like Shell | Serpenticone Ammonite-Like Shell | Nautilus-Like Shell with Smooth Surface | Turrilites-Like | Turritella-Like Tower Shell (turritella-helix) | Turritella-Like Tower Shell (turritella) |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| Ammonite-Like Shell | 100% | 0% | 33.3% | 0% | 12.5% | 33.3% | 14.3% | 0% | 50% | 66.7% | 33.3% | 28.6% | 0% | 14.3% |
-| Annulated Orthocone-Like Shell | 0% | 100% | 0% | 60% | 0% | 0% | 0% | 100% | 0% | 0% | 0% | 0% | 0% | 0% |
-| Crioceratite-Like Shell | 33.3% | 0% | 100% | 0% | 12.5% | 16.7% | 14.3% | 0% | 16.7% | 33.3% | 16.7% | 28.6% | 0% | 14.3% |
-| Orthocone-Like Shell (cyrtocone) | 0% | 60% | 0% | 100% | 0% | 0% | 0% | 60% | 0% | 0% | 0% | 0% | 0% | 0% |
-| Flared Shell | 12.5% | 0% | 12.5% | 0% | 100% | 12.5% | 57.1% | 0% | 25% | 12.5% | 12.5% | 14.3% | 14.3% | 28.6% |
-| Nautilus-Like Shell | 33.3% | 0% | 16.7% | 0% | 12.5% | 100% | 28.6% | 0% | 33.3% | 33.3% | 100% | 14.3% | 0% | 14.3% |
-| Necklace Shell-Like Moon Snail | 14.3% | 0% | 14.3% | 0% | 57.1% | 28.6% | 100% | 0% | 28.6% | 14.3% | 28.6% | 16.7% | 16.7% | 33.3% |
-| Orthocone-Like Shell (orthocone) | 0% | 100% | 0% | 60% | 0% | 0% | 0% | 100% | 0% | 0% | 0% | 0% | 0% | 0% |
-| Ramshorn-Like Shell | 50% | 0% | 16.7% | 0% | 25% | 33.3% | 28.6% | 0% | 100% | 66.7% | 33.3% | 14.3% | 14.3% | 28.6% |
-| Serpenticone Ammonite-Like Shell | 66.7% | 0% | 33.3% | 0% | 12.5% | 33.3% | 14.3% | 0% | 66.7% | 100% | 33.3% | 28.6% | 0% | 14.3% |
-| Nautilus-Like Shell with Smooth Surface | 33.3% | 0% | 16.7% | 0% | 12.5% | 100% | 28.6% | 0% | 33.3% | 33.3% | 100% | 14.3% | 0% | 14.3% |
-| Turrilites-Like | 28.6% | 0% | 28.6% | 0% | 14.3% | 14.3% | 16.7% | 0% | 14.3% | 28.6% | 14.3% | 100% | 66.7% | 83.3% |
-| Turritella-Like Tower Shell (turritella-helix) | 0% | 0% | 0% | 0% | 14.3% | 0% | 16.7% | 0% | 14.3% | 0% | 0% | 66.7% | 100% | 83.3% |
-| Turritella-Like Tower Shell (turritella) | 14.3% | 0% | 14.3% | 0% | 28.6% | 14.3% | 33.3% | 0% | 28.6% | 14.3% | 14.3% | 83.3% | 83.3% | 100% |
+| Shell | Ammonite-Like Shell | Annulated Orthocone-Like Shell | Crioceratite-Like Shell | Orthocone-Like Shell (cyrtocone) | Flared Shell | Nautilus-Like Shell | Necklace Shell-Like Moon Snail | Orthocone-Like Shell (orthocone) | Ramshorn-Like Shell | Serpenticone Ammonite-Like Shell | Nautilus-Like Shell with Smooth Surface | Turrilites-Like | Turritella-Like Tower Shell (turritella-helix) | Turritella-Like Tower Shell (turritella) | Tusk Shell-Like |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| Ammonite-Like Shell | 100% | 0% | 33.3% | 0% | 12.5% | 33.3% | 14.3% | 0% | 50% | 66.7% | 33.3% | 28.6% | 0% | 14.3% | 0% |
+| Annulated Orthocone-Like Shell | 0% | 100% | 0% | 60% | 0% | 0% | 0% | 100% | 0% | 0% | 0% | 0% | 0% | 0% | 40% |
+| Crioceratite-Like Shell | 33.3% | 0% | 100% | 0% | 12.5% | 16.7% | 14.3% | 0% | 16.7% | 33.3% | 16.7% | 28.6% | 0% | 14.3% | 0% |
+| Orthocone-Like Shell (cyrtocone) | 0% | 60% | 0% | 100% | 0% | 0% | 0% | 60% | 0% | 0% | 0% | 0% | 0% | 0% | 80% |
+| Flared Shell | 12.5% | 0% | 12.5% | 0% | 100% | 12.5% | 57.1% | 0% | 25% | 12.5% | 12.5% | 14.3% | 14.3% | 28.6% | 0% |
+| Nautilus-Like Shell | 33.3% | 0% | 16.7% | 0% | 12.5% | 100% | 28.6% | 0% | 33.3% | 33.3% | 100% | 14.3% | 0% | 14.3% | 0% |
+| Necklace Shell-Like Moon Snail | 14.3% | 0% | 14.3% | 0% | 57.1% | 28.6% | 100% | 0% | 28.6% | 14.3% | 28.6% | 16.7% | 16.7% | 33.3% | 0% |
+| Orthocone-Like Shell (orthocone) | 0% | 100% | 0% | 60% | 0% | 0% | 0% | 100% | 0% | 0% | 0% | 0% | 0% | 0% | 40% |
+| Ramshorn-Like Shell | 50% | 0% | 16.7% | 0% | 25% | 33.3% | 28.6% | 0% | 100% | 66.7% | 33.3% | 14.3% | 14.3% | 28.6% | 0% |
+| Serpenticone Ammonite-Like Shell | 66.7% | 0% | 33.3% | 0% | 12.5% | 33.3% | 14.3% | 0% | 66.7% | 100% | 33.3% | 28.6% | 0% | 14.3% | 0% |
+| Nautilus-Like Shell with Smooth Surface | 33.3% | 0% | 16.7% | 0% | 12.5% | 100% | 28.6% | 0% | 33.3% | 33.3% | 100% | 14.3% | 0% | 14.3% | 0% |
+| Turrilites-Like | 28.6% | 0% | 28.6% | 0% | 14.3% | 14.3% | 16.7% | 0% | 14.3% | 28.6% | 14.3% | 100% | 66.7% | 83.3% | 0% |
+| Turritella-Like Tower Shell (turritella-helix) | 0% | 0% | 0% | 0% | 14.3% | 0% | 16.7% | 0% | 14.3% | 0% | 0% | 66.7% | 100% | 83.3% | 0% |
+| Turritella-Like Tower Shell (turritella) | 14.3% | 0% | 14.3% | 0% | 28.6% | 14.3% | 33.3% | 0% | 28.6% | 14.3% | 14.3% | 83.3% | 83.3% | 100% | 0% |
+| Tusk Shell-Like | 0% | 40% | 0% | 80% | 0% | 0% | 0% | 40% | 0% | 0% | 0% | 0% | 0% | 0% | 100% |
 
 ## Nearest Neighbours
 
@@ -54,7 +55,7 @@ Similarity is calculated from preset classification metadata only. Mesh geometry
 
 ### Orthocone-Like Shell (cyrtocone)
 
-- Closest: Orthocone-Like Shell (orthocone) (60%)
+- Closest: Tusk Shell-Like (80%)
 - Most distinct: Ammonite-Like Shell (0%)
 
 ### Flared Shell
@@ -106,6 +107,11 @@ Similarity is calculated from preset classification metadata only. Mesh geometry
 
 - Closest: Turritella-Like Tower Shell (turritella-helix) (83.3%)
 - Most distinct: Annulated Orthocone-Like Shell (0%)
+
+### Tusk Shell-Like
+
+- Closest: Orthocone-Like Shell (cyrtocone) (80%)
+- Most distinct: Ammonite-Like Shell (0%)
 
 ## Pairwise Comparisons
 
@@ -304,6 +310,22 @@ Differences:
 - Whorl Contact: Ammonite-Like Shell = touching; Turritella-Like Tower Shell (turritella) = stacked
 - Spire: Ammonite-Like Shell = not classified; Turritella-Like Tower Shell (turritella) = high
 
+### Ammonite-Like Shell <-> Tusk Shell-Like
+
+Similarity: 0%
+
+Shared:
+- None
+
+Differences:
+- Family: Ammonite-Like Shell = ammonoid; Tusk Shell-Like = scaphopod
+- Geometry: Ammonite-Like Shell = log-spiral; Tusk Shell-Like = centreline-conical
+- Form: Ammonite-Like Shell = coiled-cephalopod; Tusk Shell-Like = cyrtoconic
+- Coiling: Ammonite-Like Shell = planispiral; Tusk Shell-Like = none
+- Umbilicus: Ammonite-Like Shell = moderate; Tusk Shell-Like = not classified
+- Whorl Contact: Ammonite-Like Shell = touching; Tusk Shell-Like = not classified
+- Axis: Ammonite-Like Shell = not classified; Tusk Shell-Like = curved
+
 ### Annulated Orthocone-Like Shell <-> Crioceratite-Like Shell
 
 Similarity: 0%
@@ -491,6 +513,19 @@ Differences:
 - Axis: Annulated Orthocone-Like Shell = straight; Turritella-Like Tower Shell (turritella) = not classified
 - Spire: Annulated Orthocone-Like Shell = not classified; Turritella-Like Tower Shell (turritella) = high
 
+### Annulated Orthocone-Like Shell <-> Tusk Shell-Like
+
+Similarity: 40%
+
+Shared:
+- Geometry: centreline-conical
+- Coiling: none
+
+Differences:
+- Family: Annulated Orthocone-Like Shell = orthoceratoid; Tusk Shell-Like = scaphopod
+- Form: Annulated Orthocone-Like Shell = orthoconic; Tusk Shell-Like = cyrtoconic
+- Axis: Annulated Orthocone-Like Shell = straight; Tusk Shell-Like = curved
+
 ### Crioceratite-Like Shell <-> Orthocone-Like Shell (cyrtocone)
 
 Similarity: 0%
@@ -656,6 +691,22 @@ Differences:
 - Whorl Contact: Crioceratite-Like Shell = detached; Turritella-Like Tower Shell (turritella) = stacked
 - Spire: Crioceratite-Like Shell = not classified; Turritella-Like Tower Shell (turritella) = high
 
+### Crioceratite-Like Shell <-> Tusk Shell-Like
+
+Similarity: 0%
+
+Shared:
+- None
+
+Differences:
+- Family: Crioceratite-Like Shell = ammonoid; Tusk Shell-Like = scaphopod
+- Geometry: Crioceratite-Like Shell = log-spiral; Tusk Shell-Like = centreline-conical
+- Form: Crioceratite-Like Shell = crioconic; Tusk Shell-Like = cyrtoconic
+- Coiling: Crioceratite-Like Shell = open-planispiral; Tusk Shell-Like = none
+- Umbilicus: Crioceratite-Like Shell = open; Tusk Shell-Like = not classified
+- Whorl Contact: Crioceratite-Like Shell = detached; Tusk Shell-Like = not classified
+- Axis: Crioceratite-Like Shell = not classified; Tusk Shell-Like = curved
+
 ### Orthocone-Like Shell (cyrtocone) <-> Flared Shell
 
 Similarity: 0%
@@ -813,6 +864,19 @@ Differences:
 - Axis: Orthocone-Like Shell (cyrtocone) = curved; Turritella-Like Tower Shell (turritella) = not classified
 - Spire: Orthocone-Like Shell (cyrtocone) = not classified; Turritella-Like Tower Shell (turritella) = high
 
+### Orthocone-Like Shell (cyrtocone) <-> Tusk Shell-Like
+
+Similarity: 80%
+
+Shared:
+- Geometry: centreline-conical
+- Form: cyrtoconic
+- Coiling: none
+- Axis: curved
+
+Differences:
+- Family: Orthocone-Like Shell (cyrtocone) = orthoceratoid; Tusk Shell-Like = scaphopod
+
 ### Flared Shell <-> Nautilus-Like Shell
 
 Similarity: 12.5%
@@ -953,6 +1017,22 @@ Differences:
 - Spire: Flared Shell = low; Turritella-Like Tower Shell (turritella) = high
 - Aperture: Flared Shell = expanded; Turritella-Like Tower Shell (turritella) = not classified
 
+### Flared Shell <-> Tusk Shell-Like
+
+Similarity: 0%
+
+Shared:
+- None
+
+Differences:
+- Family: Flared Shell = gastropod; Tusk Shell-Like = scaphopod
+- Geometry: Flared Shell = log-spiral; Tusk Shell-Like = centreline-conical
+- Form: Flared Shell = flared; Tusk Shell-Like = cyrtoconic
+- Coiling: Flared Shell = low-spired; Tusk Shell-Like = none
+- Axis: Flared Shell = not classified; Tusk Shell-Like = curved
+- Spire: Flared Shell = low; Tusk Shell-Like = not classified
+- Aperture: Flared Shell = expanded; Tusk Shell-Like = not classified
+
 ### Nautilus-Like Shell <-> Necklace Shell-Like Moon Snail
 
 Similarity: 28.6%
@@ -1073,6 +1153,22 @@ Differences:
 - Whorl Contact: Nautilus-Like Shell = overlapping; Turritella-Like Tower Shell (turritella) = stacked
 - Spire: Nautilus-Like Shell = not classified; Turritella-Like Tower Shell (turritella) = high
 
+### Nautilus-Like Shell <-> Tusk Shell-Like
+
+Similarity: 0%
+
+Shared:
+- None
+
+Differences:
+- Family: Nautilus-Like Shell = nautiloid; Tusk Shell-Like = scaphopod
+- Geometry: Nautilus-Like Shell = log-spiral; Tusk Shell-Like = centreline-conical
+- Form: Nautilus-Like Shell = nautiliconic; Tusk Shell-Like = cyrtoconic
+- Coiling: Nautilus-Like Shell = planispiral; Tusk Shell-Like = none
+- Umbilicus: Nautilus-Like Shell = narrow; Tusk Shell-Like = not classified
+- Whorl Contact: Nautilus-Like Shell = overlapping; Tusk Shell-Like = not classified
+- Axis: Nautilus-Like Shell = not classified; Tusk Shell-Like = curved
+
 ### Necklace Shell-Like Moon Snail <-> Orthocone-Like Shell (orthocone)
 
 Similarity: 0%
@@ -1176,6 +1272,22 @@ Differences:
 - Whorl Contact: Necklace Shell-Like Moon Snail = overlapping; Turritella-Like Tower Shell (turritella) = stacked
 - Spire: Necklace Shell-Like Moon Snail = low; Turritella-Like Tower Shell (turritella) = high
 
+### Necklace Shell-Like Moon Snail <-> Tusk Shell-Like
+
+Similarity: 0%
+
+Shared:
+- None
+
+Differences:
+- Family: Necklace Shell-Like Moon Snail = gastropod; Tusk Shell-Like = scaphopod
+- Geometry: Necklace Shell-Like Moon Snail = log-spiral; Tusk Shell-Like = centreline-conical
+- Form: Necklace Shell-Like Moon Snail = globose; Tusk Shell-Like = cyrtoconic
+- Coiling: Necklace Shell-Like Moon Snail = low-spired; Tusk Shell-Like = none
+- Whorl Contact: Necklace Shell-Like Moon Snail = overlapping; Tusk Shell-Like = not classified
+- Axis: Necklace Shell-Like Moon Snail = not classified; Tusk Shell-Like = curved
+- Spire: Necklace Shell-Like Moon Snail = low; Tusk Shell-Like = not classified
+
 ### Orthocone-Like Shell (orthocone) <-> Ramshorn-Like Shell
 
 Similarity: 0%
@@ -1272,6 +1384,19 @@ Differences:
 - Axis: Orthocone-Like Shell (orthocone) = straight; Turritella-Like Tower Shell (turritella) = not classified
 - Spire: Orthocone-Like Shell (orthocone) = not classified; Turritella-Like Tower Shell (turritella) = high
 
+### Orthocone-Like Shell (orthocone) <-> Tusk Shell-Like
+
+Similarity: 40%
+
+Shared:
+- Geometry: centreline-conical
+- Coiling: none
+
+Differences:
+- Family: Orthocone-Like Shell (orthocone) = orthoceratoid; Tusk Shell-Like = scaphopod
+- Form: Orthocone-Like Shell (orthocone) = orthoconic; Tusk Shell-Like = cyrtoconic
+- Axis: Orthocone-Like Shell (orthocone) = straight; Tusk Shell-Like = curved
+
 ### Ramshorn-Like Shell <-> Serpenticone Ammonite-Like Shell
 
 Similarity: 66.7%
@@ -1345,6 +1470,22 @@ Differences:
 - Whorl Contact: Ramshorn-Like Shell = touching; Turritella-Like Tower Shell (turritella) = stacked
 - Spire: Ramshorn-Like Shell = not classified; Turritella-Like Tower Shell (turritella) = high
 
+### Ramshorn-Like Shell <-> Tusk Shell-Like
+
+Similarity: 0%
+
+Shared:
+- None
+
+Differences:
+- Family: Ramshorn-Like Shell = gastropod; Tusk Shell-Like = scaphopod
+- Geometry: Ramshorn-Like Shell = log-spiral; Tusk Shell-Like = centreline-conical
+- Form: Ramshorn-Like Shell = planispiral; Tusk Shell-Like = cyrtoconic
+- Coiling: Ramshorn-Like Shell = planispiral; Tusk Shell-Like = none
+- Umbilicus: Ramshorn-Like Shell = wide; Tusk Shell-Like = not classified
+- Whorl Contact: Ramshorn-Like Shell = touching; Tusk Shell-Like = not classified
+- Axis: Ramshorn-Like Shell = not classified; Tusk Shell-Like = curved
+
 ### Serpenticone Ammonite-Like Shell <-> Nautilus-Like Shell with Smooth Surface
 
 Similarity: 33.3%
@@ -1405,6 +1546,22 @@ Differences:
 - Whorl Contact: Serpenticone Ammonite-Like Shell = touching; Turritella-Like Tower Shell (turritella) = stacked
 - Spire: Serpenticone Ammonite-Like Shell = not classified; Turritella-Like Tower Shell (turritella) = high
 
+### Serpenticone Ammonite-Like Shell <-> Tusk Shell-Like
+
+Similarity: 0%
+
+Shared:
+- None
+
+Differences:
+- Family: Serpenticone Ammonite-Like Shell = ammonoid; Tusk Shell-Like = scaphopod
+- Geometry: Serpenticone Ammonite-Like Shell = log-spiral; Tusk Shell-Like = centreline-conical
+- Form: Serpenticone Ammonite-Like Shell = serpenticonic; Tusk Shell-Like = cyrtoconic
+- Coiling: Serpenticone Ammonite-Like Shell = planispiral; Tusk Shell-Like = none
+- Umbilicus: Serpenticone Ammonite-Like Shell = wide; Tusk Shell-Like = not classified
+- Whorl Contact: Serpenticone Ammonite-Like Shell = touching; Tusk Shell-Like = not classified
+- Axis: Serpenticone Ammonite-Like Shell = not classified; Tusk Shell-Like = curved
+
 ### Nautilus-Like Shell with Smooth Surface <-> Turrilites-Like
 
 Similarity: 14.3%
@@ -1451,6 +1608,22 @@ Differences:
 - Whorl Contact: Nautilus-Like Shell with Smooth Surface = overlapping; Turritella-Like Tower Shell (turritella) = stacked
 - Spire: Nautilus-Like Shell with Smooth Surface = not classified; Turritella-Like Tower Shell (turritella) = high
 
+### Nautilus-Like Shell with Smooth Surface <-> Tusk Shell-Like
+
+Similarity: 0%
+
+Shared:
+- None
+
+Differences:
+- Family: Nautilus-Like Shell with Smooth Surface = nautiloid; Tusk Shell-Like = scaphopod
+- Geometry: Nautilus-Like Shell with Smooth Surface = log-spiral; Tusk Shell-Like = centreline-conical
+- Form: Nautilus-Like Shell with Smooth Surface = nautiliconic; Tusk Shell-Like = cyrtoconic
+- Coiling: Nautilus-Like Shell with Smooth Surface = planispiral; Tusk Shell-Like = none
+- Umbilicus: Nautilus-Like Shell with Smooth Surface = narrow; Tusk Shell-Like = not classified
+- Whorl Contact: Nautilus-Like Shell with Smooth Surface = overlapping; Tusk Shell-Like = not classified
+- Axis: Nautilus-Like Shell with Smooth Surface = not classified; Tusk Shell-Like = curved
+
 ### Turrilites-Like <-> Turritella-Like Tower Shell (turritella-helix)
 
 Similarity: 66.7%
@@ -1479,6 +1652,22 @@ Shared:
 Differences:
 - Family: Turrilites-Like = ammonoid; Turritella-Like Tower Shell (turritella) = gastropod
 
+### Turrilites-Like <-> Tusk Shell-Like
+
+Similarity: 0%
+
+Shared:
+- None
+
+Differences:
+- Family: Turrilites-Like = ammonoid; Tusk Shell-Like = scaphopod
+- Geometry: Turrilites-Like = log-spiral; Tusk Shell-Like = centreline-conical
+- Form: Turrilites-Like = turriform; Tusk Shell-Like = cyrtoconic
+- Coiling: Turrilites-Like = high-spired; Tusk Shell-Like = none
+- Whorl Contact: Turrilites-Like = stacked; Tusk Shell-Like = not classified
+- Axis: Turrilites-Like = not classified; Tusk Shell-Like = curved
+- Spire: Turrilites-Like = high; Tusk Shell-Like = not classified
+
 ### Turritella-Like Tower Shell (turritella-helix) <-> Turritella-Like Tower Shell (turritella)
 
 Similarity: 83.3%
@@ -1492,3 +1681,35 @@ Shared:
 
 Differences:
 - Geometry: Turritella-Like Tower Shell (turritella-helix) = conical-helix; Turritella-Like Tower Shell (turritella) = log-spiral
+
+### Turritella-Like Tower Shell (turritella-helix) <-> Tusk Shell-Like
+
+Similarity: 0%
+
+Shared:
+- None
+
+Differences:
+- Family: Turritella-Like Tower Shell (turritella-helix) = gastropod; Tusk Shell-Like = scaphopod
+- Geometry: Turritella-Like Tower Shell (turritella-helix) = conical-helix; Tusk Shell-Like = centreline-conical
+- Form: Turritella-Like Tower Shell (turritella-helix) = turriform; Tusk Shell-Like = cyrtoconic
+- Coiling: Turritella-Like Tower Shell (turritella-helix) = high-spired; Tusk Shell-Like = none
+- Whorl Contact: Turritella-Like Tower Shell (turritella-helix) = stacked; Tusk Shell-Like = not classified
+- Axis: Turritella-Like Tower Shell (turritella-helix) = not classified; Tusk Shell-Like = curved
+- Spire: Turritella-Like Tower Shell (turritella-helix) = high; Tusk Shell-Like = not classified
+
+### Turritella-Like Tower Shell (turritella) <-> Tusk Shell-Like
+
+Similarity: 0%
+
+Shared:
+- None
+
+Differences:
+- Family: Turritella-Like Tower Shell (turritella) = gastropod; Tusk Shell-Like = scaphopod
+- Geometry: Turritella-Like Tower Shell (turritella) = log-spiral; Tusk Shell-Like = centreline-conical
+- Form: Turritella-Like Tower Shell (turritella) = turriform; Tusk Shell-Like = cyrtoconic
+- Coiling: Turritella-Like Tower Shell (turritella) = high-spired; Tusk Shell-Like = none
+- Whorl Contact: Turritella-Like Tower Shell (turritella) = stacked; Tusk Shell-Like = not classified
+- Axis: Turritella-Like Tower Shell (turritella) = not classified; Tusk Shell-Like = curved
+- Spire: Turritella-Like Tower Shell (turritella) = high; Tusk Shell-Like = not classified

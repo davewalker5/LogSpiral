@@ -61,7 +61,7 @@
   "plotting": {
     "opaque": {
       "enabled": true,
-      "title": "",
+      "title": "Turrilites-Like Shell",
       "shell_opacity": 1.0,
       "septa_opacity": 0.75,
       "siphuncle_opacity": 0.75,
@@ -74,7 +74,7 @@
     },
     "transparent": {
       "enabled": true,
-      "title": "",
+      "title": "Turrilites-Like Shell",
       "shell_opacity": 0.25,
       "septa_opacity": 0.75,
       "siphuncle_opacity": 0.75,
